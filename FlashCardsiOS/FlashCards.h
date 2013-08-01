@@ -1,5 +1,5 @@
 //
-//  HelloWorldLayer.h
+//  IntroLayer.h
 //  FlashCardsiOS
 //
 //  Created by Eric Smith on 7/31/13.
@@ -7,13 +7,11 @@
 //
 
 
-#import <GameKit/GameKit.h>
-
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 
 // HelloWorldLayer
-@interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
+@interface FlashCards : CCLayer
 {
 }
 

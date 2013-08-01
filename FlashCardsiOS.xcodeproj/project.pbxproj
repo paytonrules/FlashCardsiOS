@@ -139,8 +139,7 @@
 		074D891517AA1BD500985CD3 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 074D891417AA1BD500985CD3 /* vec4.c */; };
 		074D891A17AA1BD500985CD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D891917AA1BD500985CD3 /* main.m */; };
 		074D891D17AA1BD500985CD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D891C17AA1BD500985CD3 /* AppDelegate.m */; };
-		074D892017AA1BD500985CD3 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D891F17AA1BD500985CD3 /* HelloWorldLayer.m */; };
-		074D892317AA1BD500985CD3 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D892217AA1BD500985CD3 /* IntroLayer.m */; };
+		074D892317AA1BD500985CD3 /* FlashCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D892217AA1BD500985CD3 /* FlashCards.m */; };
 		074D892F17AA1D5200985CD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D878017AA1BD300985CD3 /* UIKit.framework */; };
 		074D893017AA1D5200985CD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D878217AA1BD300985CD3 /* Foundation.framework */; };
 		074D893117AA1D5200985CD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D878417AA1BD300985CD3 /* CoreGraphics.framework */; };
@@ -465,10 +464,8 @@
 		074D891917AA1BD500985CD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		074D891B17AA1BD500985CD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		074D891C17AA1BD500985CD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		074D891E17AA1BD500985CD3 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		074D891F17AA1BD500985CD3 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		074D892117AA1BD500985CD3 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		074D892217AA1BD500985CD3 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		074D892117AA1BD500985CD3 /* FlashCards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashCards.h; sourceTree = "<group>"; };
+		074D892217AA1BD500985CD3 /* FlashCards.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashCards.m; sourceTree = "<group>"; };
 		074D892E17AA1D5200985CD3 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		074D893417AA1D5200985CD3 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
 		074D893617AA1D5200985CD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -549,12 +546,7 @@
 		074D878A17AA1BD300985CD3 /* FlashCardsiOS */ = {
 			isa = PBXGroup;
 			children = (
-				074D891B17AA1BD500985CD3 /* AppDelegate.h */,
-				074D891C17AA1BD500985CD3 /* AppDelegate.m */,
-				074D891E17AA1BD500985CD3 /* HelloWorldLayer.h */,
-				074D891F17AA1BD500985CD3 /* HelloWorldLayer.m */,
-				074D892117AA1BD500985CD3 /* IntroLayer.h */,
-				074D892217AA1BD500985CD3 /* IntroLayer.m */,
+				074D895617AA1F0A00985CD3 /* CocosDependent */,
 				074D878B17AA1BD300985CD3 /* Resources */,
 				074D87A317AA1BD300985CD3 /* libs */,
 				074D891717AA1BD500985CD3 /* Supporting Files */,
@@ -974,6 +966,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		074D895617AA1F0A00985CD3 /* CocosDependent */ = {
+			isa = PBXGroup;
+			children = (
+				074D891B17AA1BD500985CD3 /* AppDelegate.h */,
+				074D891C17AA1BD500985CD3 /* AppDelegate.m */,
+				074D892117AA1BD500985CD3 /* FlashCards.h */,
+				074D892217AA1BD500985CD3 /* FlashCards.m */,
+			);
+			name = CocosDependent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1244,8 +1247,7 @@
 				074D891517AA1BD500985CD3 /* vec4.c in Sources */,
 				074D891A17AA1BD500985CD3 /* main.m in Sources */,
 				074D891D17AA1BD500985CD3 /* AppDelegate.m in Sources */,
-				074D892017AA1BD500985CD3 /* HelloWorldLayer.m in Sources */,
-				074D892317AA1BD500985CD3 /* IntroLayer.m in Sources */,
+				074D892317AA1BD500985CD3 /* FlashCards.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
