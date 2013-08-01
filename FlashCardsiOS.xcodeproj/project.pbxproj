@@ -485,6 +485,7 @@
 		074D896617AA822000985CD3 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		074D896717AA822000985CD3 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		074D896917AA833D00985CD3 /* CardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSpec.m; sourceTree = "<group>"; };
+		074D896C17AA860500985CD3 /* CardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1017,6 +1018,7 @@
 			children = (
 				074D896617AA822000985CD3 /* Card.h */,
 				074D896717AA822000985CD3 /* Card.m */,
+				074D896C17AA860500985CD3 /* CardView.h */,
 			);
 			name = Game;
 			sourceTree = "<group>";

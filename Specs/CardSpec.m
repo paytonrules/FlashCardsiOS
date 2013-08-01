@@ -3,11 +3,17 @@
 
 OCDSpec2Context(CardSpec) {
   
-  Describe(@"-someBehavior", ^{
+  Describe(@"tapping the card", ^{
     
-    It(@"fails", ^{
+    It(@"lets the view know if the card is chosen", ^{
+      Card *card = [Card cardWithView: view];
+      
+      
       [ExpectBool(NO) toBeTrue];
     });
+    
+    // Bounding box
+    // Doesn't choose twice
     
   });
   
