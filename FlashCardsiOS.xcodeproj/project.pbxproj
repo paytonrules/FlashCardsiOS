@@ -147,6 +147,11 @@
 		074D893917AA1D5200985CD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D893817AA1D5200985CD3 /* main.m */; };
 		074D895017AA1D8500985CD3 /* libOCDSpec2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D894717AA1D6600985CD3 /* libOCDSpec2.a */; };
 		074D895817AA20A500985CD3 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 074D895717AA20A500985CD3 /* background.jpg */; };
+		074D896017AA7CAB00985CD3 /* CardSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D895F17AA7CAB00985CD3 /* CardSprite.m */; };
+		074D896417AA818C00985CD3 /* Enemy Bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 074D896317AA818C00985CD3 /* Enemy Bug.png */; };
+		074D896817AA822000985CD3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896717AA822000985CD3 /* Card.m */; };
+		074D896A17AA833D00985CD3 /* CardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896917AA833D00985CD3 /* CardSpec.m */; };
+		074D896B17AA834E00985CD3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896717AA822000985CD3 /* Card.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -474,6 +479,12 @@
 		074D893A17AA1D5200985CD3 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		074D893E17AA1D6600985CD3 /* OCDSpec2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OCDSpec2.xcodeproj; path = OCDSpec2/OCDSpec2.xcodeproj; sourceTree = "<group>"; };
 		074D895717AA20A500985CD3 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		074D895E17AA7CAB00985CD3 /* CardSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSprite.h; sourceTree = "<group>"; };
+		074D895F17AA7CAB00985CD3 /* CardSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSprite.m; sourceTree = "<group>"; };
+		074D896317AA818C00985CD3 /* Enemy Bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Enemy Bug.png"; sourceTree = "<group>"; };
+		074D896617AA822000985CD3 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		074D896717AA822000985CD3 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		074D896917AA833D00985CD3 /* CardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -548,6 +559,7 @@
 		074D878A17AA1BD300985CD3 /* FlashCardsiOS */ = {
 			isa = PBXGroup;
 			children = (
+				074D896517AA821000985CD3 /* Game */,
 				074D895617AA1F0A00985CD3 /* CocosDependent */,
 				074D878B17AA1BD300985CD3 /* Resources */,
 				074D87A317AA1BD300985CD3 /* libs */,
@@ -559,6 +571,7 @@
 		074D878B17AA1BD300985CD3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				074D896317AA818C00985CD3 /* Enemy Bug.png */,
 				074D895717AA20A500985CD3 /* background.jpg */,
 				074D878C17AA1BD300985CD3 /* Default.png */,
 				074D878E17AA1BD300985CD3 /* Default@2x.png */,
@@ -942,6 +955,7 @@
 			isa = PBXGroup;
 			children = (
 				074D893317AA1D5200985CD3 /* Supporting Files */,
+				074D896917AA833D00985CD3 /* CardSpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -972,12 +986,39 @@
 		074D895617AA1F0A00985CD3 /* CocosDependent */ = {
 			isa = PBXGroup;
 			children = (
+				074D895A17AA7C8100985CD3 /* Sprites */,
+				074D895917AA7C4000985CD3 /* Layers */,
 				074D891B17AA1BD500985CD3 /* AppDelegate.h */,
 				074D891C17AA1BD500985CD3 /* AppDelegate.m */,
+			);
+			name = CocosDependent;
+			sourceTree = "<group>";
+		};
+		074D895917AA7C4000985CD3 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
 				074D892117AA1BD500985CD3 /* FlashCards.h */,
 				074D892217AA1BD500985CD3 /* FlashCards.m */,
 			);
-			name = CocosDependent;
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		074D895A17AA7C8100985CD3 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				074D895E17AA7CAB00985CD3 /* CardSprite.h */,
+				074D895F17AA7CAB00985CD3 /* CardSprite.m */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
+		074D896517AA821000985CD3 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				074D896617AA822000985CD3 /* Card.h */,
+				074D896717AA822000985CD3 /* Card.m */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1107,6 +1148,7 @@
 				074D87A217AA1BD300985CD3 /* iTunesArtwork in Resources */,
 				074D88FB17AA1BD500985CD3 /* ChangeLog in Resources */,
 				074D895817AA20A500985CD3 /* background.jpg in Resources */,
+				074D896417AA818C00985CD3 /* Enemy Bug.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,6 +1294,8 @@
 				074D891A17AA1BD500985CD3 /* main.m in Sources */,
 				074D891D17AA1BD500985CD3 /* AppDelegate.m in Sources */,
 				074D892317AA1BD500985CD3 /* FlashCards.m in Sources */,
+				074D896017AA7CAB00985CD3 /* CardSprite.m in Sources */,
+				074D896817AA822000985CD3 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1260,6 +1304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				074D893917AA1D5200985CD3 /* main.m in Sources */,
+				074D896A17AA833D00985CD3 /* CardSpec.m in Sources */,
+				074D896B17AA834E00985CD3 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

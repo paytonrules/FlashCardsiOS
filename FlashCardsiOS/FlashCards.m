@@ -1,19 +1,7 @@
-//
-//  IntroLayer.m
-//  FlashCardsiOS
-//
-//  Created by Eric Smith on 7/31/13.
-//  Copyright Eric Smith 2013. All rights reserved.
-//
-
-
-// Import the interfaces
 #import "FlashCards.h"
+#import "CardSprite.h"
 
 
-#pragma mark - IntroLayer
-
-// HelloWorldLayer implementation
 @implementation FlashCards
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
@@ -42,9 +30,14 @@
 		CCSprite *background;		
     background = [CCSprite spriteWithFile:@"background.jpg"];
 		background.position = ccp(size.width/2, size.height/2);
-
+    
+    CardSprite *bug;
+    bug = [[[CardSprite alloc] initWithFile:@"Enemy Bug.png"] autorelease];
+    bug.position = ccp(200, 600);
+    
 		// add the label as a child to this Layer
 		[self addChild: background];
+    [self addChild: bug];
 	}
 	
 	return self;
