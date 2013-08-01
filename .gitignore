@@ -20,3 +20,7 @@ DerivedData
 
 # Mac
 .DS_Store
+
+# apportable
+.arcconfig
+.sconsign.dblite

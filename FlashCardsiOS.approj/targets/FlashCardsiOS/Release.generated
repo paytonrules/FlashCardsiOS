@@ -1,0 +1,1628 @@
+{
+    "xcode_project": "FlashCardsiOS.xcodeproj", 
+    "sources": [
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/AppDelegate.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/FlashCards.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/CocosDenshion/CDAudioManager.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/CocosDenshion/CDOpenALSupport.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/CocosDenshion/CDXMacOSXSupport.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/CocosDenshion/CDXPropertyModifierAction.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/CocosDenshion/CocosDenshion.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/CocosDenshion/SimpleAudioEngine.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCAction.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionCamera.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionCatmullRom.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionEase.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionGrid.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionGrid3D.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionInstant.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionInterval.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionManager.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionPageTurn3D.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionProgressTimer.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionTiledGrid.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCActionTween.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCAnimation.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCAnimationCache.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCAtlasNode.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCCamera.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCClippingNode.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCConfiguration.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCDirector.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCDrawNode.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCDrawingPrimitives.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCFontDefinition.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCGLProgram.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCGrabber.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCGrid.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCLabelAtlas.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCLabelBMFont.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCLabelTTF.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCLayer.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCMenu.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCMenuItem.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCMotionStreak.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCNode+Debug.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCNode.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCParallaxNode.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCParticleBatchNode.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCParticleExamples.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCParticleSystem.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCParticleSystemQuad.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCPhysicsDebugNode.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc++", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCPhysicsSprite.mm", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCProgressTimer.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCRenderTexture.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCScene.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCScheduler.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCShaderCache.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCSprite.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCSpriteBatchNode.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCSpriteFrame.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCSpriteFrameCache.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTMXLayer.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTMXObjectGroup.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTMXTiledMap.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTMXXMLParser.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTexture2D.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTextureAtlas.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTextureCache.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTexturePVR.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTileMapAtlas.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTransition.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTransitionPageTurn.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/CCTransitionProgress.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Platforms/Mac/CCDirectorMac.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Platforms/Mac/CCEventDispatcher.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Platforms/Mac/CCGLView.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Platforms/Mac/CCWindow.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/CCDirectorIOS.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/CCES2Renderer.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/CCGLView.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/CCTouchDispatcher.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/CCTouchHandler.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/CCArray.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/CCFileUtils.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/CCProfiling.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/CCVertex.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/CGPointExtension.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/NSThread+performBlock.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/TGAlib.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/TransformUtils.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/ZipUtils.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/base64.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/ccCArray.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/Support/ccUtils.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/ccDeprecated.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/ccFPSImages.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/ccGLStateCache.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/ccShaders.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/cocos2d/cocos2d.m", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/GL/mat4stack.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/GL/matrix.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/aabb.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/mat3.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/mat4.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/neon_matrix_impl.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/plane.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/quaternion.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/ray2.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/utility.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/vec2.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/vec3.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "c", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/libs/kazmath/src/vec4.c", 
+            "flags": [], 
+            "defines": {}
+        }, 
+        {
+            "language": "objc", 
+            "header_paths": [], 
+            "source": "FlashCardsiOS/main.m", 
+            "flags": [], 
+            "defines": {}
+        }
+    ], 
+    "infoplists": [
+        "./FlashCardsiOS/Resources/Info.plist"
+    ], 
+    "libs": [
+        "z", 
+        "sqlite3"
+    ], 
+    "defines": {
+        "NDEBUG": 1, 
+        "NS_BLOCK_ASSERTIONS": 1, 
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 40000
+    }, 
+    "pchs": [
+        "./FlashCardsiOS/Prefix.pch"
+    ], 
+    "assets": [
+        {
+            "asset": "FlashCardsiOS/Resources/Default@2x.png", 
+            "target": "Default@2x.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/Default-568h@2x.png", 
+            "target": "Default-568h@2x.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/Default.png", 
+            "target": "Default.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/Default-Landscape~ipad.png", 
+            "target": "Default-Landscape~ipad.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/Icon-Small-50.png", 
+            "target": "Icon-Small-50.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/Icon-72.png", 
+            "target": "Icon-72.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/Icon-Small.png", 
+            "target": "Icon-Small.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/Icon-Small@2x.png", 
+            "target": "Icon-Small@2x.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/Icon.png", 
+            "target": "Icon.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/Icon@2x.png", 
+            "target": "Icon@2x.png"
+        }, 
+        {
+            "asset": "FlashCardsiOS/Resources/iTunesArtwork", 
+            "target": "iTunesArtwork"
+        }, 
+        {
+            "asset": "FlashCardsiOS/libs/kazmath/src/ChangeLog", 
+            "target": "ChangeLog"
+        }, 
+        {
+            "asset": "FlashCardsiOS/background.jpg", 
+            "target": "background.jpg"
+        }
+    ], 
+    "type": "app", 
+    "header_paths": [
+        {
+            "type": "iquote", 
+            "header_path": "FlashCardsiOS-generated-files.hmap", 
+            "hmap": {}
+        }, 
+        {
+            "type": "I", 
+            "header_path": "FlashCardsiOS-own-target-headers.hmap", 
+            "hmap": {}
+        }, 
+        {
+            "type": "I", 
+            "header_path": "FlashCardsiOS-all-target-headers.hmap", 
+            "hmap": {}
+        }, 
+        {
+            "type": "iquote", 
+            "header_path": "FlashCardsiOS-project-headers.hmap", 
+            "hmap": {
+                "CCTextureCache.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTextureCache.h", 
+                    "key": "CCTextureCache.h"
+                }, 
+                "ccShader_PositionTextureColor_vert.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionTextureColor_vert.h", 
+                    "key": "ccShader_PositionTextureColor_vert.h"
+                }, 
+                "NSThread+performBlock.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "NSThread+performBlock.h", 
+                    "key": "NSThread+performBlock.h"
+                }, 
+                "FlashCards.h": {
+                    "prefix": "FlashCardsiOS/", 
+                    "suffix": "FlashCards.h", 
+                    "key": "FlashCards.h"
+                }, 
+                "ccShader_PositionTexture_uColor_frag.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionTexture_uColor_frag.h", 
+                    "key": "ccShader_PositionTexture_uColor_frag.h"
+                }, 
+                "CCTMXTiledMap.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTMXTiledMap.h", 
+                    "key": "CCTMXTiledMap.h"
+                }, 
+                "CCPhysicsDebugNode.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCPhysicsDebugNode.h", 
+                    "key": "CCPhysicsDebugNode.h"
+                }, 
+                "CCTouchDelegateProtocol.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/", 
+                    "suffix": "CCTouchDelegateProtocol.h", 
+                    "key": "CCTouchDelegateProtocol.h"
+                }, 
+                "CDXMacOSXSupport.h": {
+                    "prefix": "FlashCardsiOS/libs/CocosDenshion/", 
+                    "suffix": "CDXMacOSXSupport.h", 
+                    "key": "CDXMacOSXSupport.h"
+                }, 
+                "CDAudioManager.h": {
+                    "prefix": "FlashCardsiOS/libs/CocosDenshion/", 
+                    "suffix": "CDAudioManager.h", 
+                    "key": "CDAudioManager.h"
+                }, 
+                "ccShader_PositionTexture_uColor_vert.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionTexture_uColor_vert.h", 
+                    "key": "ccShader_PositionTexture_uColor_vert.h"
+                }, 
+                "CocosDenshion.h": {
+                    "prefix": "FlashCardsiOS/libs/CocosDenshion/", 
+                    "suffix": "CocosDenshion.h", 
+                    "key": "CocosDenshion.h"
+                }, 
+                "CCActionProgressTimer.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionProgressTimer.h", 
+                    "key": "CCActionProgressTimer.h"
+                }, 
+                "CCActionPageTurn3D.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionPageTurn3D.h", 
+                    "key": "CCActionPageTurn3D.h"
+                }, 
+                "CCAtlasNode.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCAtlasNode.h", 
+                    "key": "CCAtlasNode.h"
+                }, 
+                "CCLayer.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCLayer.h", 
+                    "key": "CCLayer.h"
+                }, 
+                "CCES2Renderer.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/", 
+                    "suffix": "CCES2Renderer.h", 
+                    "key": "CCES2Renderer.h"
+                }, 
+                "ccConfig.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccConfig.h", 
+                    "key": "ccConfig.h"
+                }, 
+                "CCAnimationCache.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCAnimationCache.h", 
+                    "key": "CCAnimationCache.h"
+                }, 
+                "ccFPSImages.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccFPSImages.h", 
+                    "key": "ccFPSImages.h"
+                }, 
+                "CCGrid.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCGrid.h", 
+                    "key": "CCGrid.h"
+                }, 
+                "vec3.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "vec3.h", 
+                    "key": "vec3.h"
+                }, 
+                "ray2.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "ray2.h", 
+                    "key": "ray2.h"
+                }, 
+                "CCTransition.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTransition.h", 
+                    "key": "CCTransition.h"
+                }, 
+                "Specs-Prefix.pch": {
+                    "prefix": "Specs/", 
+                    "suffix": "Specs-Prefix.pch", 
+                    "key": "Specs-Prefix.pch"
+                }, 
+                "CCSpriteFrameCache.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCSpriteFrameCache.h", 
+                    "key": "CCSpriteFrameCache.h"
+                }, 
+                "CCGrabber.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCGrabber.h", 
+                    "key": "CCGrabber.h"
+                }, 
+                "CCProtocols.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCProtocols.h", 
+                    "key": "CCProtocols.h"
+                }, 
+                "ccShader_Position_uColor_frag.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_Position_uColor_frag.h", 
+                    "key": "ccShader_Position_uColor_frag.h"
+                }, 
+                "CCArray.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "CCArray.h", 
+                    "key": "CCArray.h"
+                }, 
+                "ccCArray.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "ccCArray.h", 
+                    "key": "ccCArray.h"
+                }, 
+                "CCMenu.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCMenu.h", 
+                    "key": "CCMenu.h"
+                }, 
+                "CCActionTween.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionTween.h", 
+                    "key": "CCActionTween.h"
+                }, 
+                "CCTouchHandler.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/", 
+                    "suffix": "CCTouchHandler.h", 
+                    "key": "CCTouchHandler.h"
+                }, 
+                "ccShader_PositionColor_frag.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionColor_frag.h", 
+                    "key": "ccShader_PositionColor_frag.h"
+                }, 
+                "CCEventDispatcher.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/Mac/", 
+                    "suffix": "CCEventDispatcher.h", 
+                    "key": "CCEventDispatcher.h"
+                }, 
+                "ccShader_PositionTextureColor_frag.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionTextureColor_frag.h", 
+                    "key": "ccShader_PositionTextureColor_frag.h"
+                }, 
+                "CCTransitionProgress.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTransitionProgress.h", 
+                    "key": "CCTransitionProgress.h"
+                }, 
+                "CDOpenALSupport.h": {
+                    "prefix": "FlashCardsiOS/libs/CocosDenshion/", 
+                    "suffix": "CDOpenALSupport.h", 
+                    "key": "CDOpenALSupport.h"
+                }, 
+                "ccShader_PositionColor_vert.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionColor_vert.h", 
+                    "key": "ccShader_PositionColor_vert.h"
+                }, 
+                "CCVertex.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "CCVertex.h", 
+                    "key": "CCVertex.h"
+                }, 
+                "CCActionEase.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionEase.h", 
+                    "key": "CCActionEase.h"
+                }, 
+                "TransformUtils.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "TransformUtils.h", 
+                    "key": "TransformUtils.h"
+                }, 
+                "CCSprite.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCSprite.h", 
+                    "key": "CCSprite.h"
+                }, 
+                "neon_matrix_impl.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "neon_matrix_impl.h", 
+                    "key": "neon_matrix_impl.h"
+                }, 
+                "ccGLStateCache.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccGLStateCache.h", 
+                    "key": "ccGLStateCache.h"
+                }, 
+                "CDXPropertyModifierAction.h": {
+                    "prefix": "FlashCardsiOS/libs/CocosDenshion/", 
+                    "suffix": "CDXPropertyModifierAction.h", 
+                    "key": "CDXPropertyModifierAction.h"
+                }, 
+                "CCParallaxNode.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCParallaxNode.h", 
+                    "key": "CCParallaxNode.h"
+                }, 
+                "kazmath.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "kazmath.h", 
+                    "key": "kazmath.h"
+                }, 
+                "aabb.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "aabb.h", 
+                    "key": "aabb.h"
+                }, 
+                "CCProfiling.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "CCProfiling.h", 
+                    "key": "CCProfiling.h"
+                }, 
+                "CCConfiguration.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCConfiguration.h", 
+                    "key": "CCConfiguration.h"
+                }, 
+                "CCRenderTexture.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCRenderTexture.h", 
+                    "key": "CCRenderTexture.h"
+                }, 
+                "vec4.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "vec4.h", 
+                    "key": "vec4.h"
+                }, 
+                "CCActionGrid3D.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionGrid3D.h", 
+                    "key": "CCActionGrid3D.h"
+                }, 
+                "TGAlib.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "TGAlib.h", 
+                    "key": "TGAlib.h"
+                }, 
+                "utlist.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "utlist.h", 
+                    "key": "utlist.h"
+                }, 
+                "CCTouchDispatcher.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/", 
+                    "suffix": "CCTouchDispatcher.h", 
+                    "key": "CCTouchDispatcher.h"
+                }, 
+                "CCFontDefinition.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCFontDefinition.h", 
+                    "key": "CCFontDefinition.h"
+                }, 
+                "CCScene.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCScene.h", 
+                    "key": "CCScene.h"
+                }, 
+                "CCActionTiledGrid.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionTiledGrid.h", 
+                    "key": "CCActionTiledGrid.h"
+                }, 
+                "OpenGL_Internal.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "OpenGL_Internal.h", 
+                    "key": "OpenGL_Internal.h"
+                }, 
+                "CCParticleSystem.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCParticleSystem.h", 
+                    "key": "CCParticleSystem.h"
+                }, 
+                "SimpleAudioEngine.h": {
+                    "prefix": "FlashCardsiOS/libs/CocosDenshion/", 
+                    "suffix": "SimpleAudioEngine.h", 
+                    "key": "SimpleAudioEngine.h"
+                }, 
+                "ccShader_PositionColorLengthTexture_frag.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionColorLengthTexture_frag.h", 
+                    "key": "ccShader_PositionColorLengthTexture_frag.h"
+                }, 
+                "ccShaders.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShaders.h", 
+                    "key": "ccShaders.h"
+                }, 
+                "CGPointExtension.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "CGPointExtension.h", 
+                    "key": "CGPointExtension.h"
+                }, 
+                "plane.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "plane.h", 
+                    "key": "plane.h"
+                }, 
+                "utility.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "utility.h", 
+                    "key": "utility.h"
+                }, 
+                "CCParticleExamples.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCParticleExamples.h", 
+                    "key": "CCParticleExamples.h"
+                }, 
+                "CCClippingNode.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCClippingNode.h", 
+                    "key": "CCClippingNode.h"
+                }, 
+                "CCAnimation.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCAnimation.h", 
+                    "key": "CCAnimation.h"
+                }, 
+                "ZipUtils.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "ZipUtils.h", 
+                    "key": "ZipUtils.h"
+                }, 
+                "Prefix.pch": {
+                    "prefix": "FlashCardsiOS/", 
+                    "suffix": "Prefix.pch", 
+                    "key": "Prefix.pch"
+                }, 
+                "CCLabelBMFont.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCLabelBMFont.h", 
+                    "key": "CCLabelBMFont.h"
+                }, 
+                "quaternion.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "quaternion.h", 
+                    "key": "quaternion.h"
+                }, 
+                "CCDirectorMac.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/Mac/", 
+                    "suffix": "CCDirectorMac.h", 
+                    "key": "CCDirectorMac.h"
+                }, 
+                "CCActionInterval.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionInterval.h", 
+                    "key": "CCActionInterval.h"
+                }, 
+                "CCGL.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/", 
+                    "suffix": "CCGL.h", 
+                    "key": "CCGL.h"
+                }, 
+                "CCActionCatmullRom.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionCatmullRom.h", 
+                    "key": "CCActionCatmullRom.h"
+                }, 
+                "CCGLProgram.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCGLProgram.h", 
+                    "key": "CCGLProgram.h"
+                }, 
+                "CCFileUtils.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "CCFileUtils.h", 
+                    "key": "CCFileUtils.h"
+                }, 
+                "matrix.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/GL/", 
+                    "suffix": "matrix.h", 
+                    "key": "matrix.h"
+                }, 
+                "CCActionManager.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionManager.h", 
+                    "key": "CCActionManager.h"
+                }, 
+                "CCMotionStreak.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCMotionStreak.h", 
+                    "key": "CCMotionStreak.h"
+                }, 
+                "mat4.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "mat4.h", 
+                    "key": "mat4.h"
+                }, 
+                "CCDrawNode.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCDrawNode.h", 
+                    "key": "CCDrawNode.h"
+                }, 
+                "CCDirectorIOS.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/", 
+                    "suffix": "CCDirectorIOS.h", 
+                    "key": "CCDirectorIOS.h"
+                }, 
+                "cocos2d.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "cocos2d.h", 
+                    "key": "cocos2d.h"
+                }, 
+                "CCAction.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCAction.h", 
+                    "key": "CCAction.h"
+                }, 
+                "CCSpriteBatchNode.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCSpriteBatchNode.h", 
+                    "key": "CCSpriteBatchNode.h"
+                }, 
+                "CCTMXObjectGroup.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTMXObjectGroup.h", 
+                    "key": "CCTMXObjectGroup.h"
+                }, 
+                "uthash.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "uthash.h", 
+                    "key": "uthash.h"
+                }, 
+                "CCPhysicsSprite.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCPhysicsSprite.h", 
+                    "key": "CCPhysicsSprite.h"
+                }, 
+                "CCTMXXMLParser.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTMXXMLParser.h", 
+                    "key": "CCTMXXMLParser.h"
+                }, 
+                "ccTypes.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccTypes.h", 
+                    "key": "ccTypes.h"
+                }, 
+                "CCActionCamera.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionCamera.h", 
+                    "key": "CCActionCamera.h"
+                }, 
+                "ccShader_PositionTextureA8Color_vert.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionTextureA8Color_vert.h", 
+                    "key": "ccShader_PositionTextureA8Color_vert.h"
+                }, 
+                "CDConfig.h": {
+                    "prefix": "FlashCardsiOS/libs/CocosDenshion/", 
+                    "suffix": "CDConfig.h", 
+                    "key": "CDConfig.h"
+                }, 
+                "CCLabelTTF.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCLabelTTF.h", 
+                    "key": "CCLabelTTF.h"
+                }, 
+                "CCDrawingPrimitives.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCDrawingPrimitives.h", 
+                    "key": "CCDrawingPrimitives.h"
+                }, 
+                "ccShader_Position_uColor_vert.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_Position_uColor_vert.h", 
+                    "key": "ccShader_Position_uColor_vert.h"
+                }, 
+                "mat4stack.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/GL/", 
+                    "suffix": "mat4stack.h", 
+                    "key": "mat4stack.h"
+                }, 
+                "CCNS.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/", 
+                    "suffix": "CCNS.h", 
+                    "key": "CCNS.h"
+                }, 
+                "CCTileMapAtlas.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTileMapAtlas.h", 
+                    "key": "CCTileMapAtlas.h"
+                }, 
+                "CCTMXLayer.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTMXLayer.h", 
+                    "key": "CCTMXLayer.h"
+                }, 
+                "CCActionInstant.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionInstant.h", 
+                    "key": "CCActionInstant.h"
+                }, 
+                "CCSpriteFrame.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCSpriteFrame.h", 
+                    "key": "CCSpriteFrame.h"
+                }, 
+                "CCScheduler.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCScheduler.h", 
+                    "key": "CCScheduler.h"
+                }, 
+                "ccShader_PositionTextureColorAlphaTest_frag.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionTextureColorAlphaTest_frag.h", 
+                    "key": "ccShader_PositionTextureColorAlphaTest_frag.h"
+                }, 
+                "CCESRenderer.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/", 
+                    "suffix": "CCESRenderer.h", 
+                    "key": "CCESRenderer.h"
+                }, 
+                "CCTransitionPageTurn.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTransitionPageTurn.h", 
+                    "key": "CCTransitionPageTurn.h"
+                }, 
+                "base64.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "base64.h", 
+                    "key": "base64.h"
+                }, 
+                "ccDeprecated.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccDeprecated.h", 
+                    "key": "ccDeprecated.h"
+                }, 
+                "CCParticleBatchNode.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCParticleBatchNode.h", 
+                    "key": "CCParticleBatchNode.h"
+                }, 
+                "ccShader_PositionTextureA8Color_frag.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionTextureA8Color_frag.h", 
+                    "key": "ccShader_PositionTextureA8Color_frag.h"
+                }, 
+                "CCActionGrid.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCActionGrid.h", 
+                    "key": "CCActionGrid.h"
+                }, 
+                "CCGLView.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/iOS/", 
+                    "suffix": "CCGLView.h", 
+                    "key": "CCGLView.h"
+                }, 
+                "CCParticleSystemQuad.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCParticleSystemQuad.h", 
+                    "key": "CCParticleSystemQuad.h"
+                }, 
+                "vec2.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "vec2.h", 
+                    "key": "vec2.h"
+                }, 
+                "ccMacros.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccMacros.h", 
+                    "key": "ccMacros.h"
+                }, 
+                "ccShader_PositionTexture_vert.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionTexture_vert.h", 
+                    "key": "ccShader_PositionTexture_vert.h"
+                }, 
+                "CCLabelAtlas.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCLabelAtlas.h", 
+                    "key": "CCLabelAtlas.h"
+                }, 
+                "AppDelegate.h": {
+                    "prefix": "FlashCardsiOS/", 
+                    "suffix": "AppDelegate.h", 
+                    "key": "AppDelegate.h"
+                }, 
+                "mat3.h": {
+                    "prefix": "FlashCardsiOS/libs/kazmath/include/kazmath/", 
+                    "suffix": "mat3.h", 
+                    "key": "mat3.h"
+                }, 
+                "CCTexture2D.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTexture2D.h", 
+                    "key": "CCTexture2D.h"
+                }, 
+                "CCTextureAtlas.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTextureAtlas.h", 
+                    "key": "CCTextureAtlas.h"
+                }, 
+                "ccShader_PositionColorLengthTexture_vert.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionColorLengthTexture_vert.h", 
+                    "key": "ccShader_PositionColorLengthTexture_vert.h"
+                }, 
+                "CCWindow.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Platforms/Mac/", 
+                    "suffix": "CCWindow.h", 
+                    "key": "CCWindow.h"
+                }, 
+                "CCShaderCache.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCShaderCache.h", 
+                    "key": "CCShaderCache.h"
+                }, 
+                "CCProgressTimer.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCProgressTimer.h", 
+                    "key": "CCProgressTimer.h"
+                }, 
+                "CCNode.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCNode.h", 
+                    "key": "CCNode.h"
+                }, 
+                "CCTexturePVR.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCTexturePVR.h", 
+                    "key": "CCTexturePVR.h"
+                }, 
+                "ccUtils.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/Support/", 
+                    "suffix": "ccUtils.h", 
+                    "key": "ccUtils.h"
+                }, 
+                "ccShader_PositionTexture_frag.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "ccShader_PositionTexture_frag.h", 
+                    "key": "ccShader_PositionTexture_frag.h"
+                }, 
+                "CCDirector.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCDirector.h", 
+                    "key": "CCDirector.h"
+                }, 
+                "CCMenuItem.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCMenuItem.h", 
+                    "key": "CCMenuItem.h"
+                }, 
+                "CCCamera.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCCamera.h", 
+                    "key": "CCCamera.h"
+                }, 
+                "CCNode+Debug.h": {
+                    "prefix": "FlashCardsiOS/libs/cocos2d/", 
+                    "suffix": "CCNode+Debug.h", 
+                    "key": "CCNode+Debug.h"
+                }
+            }
+        }, 
+        {
+            "type": "I", 
+            "header_path": "FlashCardsiOS/libs/kazmath/include"
+        }
+    ], 
+    "modules": [], 
+    "version": "1", 
+    "flags": [
+        "-fwritable-strings", 
+        "-fasm-blocks", 
+        {
+            "flag": "-std=gnu99", 
+            "not_type": "c++"
+        }, 
+        {
+            "flag": "-fgnu-keywords", 
+            "not_type": "c++"
+        }, 
+        "-fno-asm", 
+        "-fpascal-strings", 
+        "-Wno-deprecated-declarations", 
+        "-Wreturn-type", 
+        "-Wswitch", 
+        "-Wparentheses", 
+        "-Wformat", 
+        "-Wunused-value", 
+        "-Wunused-variable", 
+        {
+            "flag": "-Winvalid-offsetof", 
+            "type": "c++"
+        }, 
+        {
+            "flag": "-Wprotocol", 
+            "type": "objc"
+        }
+    ], 
+    "deps": [
+        "UIKit", 
+        "QuartzCore", 
+        "OpenGLES", 
+        "OpenAL", 
+        "AudioToolbox", 
+        "AVFoundation", 
+        "UIKit", 
+        "Foundation", 
+        "CoreGraphics", 
+        "CoreText", 
+        "GameKit"
+    ], 
+    "config": {
+        "APPLICATION_NAME": "FlashCardsiOS", 
+        "TEMPLATE_VALUES": {
+            "PRODUCT_NAME": "FlashCardsiOS", 
+            "EXECUTABLE_NAME": "FlashCardsiOS"
+        }, 
+        "LONG_VERSION": "1.0", 
+        "APPLICATION_FULL_NAME": "FlashCardsiOS", 
+        "APPLICATION_IDENTIFIER": "com.yourcompany.FlashCardsiOS"
+    }
+}
