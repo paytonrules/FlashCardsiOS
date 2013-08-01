@@ -9,7 +9,6 @@
 
 // Import the interfaces
 #import "FlashCards.h"
-#import "HelloWorldLayer.h"
 
 
 #pragma mark - IntroLayer
@@ -41,7 +40,7 @@
 		CGSize size = [[CCDirector sharedDirector] winSize];
 
 		CCSprite *background;		
-    background = [CCSprite spriteWithFile:@"Default-Landscape~ipad.png"];
+    background = [CCSprite spriteWithFile:@"background.jpg"];
 		background.position = ccp(size.width/2, size.height/2);
 
 		// add the label as a child to this Layer
