@@ -1,6 +1,6 @@
 #import "FlashCards.h"
 #import "CardSprite.h"
-
+#import "SimpleAudioEngine.h"
 
 @implementation FlashCards
 
@@ -34,6 +34,9 @@
     CardSprite *bug;
     bug = [[[CardSprite alloc] initWithFile:@"Enemy Bug.png"] autorelease];
     bug.position = ccp(200, 600);
+    
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Powerup.wav"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
     
 		// add the label as a child to this Layer
 		[self addChild: background];

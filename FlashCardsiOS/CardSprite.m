@@ -8,7 +8,7 @@
 
 #import "CardSprite.h"
 #import "Card.h"
-#import "CocosDenshion.h"
+#import "SimpleAudioEngine.h"
 
 @interface CardSprite ()
 @property(strong) Card *card;
@@ -59,11 +59,12 @@
 
 -(void) correct
 {
-  
+  [[SimpleAudioEngine sharedEngine] playEffect:@"Powerup.wav"];
 }
 
 -(void) incorrect
 {
+  [[SimpleAudioEngine sharedEngine] playEffect:@"jump.wav"];
 }
 
 - (void)dealloc
