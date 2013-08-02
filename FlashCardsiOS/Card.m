@@ -25,10 +25,8 @@
   return tempCard;
 }
 
--(void) tap:(CGPoint) location
+-(void) tap
 {
-  if (CGRectContainsPoint(self.view.boundingBox, location))
-  {
     if (self.current)
     {
       [self.view correct];
@@ -37,7 +35,6 @@
     {
       [self.view incorrect];
     }
-  }
 }
 
 -(void) makeCurrent

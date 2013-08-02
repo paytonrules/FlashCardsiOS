@@ -9,10 +9,9 @@
 #import "CardSprite.h"
 #import "Card.h"
 
-@interface CardSprite () {
-  Card *card;
-}
-
+@interface CardSprite ()
+@property(strong) Card *card;
+@property(readonly) CGRect rectInPixels;
 @end
 
 @implementation CardSprite
@@ -22,7 +21,8 @@
   self = [super initWithFile:fileName];
   if (self)
   {
-    card = [[Card alloc] init];
+    self.card = [Card cardWithView:self];
+    [self.card makeCurrent];
     
     //Note - this isn't real optimized
     CCDirector* pDirector = [CCDirector sharedDirector];
@@ -32,18 +32,41 @@
   return self;
 }
 
+-(CGRect) rectInPixels
+{
+  CGSize s = [self.texture contentSizeInPixels];
+	return CGRectMake(-s.width / 2, -s.height / 2, s.width, s.height);
+}
+
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-  return NO;
+  // these two lines seem testable
+  CGPoint point = [self convertTouchToNodeSpaceAR:touch];
+  if (CGRectContainsPoint(self.rectInPixels, point))
+  {
+    [self setScale:1.2f];
+    return true;
+  }
+  return false;
 }
 
 -(void) ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+  [self setScale:1.0f];
+  [self.card tap];
+}
+
+-(void) correct
+{
+}
+
+-(void) incorrect
 {
 }
 
 - (void)dealloc
 {
-  [card release];
+  [self.card release];
   [super dealloc];
 }
 

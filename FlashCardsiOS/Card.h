@@ -4,7 +4,7 @@
 
 @interface Card : NSObject
 
--(void) tap:(CGPoint) location;
+-(void) tap;
 -(void) makeCurrent;
 +(Card *) cardWithView:(NSObject<CardView> *)view;
 

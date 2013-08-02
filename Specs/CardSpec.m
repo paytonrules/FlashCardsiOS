@@ -12,9 +12,7 @@ OCDSpec2Context(CardSpec) {
     __block Card *card;
     
     BeforeEach(^{
-      rect = CGRectMake(0, 0, 10, 10);
       view = [OCMockObject mockForProtocol:@protocol(CardView)];
-      [[[view stub] andReturnValue: OCMOCK_VALUE(rect)] boundingBox];
       card = [Card cardWithView: view];
     });
     
@@ -22,7 +20,7 @@ OCDSpec2Context(CardSpec) {
       [[view expect] correct];
       
       [card makeCurrent];
-      [card tap:CGPointMake(1, 1)];
+      [card tap];
       
       [view verify];
     });
@@ -30,21 +28,10 @@ OCDSpec2Context(CardSpec) {
     It(@"says its incorrect if this is the wrong card", ^{
       [[view expect] incorrect];
       
-      [card tap:CGPointMake(1, 1)];
+      [card tap];
       
       [view verify];
     });
-    
-    It(@"doesnt say its chosen correctly or incorrectly if the tap is not in the bounding box", ^{
-      [[view reject] correct];
-      [[view reject] incorrect];
-      
-      [card makeCurrent];
-      [card tap:CGPointMake(11, 11)];
-      
-      [view verify];
-    });
-
   });
   
 }
