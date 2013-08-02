@@ -1,13 +1,11 @@
-//
-//  Card.h
-//  FlashCardsiOS
-//
-//  Created by Eric Smith on 8/1/13.
-//  Copyright (c) 2013 Eric Smith. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
+#import "CardView.h"
 
 @interface Card : NSObject
+
+-(void) tap:(CGPoint) location;
+-(void) makeCurrent;
++(Card *) cardWithView:(NSObject<CardView> *)view;
 
 @end

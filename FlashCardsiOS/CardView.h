@@ -10,4 +10,8 @@
 
 @protocol CardView <NSObject>
 
+-(void) correct;
+-(void) incorrect;
+@property(readonly) CGRect boundingBox;
+
 @end
