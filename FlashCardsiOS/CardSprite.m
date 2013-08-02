@@ -8,6 +8,7 @@
 
 #import "CardSprite.h"
 #import "Card.h"
+#import "CocosDenshion.h"
 
 @interface CardSprite ()
 @property(strong) Card *card;
@@ -58,6 +59,7 @@
 
 -(void) correct
 {
+  
 }
 
 -(void) incorrect

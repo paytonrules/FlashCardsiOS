@@ -152,6 +152,11 @@
 		074D896817AA822000985CD3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896717AA822000985CD3 /* Card.m */; };
 		074D896A17AA833D00985CD3 /* CardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896917AA833D00985CD3 /* CardSpec.m */; };
 		074D896B17AA834E00985CD3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896717AA822000985CD3 /* Card.m */; };
+		07DE97D917ABDC710013AFDC /* bug.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D417ABDC710013AFDC /* bug.mp3 */; };
+		07DE97DA17ABDC710013AFDC /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D517ABDC710013AFDC /* jump.wav */; };
+		07DE97DB17ABDC710013AFDC /* Powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D617ABDC710013AFDC /* Powerup.wav */; };
+		07DE97DC17ABDC710013AFDC /* star.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D717ABDC710013AFDC /* star.mp3 */; };
+		07DE97DD17ABDC710013AFDC /* tree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D817ABDC710013AFDC /* tree.mp3 */; };
 		A35EDC01BFAD4772AE508509 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA5749873D4856ADDDAF27 /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
 
@@ -488,6 +493,11 @@
 		074D896717AA822000985CD3 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		074D896917AA833D00985CD3 /* CardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSpec.m; sourceTree = "<group>"; };
 		074D896C17AA860500985CD3 /* CardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		07DE97D417ABDC710013AFDC /* bug.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bug.mp3; sourceTree = "<group>"; };
+		07DE97D517ABDC710013AFDC /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		07DE97D617ABDC710013AFDC /* Powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Powerup.wav; sourceTree = "<group>"; };
+		07DE97D717ABDC710013AFDC /* star.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = star.mp3; sourceTree = "<group>"; };
+		07DE97D817ABDC710013AFDC /* tree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tree.mp3; sourceTree = "<group>"; };
 		385674D539444B7D952A1309 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -578,6 +588,11 @@
 		074D878B17AA1BD300985CD3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				07DE97D417ABDC710013AFDC /* bug.mp3 */,
+				07DE97D517ABDC710013AFDC /* jump.wav */,
+				07DE97D617ABDC710013AFDC /* Powerup.wav */,
+				07DE97D717ABDC710013AFDC /* star.mp3 */,
+				07DE97D817ABDC710013AFDC /* tree.mp3 */,
 				074D896317AA818C00985CD3 /* Enemy Bug.png */,
 				074D895717AA20A500985CD3 /* background.jpg */,
 				074D878C17AA1BD300985CD3 /* Default.png */,
@@ -1159,6 +1174,11 @@
 				074D88FB17AA1BD500985CD3 /* ChangeLog in Resources */,
 				074D895817AA20A500985CD3 /* background.jpg in Resources */,
 				074D896417AA818C00985CD3 /* Enemy Bug.png in Resources */,
+				07DE97D917ABDC710013AFDC /* bug.mp3 in Resources */,
+				07DE97DA17ABDC710013AFDC /* jump.wav in Resources */,
+				07DE97DB17ABDC710013AFDC /* Powerup.wav in Resources */,
+				07DE97DC17ABDC710013AFDC /* star.mp3 in Resources */,
+				07DE97DD17ABDC710013AFDC /* tree.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
