@@ -1,11 +1,11 @@
 #import <OCDSpec2/OCDSpec2.h>
 #import <OCMock/OCMock.h>
 #import "FirstLesson.h"
-#import "TableFactory.h"
+#import "SpriteTableLookupFactory.h"
 #import "RandomNumberGenerator.h"
 #import "CardInfo.h"
 
-@interface SimpleTableFactory : NSObject<TableFactory>
+@interface SimpleTableFactory : NSObject<SpriteTableLookupFactory>
 @end
 
 @implementation SimpleTableFactory
@@ -37,9 +37,9 @@ OCDSpec2Context(FirstLessonSpec) {
     
     It(@"starts by creating a sprite from a card", ^{
       NSObject<RandomNumberGenerator> *simpleGenerator = [SimpleRandomNumberGenerator new];
-      NSObject<TableFactory> *tableFactory = [SimpleTableFactory new];
+      NSObject<SpriteTableLookupFactory> *tableFactory = [SimpleTableFactory new];
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
-      CGPoint location = CGPointMake(0, 0);
+      CGPoint location = CGPointMake(2, 4);
       
       NSObject<Lesson> *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
                                                   andRandomNumberGenerator: simpleGenerator];
