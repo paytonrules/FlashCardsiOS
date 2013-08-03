@@ -157,6 +157,9 @@
 		07DE97DB17ABDC710013AFDC /* Powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D617ABDC710013AFDC /* Powerup.wav */; };
 		07DE97DC17ABDC710013AFDC /* star.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D717ABDC710013AFDC /* star.mp3 */; };
 		07DE97DD17ABDC710013AFDC /* tree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D817ABDC710013AFDC /* tree.mp3 */; };
+		07DE97EA17AD55FD0013AFDC /* FirstLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97E917AD55FD0013AFDC /* FirstLesson.m */; };
+		07DE97EB17AD56D10013AFDC /* FirstLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97E917AD55FD0013AFDC /* FirstLesson.m */; };
+		07DE97ED17AD58120013AFDC /* FirstLessonSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97EC17AD58120013AFDC /* FirstLessonSpec.m */; };
 		A35EDC01BFAD4772AE508509 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA5749873D4856ADDDAF27 /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
 
@@ -499,6 +502,10 @@
 		07DE97D717ABDC710013AFDC /* star.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = star.mp3; sourceTree = "<group>"; };
 		07DE97D817ABDC710013AFDC /* tree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tree.mp3; sourceTree = "<group>"; };
 		07DE97E617AD2D8D0013AFDC /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		07DE97E717AD55480013AFDC /* Lesson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lesson.h; sourceTree = "<group>"; };
+		07DE97E817AD55FD0013AFDC /* FirstLesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLesson.h; sourceTree = "<group>"; };
+		07DE97E917AD55FD0013AFDC /* FirstLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLesson.m; sourceTree = "<group>"; };
+		07DE97EC17AD58120013AFDC /* FirstLessonSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLessonSpec.m; sourceTree = "<group>"; };
 		385674D539444B7D952A1309 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -979,6 +986,7 @@
 			children = (
 				074D893317AA1D5200985CD3 /* Supporting Files */,
 				074D896917AA833D00985CD3 /* CardSpec.m */,
+				07DE97EC17AD58120013AFDC /* FirstLessonSpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -1042,6 +1050,9 @@
 				074D896717AA822000985CD3 /* Card.m */,
 				074D896C17AA860500985CD3 /* CardView.h */,
 				07DE97E617AD2D8D0013AFDC /* GameView.h */,
+				07DE97E717AD55480013AFDC /* Lesson.h */,
+				07DE97E817AD55FD0013AFDC /* FirstLesson.h */,
+				07DE97E917AD55FD0013AFDC /* FirstLesson.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -1358,6 +1369,7 @@
 				074D892317AA1BD500985CD3 /* FlashCards.m in Sources */,
 				074D896017AA7CAB00985CD3 /* CardSprite.m in Sources */,
 				074D896817AA822000985CD3 /* Card.m in Sources */,
+				07DE97EA17AD55FD0013AFDC /* FirstLesson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1368,6 +1380,8 @@
 				074D893917AA1D5200985CD3 /* main.m in Sources */,
 				074D896A17AA833D00985CD3 /* CardSpec.m in Sources */,
 				074D896B17AA834E00985CD3 /* Card.m in Sources */,
+				07DE97EB17AD56D10013AFDC /* FirstLesson.m in Sources */,
+				07DE97ED17AD58120013AFDC /* FirstLessonSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,13 @@
 #import "FlashCards.h"
 #import "CardSprite.h"
+#import "FirstLesson.h"
 #import "SimpleAudioEngine.h"
+#import "Lesson.h"
+
+@interface FlashCards()
+
+@property(strong) NSObject<Lesson> *lesson;
+@end
 
 @implementation FlashCards
 
@@ -15,9 +22,16 @@
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
+  
+  [layer startLesson];
 	
 	// return the scene
 	return scene;
+}
+
+-(void) startLesson
+{
+  self.lesson = [FirstLesson startWithView:self];
 }
 
 -(void) createBackground
