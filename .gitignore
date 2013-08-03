@@ -24,3 +24,6 @@ DerivedData
 # apportable
 .arcconfig
 .sconsign.dblite
+FlashCardsiOS.approj/assets
+*.generated
+*.final
