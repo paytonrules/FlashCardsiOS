@@ -20,27 +20,39 @@
 	return scene;
 }
 
-// 
+-(void) createBackground
+{
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    
+    CCSprite *background;		
+    background = [CCSprite spriteWithFile:@"background.jpg"];
+    background.position = ccp(size.width/2, size.height/2);
+    [self addChild: background];
+}
+
+-(void) preloadSoundEffects
+{
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Powerup.wav"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
+}
+
+-(void) addNewSprite:(NSString *)filename atLocation:(CGPoint) location
+{
+  CardSprite *sprite;
+  sprite = [[[CardSprite alloc] initWithFile:filename] autorelease];
+  sprite.position = location;
+  [self addChild: sprite];
+}
+
+// Does this belong in init?  Probably not right
 -(id) init
 {
 	if( (self=[super init])) {
-		// ask director for the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-
-		CCSprite *background;		
-    background = [CCSprite spriteWithFile:@"background.jpg"];
-		background.position = ccp(size.width/2, size.height/2);
+    [self createBackground];
     
-    CardSprite *bug;
-    bug = [[[CardSprite alloc] initWithFile:@"Enemy Bug.png"] autorelease];
-    bug.position = ccp(200, 600);
+    [self addNewSprite:@"Enemy Bug.png" atLocation:ccp(200, 600)];
     
-    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Powerup.wav"];
-    [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
-    
-		// add the label as a child to this Layer
-		[self addChild: background];
-    [self addChild: bug];
+    [self preloadSoundEffects];
 	}
 	
 	return self;
