@@ -1,5 +1,5 @@
 //
-//  GameView.h
+//  RandomNumberGenerator.h
 //  FlashCardsiOS
 //
 //  Created by Eric Smith on 8/3/13.
@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol GameView <NSObject>
--(void) addNewSprite:(NSString *)filename forCard:(NSObject *) card atLocation:(CGPoint) location;
+@protocol RandomNumberGenerator <NSObject>
+
+-(float) next;
+
 @end

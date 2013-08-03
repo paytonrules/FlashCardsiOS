@@ -4,5 +4,6 @@
 @protocol Lesson <NSObject>
 
 +(id) startWithView:(NSObject<GameView> *)view;
+-(void) startWithView:(NSObject<GameView> *)view;
 
 @end
