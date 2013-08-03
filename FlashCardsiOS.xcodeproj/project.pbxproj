@@ -1489,6 +1489,7 @@
 				HEADER_SEARCH_PATHS = (
 					OCDSpec2,
 					"$(inherited)",
+					"\"FlashCardsiOS/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
@@ -1519,6 +1520,7 @@
 				HEADER_SEARCH_PATHS = (
 					OCDSpec2,
 					"$(inherited)",
+					"\"FlashCardsiOS/libs/kazmath/include\"",
 				);
 				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;

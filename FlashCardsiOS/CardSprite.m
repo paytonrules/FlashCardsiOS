@@ -33,17 +33,14 @@
   return self;
 }
 
--(CGRect) rectInPixels
+-(CGSize) textureSize
 {
-  CGSize s = [self.texture contentSizeInPixels];
-	return CGRectMake(-s.width / 2, -s.height / 2, s.width, s.height);
+  return [self.texture contentSizeInPixels];
 }
 
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-  // these two lines seem testable
-  CGPoint point = [self convertTouchToNodeSpaceAR:touch];
-  if (CGRectContainsPoint(self.rectInPixels, point))
+  if ([self.card contains: [self convertTouchToNodeSpaceAR:touch]])
   {
     [self setScale:1.2f];
     return true;

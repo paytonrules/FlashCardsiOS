@@ -6,6 +6,7 @@
 
 -(void) tap;
 -(void) makeCurrent;
+-(BOOL) contains:(CGPoint) nodeSpaceLocation;
 +(Card *) cardWithView:(NSObject<CardView> *)view;
 
 @end
