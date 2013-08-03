@@ -1,4 +1,5 @@
 #import "FlashCards.h"
+#import "Card.h"
 #import "CardSprite.h"
 #import "FirstLesson.h"
 #import "SimpleAudioEngine.h"
@@ -31,7 +32,8 @@
 
 -(void) startLesson
 {
-  self.lesson = [FirstLesson startWithView:self];
+  self.lesson = [FirstLesson new];
+  [self.lesson startWithView:self];
 }
 
 -(void) createBackground
@@ -50,7 +52,7 @@
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
 }
 
--(void) addNewSprite:(NSString *)filename atLocation:(CGPoint) location
+-(void) addNewSprite:(NSString *)filename forCard:(Card *) card atLocation:(CGPoint) location
 {
   CardSprite *sprite;
   sprite = [[[CardSprite alloc] initWithFile:filename] autorelease];
@@ -64,7 +66,7 @@
 	if( (self=[super init])) {
     [self createBackground];
     
-    [self addNewSprite:@"Enemy Bug.png" atLocation:ccp(200, 600)];
+    [self addNewSprite:@"Enemy Bug.png" forCard:nil atLocation:ccp(200, 600)];
     
     [self preloadSoundEffects];
 	}
