@@ -8,5 +8,6 @@
 -(void) makeCurrent;
 -(BOOL) contains:(CGPoint) nodeSpaceLocation;
 +(Card *) cardWithView:(NSObject<CardView> *)view;
+@property(readonly) BOOL current;
 
 @end

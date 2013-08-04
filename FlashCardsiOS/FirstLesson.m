@@ -1,5 +1,6 @@
 #import "FirstLesson.h"
 #import "CardInfo.h"
+#import "Card.h"
 
 @interface FirstLesson()
 @property(strong) NSArray *spriteTable;
@@ -8,6 +9,12 @@
 @end
 
 @implementation FirstLesson
+
++(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory> *)tableFactory
+{
+  return [self lessonWithSpriteTableFactory:tableFactory
+                   andRandomNumberGenerator:nil];
+}
 
 +(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *)generator
 {
@@ -21,7 +28,17 @@
 -(void) startWithView:(NSObject<GameView> *)view
 {
   self.view = view;
-  [self addCard];
+  
+  for (NSValue *cardInfoValue in self.spriteTable)
+  {
+    CardInfo cardInfo;
+    [cardInfoValue getValue:&cardInfo];
+    
+    [self.view addNewSprite: cardInfo.spriteName
+                    forCard: [Card new]
+                 atLocation: cardInfo.location];
+    
+  }
 }
 
 -(void) addCard
@@ -33,7 +50,6 @@
   [self.view addNewSprite: cardInfo.spriteName
              forCard: [NSObject new]
           atLocation: cardInfo.location];
-  
 }
 
 @end

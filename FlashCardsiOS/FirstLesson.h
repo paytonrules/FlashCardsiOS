@@ -6,4 +6,5 @@
 @interface FirstLesson : NSObject<Lesson>
 
 +(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory>*) tableFactory andRandomNumberGenerator:(NSObject<RandomNumberGenerator>*) generator;
++(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory>*) tableFactory;
 @end

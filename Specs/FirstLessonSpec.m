@@ -4,6 +4,7 @@
 #import "SpriteTableLookupFactory.h"
 #import "RandomNumberGenerator.h"
 #import "CardInfo.h"
+#import "Card.h"
 
 CardInfo *createCard(NSString *name, int x, int y)
 {
@@ -16,12 +17,12 @@ CardInfo *createCard(NSString *name, int x, int y)
 
 @interface SimpleTableFactory : NSObject<SpriteTableLookupFactory>
 @property(strong) NSArray *cards;
-+(id) factoryWithCards:(CardInfo *)card, ... NS_REQUIRES_NIL_TERMINATION;
++(id) factoryWithVisibleCards:(CardInfo *)card, ... NS_REQUIRES_NIL_TERMINATION;
 @end
 
 @implementation SimpleTableFactory
 
-+(id) factoryWithCards:(CardInfo *) card, ...
++(id) factoryWithVisibleCards:(CardInfo *) card, ...
 {
   NSMutableArray *cards = [NSMutableArray array];
   va_list args;
@@ -82,34 +83,79 @@ OCDSpec2Context(FirstLessonSpec) {
   
   Describe(@"The first lesson", ^{
     
-    It(@"starts by creating a sprite from a card", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
-                                                           initWithRandomNumbers:@[@0]];
-      
+    It(@"starts by putting the visible sprites on the screen", ^{
       NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
-                                                         factoryWithCards:createCard(@"huzzah", 2, 4), nil];
+                                                         factoryWithVisibleCards:
+                                                            createCard(@"huzzah", 2, 4),
+                                                            nil];
       
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
-      CGPoint location = CGPointMake(2, 4);
       
-      NSObject<Lesson> *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
-                                                  andRandomNumberGenerator: simpleGenerator];
+      NSObject<Lesson> *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory];
       
       [[view expect] addNewSprite:@"huzzah"
                           forCard:[OCMArg any]
-                       atLocation:location];
+                       atLocation:CGPointMake(2, 4)];
       
       [lesson startWithView:view];
       
       [view verify];
     });
     
+    It(@"puts ALL the visible cards on screen", ^{
+      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+                                                         factoryWithVisibleCards:
+                                                            createCard(@"huzzah", 2, 4),
+                                                            createCard(@"alsoHuzzah", 1, 3),
+                                                            nil];
+      
+      id view = [OCMockObject mockForProtocol:@protocol(GameView)];
+      
+      NSObject<Lesson> *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory];
+      
+      [[view expect] addNewSprite:@"huzzah"
+                          forCard:[OCMArg any]
+                       atLocation:CGPointMake(2, 4)];
+      
+      [[view expect] addNewSprite:@"alsoHuzzah"
+                          forCard:[OCMArg any]
+                       atLocation:CGPointMake(1, 3)];
+      
+      [lesson startWithView:view];
+      
+      [view verify];
+    });
+    
+    It(@"creates a new card for each of the visible card structures", ^{
+      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+                                                         factoryWithVisibleCards:
+                                                         createCard(@"huzzah", 2, 4),
+                                                         nil];
+      
+      id view = [OCMockObject mockForProtocol:@protocol(GameView)];
+      
+      NSObject<Lesson> *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory];
+      
+      [[view expect] addNewSprite:[OCMArg any]
+                           forCard:[OCMArg checkWithBlock:^BOOL(id value) { return [value isKindOfClass:[Card class]]; }]
+                        atLocation:CGPointMake(2, 4)];
+      
+      [lesson startWithView:view];
+      
+      [view verify];
+    });
+    
+    // Need an actual table lookup, and a table lookup factory.
+    // Need to start the game - see the commented test below.
+    // Need to make the default first lesson use those
+
+   /*
     It(@"chooses the next sprite based on the random number and the length of the list", ^{
       NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
                                                             initWithRandomNumbers:@[@0, @1]];
       
       NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
-                                                         factoryWithCards:createCard(@"huzzah", 2, 4),
+                                                         factoryWithVisibleCards:createCard(@"huzzah", 2, 4),
                                                                           createCard(@"again", 1, 1),
                                                                           nil];
       
@@ -130,11 +176,9 @@ OCDSpec2Context(FirstLessonSpec) {
       [lesson addCard];
       
       [view verify];
-    });
+    });*/ 
     
-    // Need an actual random number generator
-    // Need an actual table lookup
-    // Need to make the default first lesson use those
+
     
     
   });

@@ -5,6 +5,12 @@
 
 OCDSpec2Context(CardSpec) {
   
+  Describe(@"Can be created without a view", ^{
+    Card *card = [Card new];
+    
+    [ExpectBool(card.current) toBeFalse];
+  });
+  
   Describe(@"tapping the card", ^{
     
     __block id view;

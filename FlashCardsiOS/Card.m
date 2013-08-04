@@ -4,6 +4,7 @@
 
 @property(strong) NSObject<CardView> *view;
 @property(assign) BOOL current;
+
 @end
 
 @implementation Card
