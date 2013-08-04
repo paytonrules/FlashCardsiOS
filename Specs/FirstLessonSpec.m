@@ -25,9 +25,9 @@
 
 @implementation SimpleRandomNumberGenerator
 
--(float) next
+-(int) next
 {
-  return 0.0;
+  return 0;
 }
 @end
 
@@ -54,6 +54,12 @@ OCDSpec2Context(FirstLessonSpec) {
       
       [view verify];
     });
+    
+    // Need an actual random number generator
+    // Need a table lookup
+    // Need to make the first lesson use those
+    // Need to cycle on success (ergo state machine)
+    
     
   });
   

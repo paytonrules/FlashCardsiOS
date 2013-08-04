@@ -10,6 +10,6 @@
 
 @protocol RandomNumberGenerator <NSObject>
 
--(float) next;
+-(int) next;
 
 @end
