@@ -4,6 +4,7 @@
 @interface FirstLesson()
 @property(strong) NSArray *spriteTable;
 @property(strong) NSObject<RandomNumberGenerator> *randomNumberGenerator;
+@property(strong) NSObject<GameView> *view;
 @end
 
 @implementation FirstLesson
@@ -19,13 +20,20 @@
 
 -(void) startWithView:(NSObject<GameView> *)view
 {
+  self.view = view;
+  [self addCard];
+}
+
+-(void) addCard
+{
   NSValue *cardInfoValue = [self.spriteTable objectAtIndex:[self.randomNumberGenerator next]];
   CardInfo cardInfo;
   [cardInfoValue getValue:&cardInfo];
   
-  [view addNewSprite: cardInfo.spriteName
+  [self.view addNewSprite: cardInfo.spriteName
              forCard: [NSObject new]
           atLocation: cardInfo.location];
+  
 }
 
 @end
