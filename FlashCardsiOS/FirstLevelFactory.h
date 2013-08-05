@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
-#import "SpriteTableLookupFactory.h"
+#import "CardLookupFactory.h"
 
-@interface FirstLevelFactory : NSObject<SpriteTableLookupFactory>
+@interface FirstLevelFactory : NSObject<CardLookupFactory>
 
 @end

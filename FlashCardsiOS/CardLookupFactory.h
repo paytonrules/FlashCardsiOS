@@ -1,7 +1,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol SpriteTableLookupFactory <NSObject>
+@protocol CardLookupFactory <NSObject>
 
 -(NSArray *) create;
 

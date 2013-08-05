@@ -19,7 +19,7 @@
               andRandomNumberGenerator:[[StandardRandomNumberGenerator new] autorelease]];
 }
 
--(id) initWithCardInfoFactory:(NSObject<SpriteTableLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *) generator
+-(id) initWithCardInfoFactory:(NSObject<CardLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *) generator
 {
   self = [super init];
   if (self) {
@@ -30,13 +30,13 @@
   return self;
 }
 
-+(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory> *)tableFactory
++(id) lessonWithSpriteTableFactory:(NSObject<CardLookupFactory> *)tableFactory
 {
   return [self lessonWithSpriteTableFactory:tableFactory
                    andRandomNumberGenerator:nil];
 }
 
-+(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *)generator
++(id) lessonWithSpriteTableFactory:(NSObject<CardLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *)generator
 {
   return[[[FirstLesson alloc] initWithCardInfoFactory:factory
                              andRandomNumberGenerator:generator] autorelease];

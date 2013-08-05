@@ -1,12 +1,12 @@
-#import "SimpleTableFactory.h"
+#import "SimpleCardLookupFactory.h"
 
-@interface SimpleTableFactory()
+@interface SimpleCardLookupFactory()
 
 @property(strong) NSArray *cards;
 
 @end
 
-@implementation SimpleTableFactory
+@implementation SimpleCardLookupFactory
 
 +(id) factoryWithCards:(CardInfo *) card, ...
 {
@@ -19,7 +19,7 @@
   }
   va_end(args);
   
-  return [[[SimpleTableFactory alloc] initWithCards:cards] autorelease];
+  return [[[SimpleCardLookupFactory alloc] initWithCards:cards] autorelease];
 }
 
 -(id) initWithCards:(NSArray *) cards

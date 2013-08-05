@@ -169,8 +169,8 @@
 		07DE980417AF294D0013AFDC /* CardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980217AF294D0013AFDC /* CardInfo.m */; };
 		07DE980717AF31A50013AFDC /* FirstLevelFactorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980617AF31A50013AFDC /* FirstLevelFactorySpec.m */; };
 		07DE980E17AF33CC0013AFDC /* FirstLevelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F917AF22E00013AFDC /* FirstLevelFactory.m */; };
-		07DE981117AF36220013AFDC /* SimpleTableFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE981017AF36210013AFDC /* SimpleTableFactory.m */; };
-		07DE981217AF36220013AFDC /* SimpleTableFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE981017AF36210013AFDC /* SimpleTableFactory.m */; };
+		07DE981117AF36220013AFDC /* SimpleCardLookupFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE981017AF36210013AFDC /* SimpleCardLookupFactory.m */; };
+		07DE981217AF36220013AFDC /* SimpleCardLookupFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE981017AF36210013AFDC /* SimpleCardLookupFactory.m */; };
 		07DE981517AF37AC0013AFDC /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DE981317AF37AC0013AFDC /* Star.png */; };
 		07DE981617AF37AC0013AFDC /* Tree Tall.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DE981417AF37AC0013AFDC /* Tree Tall.png */; };
 		A35EDC01BFAD4772AE508509 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA5749873D4856ADDDAF27 /* libPods-Specs.a */; };
@@ -519,7 +519,7 @@
 		07DE97E817AD55FD0013AFDC /* FirstLesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLesson.h; sourceTree = "<group>"; };
 		07DE97E917AD55FD0013AFDC /* FirstLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLesson.m; sourceTree = "<group>"; };
 		07DE97EC17AD58120013AFDC /* FirstLessonSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLessonSpec.m; sourceTree = "<group>"; };
-		07DE97EE17AD61A00013AFDC /* SpriteTableLookupFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteTableLookupFactory.h; sourceTree = "<group>"; };
+		07DE97EE17AD61A00013AFDC /* CardLookupFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardLookupFactory.h; sourceTree = "<group>"; };
 		07DE97EF17AD651C0013AFDC /* RandomNumberGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomNumberGenerator.h; sourceTree = "<group>"; };
 		07DE97F017AD667E0013AFDC /* CardInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardInfo.h; sourceTree = "<group>"; };
 		07DE97F117AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardRandomNumberGeneratorSpec.m; sourceTree = "<group>"; };
@@ -530,8 +530,8 @@
 		07DE980017AF28890013AFDC /* CardInfoSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardInfoSpec.m; sourceTree = "<group>"; };
 		07DE980217AF294D0013AFDC /* CardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardInfo.m; sourceTree = "<group>"; };
 		07DE980617AF31A50013AFDC /* FirstLevelFactorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLevelFactorySpec.m; sourceTree = "<group>"; };
-		07DE980F17AF36210013AFDC /* SimpleTableFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableFactory.h; sourceTree = "<group>"; };
-		07DE981017AF36210013AFDC /* SimpleTableFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableFactory.m; sourceTree = "<group>"; };
+		07DE980F17AF36210013AFDC /* SimpleCardLookupFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCardLookupFactory.h; sourceTree = "<group>"; };
+		07DE981017AF36210013AFDC /* SimpleCardLookupFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCardLookupFactory.m; sourceTree = "<group>"; };
 		07DE981317AF37AC0013AFDC /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		07DE981417AF37AC0013AFDC /* Tree Tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree Tall.png"; sourceTree = "<group>"; };
 		385674D539444B7D952A1309 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
@@ -1086,7 +1086,7 @@
 				07DE97E717AD55480013AFDC /* Lesson.h */,
 				07DE97E817AD55FD0013AFDC /* FirstLesson.h */,
 				07DE97E917AD55FD0013AFDC /* FirstLesson.m */,
-				07DE97EE17AD61A00013AFDC /* SpriteTableLookupFactory.h */,
+				07DE97EE17AD61A00013AFDC /* CardLookupFactory.h */,
 				07DE97EF17AD651C0013AFDC /* RandomNumberGenerator.h */,
 				07DE97F017AD667E0013AFDC /* CardInfo.h */,
 				07DE980217AF294D0013AFDC /* CardInfo.m */,
@@ -1094,8 +1094,8 @@
 				07DE97F417AE802F0013AFDC /* StandardRandomNumberGenerator.m */,
 				07DE97F817AF22E00013AFDC /* FirstLevelFactory.h */,
 				07DE97F917AF22E00013AFDC /* FirstLevelFactory.m */,
-				07DE980F17AF36210013AFDC /* SimpleTableFactory.h */,
-				07DE981017AF36210013AFDC /* SimpleTableFactory.m */,
+				07DE980F17AF36210013AFDC /* SimpleCardLookupFactory.h */,
+				07DE981017AF36210013AFDC /* SimpleCardLookupFactory.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -1418,7 +1418,7 @@
 				07DE97F517AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */,
 				07DE97FA17AF22E00013AFDC /* FirstLevelFactory.m in Sources */,
 				07DE980317AF294D0013AFDC /* CardInfo.m in Sources */,
-				07DE981117AF36220013AFDC /* SimpleTableFactory.m in Sources */,
+				07DE981117AF36220013AFDC /* SimpleCardLookupFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1437,7 +1437,7 @@
 				07DE980417AF294D0013AFDC /* CardInfo.m in Sources */,
 				07DE980717AF31A50013AFDC /* FirstLevelFactorySpec.m in Sources */,
 				07DE980E17AF33CC0013AFDC /* FirstLevelFactory.m in Sources */,
-				07DE981217AF36220013AFDC /* SimpleTableFactory.m in Sources */,
+				07DE981217AF36220013AFDC /* SimpleCardLookupFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,7 @@
 #import <OCDSpec2/OCDSpec2.h>
 #import <OCMock/OCMock.h>
 #import "FirstLesson.h"
-#import "SimpleTableFactory.h"
+#import "SimpleCardLookupFactory.h"
 #import "RandomNumberGenerator.h"
 #import "CardInfo.h"
 #import "Card.h"
@@ -38,7 +38,7 @@ OCDSpec2Context(FirstLessonSpec) {
   Describe(@"The first lesson", ^{
     
     It(@"starts by putting the visible sprites on the screen", ^{
-      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+      NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
                                                             createCard(@"huzzah", 2, 4),
                                                             nil];
@@ -57,7 +57,7 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"puts ALL the visible cards on screen", ^{
-      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+      NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
                                                             createCard(@"huzzah", 2, 4),
                                                             createCard(@"alsoHuzzah", 1, 3),
@@ -81,7 +81,7 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"creates a new card for each of the card structures", ^{
-      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+      NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
                                                          createCard(@"huzzah", 2, 4),
                                                          nil];
@@ -103,7 +103,7 @@ OCDSpec2Context(FirstLessonSpec) {
       NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
                                                             initWithRandomNumbers:@[@0]] autorelease];
 
-      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+      NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
                                                          createCard(@"huzzah", 2, 4),
                                                          nil];
@@ -124,7 +124,7 @@ OCDSpec2Context(FirstLessonSpec) {
       NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
                                                           initWithRandomNumbers:@[@2]] autorelease];
       
-      NSObject<SpriteTableLookupFactory> *tableFactory = [SimpleTableFactory factoryWithCards:
+      NSObject<CardLookupFactory> *tableFactory = [SimpleCardLookupFactory factoryWithCards:
                                                          createCard(@"huzzah", 2, 4),
                                                          createCard(@"hullo", 1, 3),
                                                          nil];
@@ -145,7 +145,7 @@ OCDSpec2Context(FirstLessonSpec) {
       NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
                                                           initWithRandomNumbers:@[@3]] autorelease];
       
-      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+      NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
                                                          createCard(@"huzzah", 2, 4),
                                                          createCard(@"hullo", 1, 3),
@@ -167,7 +167,7 @@ OCDSpec2Context(FirstLessonSpec) {
       NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
                                                           initWithRandomNumbers:@[@4]] autorelease];
       
-      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+      NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
                                                          createCard(@"huzzah", 2, 4),
                                                          createCard(@"james", 2, 4),

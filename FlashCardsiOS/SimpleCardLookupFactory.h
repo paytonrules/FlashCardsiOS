@@ -1,8 +1,8 @@
 #import <UIKit/UIKit.h>
 #import "CardInfo.h"
-#import "SpriteTableLookupFactory.h"
+#import "CardLookupFactory.h"
 
-@interface SimpleTableFactory : NSObject<SpriteTableLookupFactory>
+@interface SimpleCardLookupFactory : NSObject<CardLookupFactory>
 
 +(id) factoryWithCards:(CardInfo *)card, ... NS_REQUIRES_NIL_TERMINATION;
 
