@@ -45,6 +45,7 @@
 {
   self.lesson = [FirstLesson new];
   [self.lesson startWithView:self];
+  [self.lesson readFlashCard];
 }
 
 -(void) createBackground
