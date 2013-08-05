@@ -1,56 +1,10 @@
 #import <OCDSpec2/OCDSpec2.h>
 #import <OCMock/OCMock.h>
 #import "FirstLesson.h"
-#import "SpriteTableLookupFactory.h"
+#import "SimpleTableFactory.h"
 #import "RandomNumberGenerator.h"
 #import "CardInfo.h"
 #import "Card.h"
-
-CardInfo *createCard(NSString *name, int x, int y)
-{
-  CardInfo *info = malloc(sizeof(CardInfo));
-  memset(info, 0, sizeof(CardInfo));
-  info->spriteName = name;
-  info->location = CGPointMake(x, y);
-  return info;
-}
-
-@interface SimpleTableFactory : NSObject<SpriteTableLookupFactory>
-@property(strong) NSArray *cards;
-+(id) factoryWithVisibleCards:(CardInfo *)card, ... NS_REQUIRES_NIL_TERMINATION;
-@end
-
-@implementation SimpleTableFactory
-
-+(id) factoryWithVisibleCards:(CardInfo *) card, ...
-{
-  NSMutableArray *cards = [NSMutableArray array];
-  va_list args;
-  va_start(args, card);
-  for (CardInfo *arg = card; arg != nil; arg = va_arg(args, CardInfo *))
-  {
-    [cards addObject:[NSValue valueWithBytes:arg objCType:@encode(CardInfo)]];
-  }
-  va_end(args);
-  
-  return [[SimpleTableFactory alloc] initWithCards:cards];
-}
-
--(id) initWithCards:(NSArray *) cards
-{
-    self = [super init];
-    if (self) {
-      self.cards = [NSArray arrayWithArray:cards];
-    }
-    return self;
-}
-
--(NSArray *) create
-{
-  return self.cards;
-}
-
-@end
 
 @interface SimpleRandomNumberGenerator : NSObject<RandomNumberGenerator>
 @property(strong) NSMutableArray *numbers;
@@ -85,7 +39,7 @@ OCDSpec2Context(FirstLessonSpec) {
     
     It(@"starts by putting the visible sprites on the screen", ^{
       NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
-                                                         factoryWithVisibleCards:
+                                                         factoryWithCards:
                                                             createCard(@"huzzah", 2, 4),
                                                             nil];
       
@@ -104,7 +58,7 @@ OCDSpec2Context(FirstLessonSpec) {
     
     It(@"puts ALL the visible cards on screen", ^{
       NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
-                                                         factoryWithVisibleCards:
+                                                         factoryWithCards:
                                                             createCard(@"huzzah", 2, 4),
                                                             createCard(@"alsoHuzzah", 1, 3),
                                                             nil];
@@ -126,9 +80,9 @@ OCDSpec2Context(FirstLessonSpec) {
       [view verify];
     });
     
-    It(@"creates a new card for each of the visible card structures", ^{
+    It(@"creates a new card for each of the card structures", ^{
       NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
-                                                         factoryWithVisibleCards:
+                                                         factoryWithCards:
                                                          createCard(@"huzzah", 2, 4),
                                                          nil];
       
@@ -146,9 +100,9 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     // Need an actual table lookup, and a table lookup factory.
-    // Need to start the game - see the commented test below.
-    // Need to make the default first lesson use those
-
+    // Need to start the game by randomly choosing the current card see the commented test below.
+    // Make sure the defaults are set
+    // I want to add some motion - how about cards that aren't visible yet?
    /*
     It(@"chooses the next sprite based on the random number and the length of the list", ^{
       NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]

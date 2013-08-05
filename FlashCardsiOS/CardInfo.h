@@ -6,4 +6,6 @@ typedef struct _CardInfo {
   CGPoint location;
   
 } CardInfo;
+
+CardInfo *createCard(NSString *name, int x, int y);
 #endif

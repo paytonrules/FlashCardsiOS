@@ -163,6 +163,16 @@
 		07DE97F217AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F117AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m */; };
 		07DE97F517AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F417AE802F0013AFDC /* StandardRandomNumberGenerator.m */; };
 		07DE97F617AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F417AE802F0013AFDC /* StandardRandomNumberGenerator.m */; };
+		07DE97FA17AF22E00013AFDC /* FirstLevelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F917AF22E00013AFDC /* FirstLevelFactory.m */; };
+		07DE980117AF28890013AFDC /* CardInfoSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980017AF28890013AFDC /* CardInfoSpec.m */; };
+		07DE980317AF294D0013AFDC /* CardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980217AF294D0013AFDC /* CardInfo.m */; };
+		07DE980417AF294D0013AFDC /* CardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980217AF294D0013AFDC /* CardInfo.m */; };
+		07DE980717AF31A50013AFDC /* FirstLevelFactorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980617AF31A50013AFDC /* FirstLevelFactorySpec.m */; };
+		07DE980E17AF33CC0013AFDC /* FirstLevelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F917AF22E00013AFDC /* FirstLevelFactory.m */; };
+		07DE981117AF36220013AFDC /* SimpleTableFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE981017AF36210013AFDC /* SimpleTableFactory.m */; };
+		07DE981217AF36220013AFDC /* SimpleTableFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE981017AF36210013AFDC /* SimpleTableFactory.m */; };
+		07DE981517AF37AC0013AFDC /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DE981317AF37AC0013AFDC /* Star.png */; };
+		07DE981617AF37AC0013AFDC /* Tree Tall.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DE981417AF37AC0013AFDC /* Tree Tall.png */; };
 		A35EDC01BFAD4772AE508509 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA5749873D4856ADDDAF27 /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
 
@@ -515,6 +525,15 @@
 		07DE97F117AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardRandomNumberGeneratorSpec.m; sourceTree = "<group>"; };
 		07DE97F317AE802E0013AFDC /* StandardRandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardRandomNumberGenerator.h; sourceTree = "<group>"; };
 		07DE97F417AE802F0013AFDC /* StandardRandomNumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardRandomNumberGenerator.m; sourceTree = "<group>"; };
+		07DE97F817AF22E00013AFDC /* FirstLevelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLevelFactory.h; sourceTree = "<group>"; };
+		07DE97F917AF22E00013AFDC /* FirstLevelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLevelFactory.m; sourceTree = "<group>"; };
+		07DE980017AF28890013AFDC /* CardInfoSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardInfoSpec.m; sourceTree = "<group>"; };
+		07DE980217AF294D0013AFDC /* CardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardInfo.m; sourceTree = "<group>"; };
+		07DE980617AF31A50013AFDC /* FirstLevelFactorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLevelFactorySpec.m; sourceTree = "<group>"; };
+		07DE980F17AF36210013AFDC /* SimpleTableFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableFactory.h; sourceTree = "<group>"; };
+		07DE981017AF36210013AFDC /* SimpleTableFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableFactory.m; sourceTree = "<group>"; };
+		07DE981317AF37AC0013AFDC /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
+		07DE981417AF37AC0013AFDC /* Tree Tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree Tall.png"; sourceTree = "<group>"; };
 		385674D539444B7D952A1309 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -605,6 +624,8 @@
 		074D878B17AA1BD300985CD3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				07DE981317AF37AC0013AFDC /* Star.png */,
+				07DE981417AF37AC0013AFDC /* Tree Tall.png */,
 				07DE97D417ABDC710013AFDC /* bug.mp3 */,
 				07DE97D517ABDC710013AFDC /* jump.wav */,
 				07DE97D617ABDC710013AFDC /* Powerup.wav */,
@@ -997,6 +1018,8 @@
 				074D896917AA833D00985CD3 /* CardSpec.m */,
 				07DE97EC17AD58120013AFDC /* FirstLessonSpec.m */,
 				07DE97F117AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m */,
+				07DE980017AF28890013AFDC /* CardInfoSpec.m */,
+				07DE980617AF31A50013AFDC /* FirstLevelFactorySpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -1066,8 +1089,13 @@
 				07DE97EE17AD61A00013AFDC /* SpriteTableLookupFactory.h */,
 				07DE97EF17AD651C0013AFDC /* RandomNumberGenerator.h */,
 				07DE97F017AD667E0013AFDC /* CardInfo.h */,
+				07DE980217AF294D0013AFDC /* CardInfo.m */,
 				07DE97F317AE802E0013AFDC /* StandardRandomNumberGenerator.h */,
 				07DE97F417AE802F0013AFDC /* StandardRandomNumberGenerator.m */,
+				07DE97F817AF22E00013AFDC /* FirstLevelFactory.h */,
+				07DE97F917AF22E00013AFDC /* FirstLevelFactory.m */,
+				07DE980F17AF36210013AFDC /* SimpleTableFactory.h */,
+				07DE981017AF36210013AFDC /* SimpleTableFactory.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -1207,6 +1235,8 @@
 				07DE97DB17ABDC710013AFDC /* Powerup.wav in Resources */,
 				07DE97DC17ABDC710013AFDC /* star.mp3 in Resources */,
 				07DE97DD17ABDC710013AFDC /* tree.mp3 in Resources */,
+				07DE981517AF37AC0013AFDC /* Star.png in Resources */,
+				07DE981617AF37AC0013AFDC /* Tree Tall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1386,6 +1416,9 @@
 				074D896817AA822000985CD3 /* Card.m in Sources */,
 				07DE97EA17AD55FD0013AFDC /* FirstLesson.m in Sources */,
 				07DE97F517AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */,
+				07DE97FA17AF22E00013AFDC /* FirstLevelFactory.m in Sources */,
+				07DE980317AF294D0013AFDC /* CardInfo.m in Sources */,
+				07DE981117AF36220013AFDC /* SimpleTableFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1400,6 +1433,11 @@
 				07DE97ED17AD58120013AFDC /* FirstLessonSpec.m in Sources */,
 				07DE97F217AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m in Sources */,
 				07DE97F617AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */,
+				07DE980117AF28890013AFDC /* CardInfoSpec.m in Sources */,
+				07DE980417AF294D0013AFDC /* CardInfo.m in Sources */,
+				07DE980717AF31A50013AFDC /* FirstLevelFactorySpec.m in Sources */,
+				07DE980E17AF33CC0013AFDC /* FirstLevelFactory.m in Sources */,
+				07DE981217AF36220013AFDC /* SimpleTableFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
