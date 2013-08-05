@@ -3,12 +3,22 @@
 #import "Card.h"
 
 @interface FirstLesson()
-@property(strong) NSArray *spriteTable;
+@property(strong) NSArray *cardData;
 @property(strong) NSObject<RandomNumberGenerator> *randomNumberGenerator;
 @property(strong) NSObject<GameView> *view;
+@property(strong) NSMutableArray *cards;
 @end
 
 @implementation FirstLesson
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+      self.cards = [NSMutableArray new];
+    }
+    return self;
+}
 
 +(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory> *)tableFactory
 {
@@ -19,7 +29,7 @@
 +(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *)generator
 {
   FirstLesson *lesson = [[FirstLesson new] autorelease];
-  lesson.spriteTable = [factory create];
+  lesson.cardData = [factory create];
   lesson.randomNumberGenerator = generator;
   
   return lesson;
@@ -29,27 +39,31 @@
 {
   self.view = view;
   
-  for (NSValue *cardInfoValue in self.spriteTable)
+  for (NSValue *cardInfoValue in self.cardData)
   {
+    Card *card = [[Card new] autorelease];
     CardInfo cardInfo;
     [cardInfoValue getValue:&cardInfo];
     
+    [self.cards addObject:card];
     [self.view addNewSprite: cardInfo.spriteName
-                    forCard: [Card new]
+                    forCard: card
                  atLocation: cardInfo.location];
     
   }
 }
 
--(void) addCard
+-(Card *) getCard:(NSInteger) cardNumber
 {
-  NSValue *cardInfoValue = [self.spriteTable objectAtIndex:[self.randomNumberGenerator next]];
-  CardInfo cardInfo;
-  [cardInfoValue getValue:&cardInfo];
+  return [self.cards objectAtIndex:cardNumber];
   
-  [self.view addNewSprite: cardInfo.spriteName
-             forCard: [NSObject new]
-          atLocation: cardInfo.location];
+}
+
+-(void) readFlashCard
+{
+  Card *card = [self.cards objectAtIndex:[self.randomNumberGenerator next]];
+  
+  [card makeCurrent];
 }
 
 @end

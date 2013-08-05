@@ -99,39 +99,30 @@ OCDSpec2Context(FirstLessonSpec) {
       [view verify];
     });
     
-    // Need an actual table lookup, and a table lookup factory.
-    // Need to start the game by randomly choosing the current card see the commented test below.
-    // Make sure the defaults are set
-    // I want to add some motion - how about cards that aren't visible yet?
-   /*
-    It(@"chooses the next sprite based on the random number and the length of the list", ^{
+    It(@"randomly chooses a card to guess", ^{
       NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
-                                                            initWithRandomNumbers:@[@0, @1]];
+                                                            initWithRandomNumbers:@[@0]];
       
       NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
-                                                         factoryWithVisibleCards:createCard(@"huzzah", 2, 4),
-                                                                          createCard(@"again", 1, 1),
-                                                                          nil];
+                                                         factoryWithCards:
+                                                         createCard(@"huzzah", 2, 4),
+                                                         nil];
       
-      id view = [OCMockObject mockForProtocol:@protocol(GameView)];
-      NSObject<Lesson> *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+      FirstLesson *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
                                                   andRandomNumberGenerator: simpleGenerator];
-
-      [view setExpectationOrderMatters:YES];
-      [[view expect] addNewSprite:@"huzzah"
-                          forCard:[OCMArg any]
-                       atLocation:CGPointMake(2, 4)];
-
-      [[view expect] addNewSprite:@"again"
-                          forCard:[OCMArg any]
-                       atLocation:CGPointMake(1, 1)];
       
       [lesson startWithView:view];
-      [lesson addCard];
+      [lesson readFlashCard];
       
-      [view verify];
-    });*/ 
+      Card *card = [lesson getCard:0];
+      
+      [ExpectBool(card.current) toBeTrue];
+    });
     
+    // Need to start the game by randomly choosing the current card see the commented test below.
+    // Make sure the defaults are set to the first level and the real random number generator
+
 
     
     
