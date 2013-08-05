@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "CardView.h"
 
 @class Card;
 
-@interface CardSprite : CCSprite<CCTouchOneByOneDelegate, CardView> {
+@interface CardSprite : CCSprite<CCTouchOneByOneDelegate> {
 }
 
 -(id) initWithFile:(NSString *) fileName andCard:(Card *) card;

@@ -1,6 +1,5 @@
 
 #import <Foundation/Foundation.h>
-#import "CardView.h"
 #import "Lesson.h"
 
 @interface Card : NSObject
