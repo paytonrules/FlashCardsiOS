@@ -1,4 +1,6 @@
 #import "FirstLesson.h"
+#import "StandardRandomNumberGenerator.h"
+#import "FirstLevelFactory.h"
 #import "CardInfo.h"
 #import "Card.h"
 
@@ -11,13 +13,21 @@
 
 @implementation FirstLesson
 
-- (id)init
+-(id) init
 {
-    self = [super init];
-    if (self) {
-      self.cards = [NSMutableArray new];
-    }
-    return self;
+  return [self initWithCardInfoFactory:[[FirstLevelFactory new] autorelease]
+              andRandomNumberGenerator:[[StandardRandomNumberGenerator new] autorelease]];
+}
+
+-(id) initWithCardInfoFactory:(NSObject<SpriteTableLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *) generator
+{
+  self = [super init];
+  if (self) {
+    self.cards = [NSMutableArray new];
+    self.cardData = [[factory create] autorelease];
+    self.randomNumberGenerator = generator;
+  }
+  return self;
 }
 
 +(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory> *)tableFactory
@@ -28,11 +38,8 @@
 
 +(id) lessonWithSpriteTableFactory:(NSObject<SpriteTableLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *)generator
 {
-  FirstLesson *lesson = [[FirstLesson new] autorelease];
-  lesson.cardData = [factory create];
-  lesson.randomNumberGenerator = generator;
-  
-  return lesson;
+  return[[[FirstLesson alloc] initWithCardInfoFactory:factory
+                             andRandomNumberGenerator:generator] autorelease];
 }
 
 -(void) startWithView:(NSObject<GameView> *)view

@@ -66,8 +66,6 @@
 	if( (self=[super init])) {
     [self createBackground];
     
-    [self addNewSprite:@"Enemy Bug.png" forCard:nil atLocation:ccp(200, 600)];
-    
     [self preloadSoundEffects];
 	}
 	

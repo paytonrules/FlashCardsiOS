@@ -19,7 +19,7 @@
   }
   va_end(args);
   
-  return [[SimpleTableFactory alloc] initWithCards:cards];
+  return [[[SimpleTableFactory alloc] initWithCards:cards] autorelease];
 }
 
 -(id) initWithCards:(NSArray *) cards

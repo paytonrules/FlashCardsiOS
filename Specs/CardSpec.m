@@ -6,7 +6,7 @@
 OCDSpec2Context(CardSpec) {
   
   Describe(@"Can be created without a view", ^{
-    Card *card = [Card new];
+    Card *card = [[Card new] autorelease];
     
     [ExpectBool(card.current) toBeFalse];
   });

@@ -100,9 +100,9 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"chooses a card to guess", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
-                                                            initWithRandomNumbers:@[@0]];
-      
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
+                                                            initWithRandomNumbers:@[@0]] autorelease];
+
       NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
                                                          factoryWithCards:
                                                          createCard(@"huzzah", 2, 4),
@@ -121,11 +121,10 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"has its minimum random card be the first one in the array", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
-                                                          initWithRandomNumbers:@[@2]];
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@2]] autorelease];
       
-      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
-                                                         factoryWithCards:
+      NSObject<SpriteTableLookupFactory> *tableFactory = [SimpleTableFactory factoryWithCards:
                                                          createCard(@"huzzah", 2, 4),
                                                          createCard(@"hullo", 1, 3),
                                                          nil];
@@ -143,8 +142,8 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"The maximum random card is the last entry in the list", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
-                                                          initWithRandomNumbers:@[@3]];
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@3]] autorelease];
       
       NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
                                                          factoryWithCards:
@@ -165,8 +164,8 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"Can find random cards in the middle too", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
-                                                          initWithRandomNumbers:@[@4]];
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@4]] autorelease];
       
       NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
                                                          factoryWithCards:
