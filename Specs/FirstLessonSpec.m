@@ -99,7 +99,7 @@ OCDSpec2Context(FirstLessonSpec) {
       [view verify];
     });
     
-    It(@"randomly chooses a card to guess", ^{
+    It(@"chooses a card to guess", ^{
       NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
                                                             initWithRandomNumbers:@[@0]];
       
@@ -119,6 +119,79 @@ OCDSpec2Context(FirstLessonSpec) {
       
       [ExpectBool(card.current) toBeTrue];
     });
+    
+    It(@"has its minimum random card be the first one in the array", ^{
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@2]];
+      
+      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+                                                         factoryWithCards:
+                                                         createCard(@"huzzah", 2, 4),
+                                                         createCard(@"hullo", 1, 3),
+                                                         nil];
+      
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+      FirstLesson *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
+                                             andRandomNumberGenerator: simpleGenerator];
+      
+      [lesson startWithView:view];
+      [lesson readFlashCard];
+      
+      Card *card = [lesson getCard:0];
+      
+      [ExpectBool(card.current) toBeTrue];
+    });
+    
+    It(@"The maximum random card is the last entry in the list", ^{
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@3]];
+      
+      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+                                                         factoryWithCards:
+                                                         createCard(@"huzzah", 2, 4),
+                                                         createCard(@"hullo", 1, 3),
+                                                         nil];
+      
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+      FirstLesson *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
+                                             andRandomNumberGenerator: simpleGenerator];
+      
+      [lesson startWithView:view];
+      [lesson readFlashCard];
+      
+      Card *card = [lesson getCard:1];
+      
+      [ExpectBool(card.current) toBeTrue];
+    });
+    
+    It(@"Can find random cards in the middle too", ^{
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@4]];
+      
+      NSObject<SpriteTableLookupFactory> *tableFactory =[SimpleTableFactory
+                                                         factoryWithCards:
+                                                         createCard(@"huzzah", 2, 4),
+                                                         createCard(@"james", 2, 4),
+                                                         createCard(@"hullo", 1, 3),
+                                                         nil];
+      
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+      FirstLesson *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
+                                             andRandomNumberGenerator: simpleGenerator];
+      
+      [lesson startWithView:view];
+      [lesson readFlashCard];
+      
+      Card *card = [lesson getCard:1];
+      
+      [ExpectBool(card.current) toBeTrue];
+    });
+    
+    PendingStr(@"Play the sound when the new card is chosen");
+    PendingStr(@"Finish up wiring the default dependencies and the view");
+    
+    // Plays the sound when the new card is chosen
+    
     
     // Need to start the game by randomly choosing the current card see the commented test below.
     // Make sure the defaults are set to the first level and the real random number generator
