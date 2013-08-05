@@ -187,8 +187,8 @@ OCDSpec2Context(FirstLessonSpec) {
       [ExpectBool(card.current) toBeTrue];
     });
     
-    PendingStr(@"Play the sound when the new card is chosen");
     PendingStr(@"Finish up wiring the default dependencies and the view");
+    PendingStr(@"Play the sound when the new card is chosen");
     
     // Plays the sound when the new card is chosen
     

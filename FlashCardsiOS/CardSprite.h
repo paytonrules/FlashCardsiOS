@@ -10,9 +10,11 @@
 #import "cocos2d.h"
 #import "CardView.h"
 
+@class Card;
+
 @interface CardSprite : CCSprite<CCTouchOneByOneDelegate, CardView> {
 }
 
--(id) initWithFile:(NSString *) fileName;
+-(id) initWithFile:(NSString *) fileName andCard:(Card *) card;
 
 @end

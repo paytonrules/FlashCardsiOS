@@ -4,10 +4,13 @@
 
 @interface Card : NSObject
 
++(BOOL) contains:(CGPoint) nodeSpaceLocation inTextureSize:(CGSize) size;
++(Card *) cardWithView:(NSObject<CardView> *)view;
+
+
 -(void) tap;
 -(void) makeCurrent;
--(BOOL) contains:(CGPoint) nodeSpaceLocation;
-+(Card *) cardWithView:(NSObject<CardView> *)view;
+
 @property(readonly) BOOL current;
 
 @end

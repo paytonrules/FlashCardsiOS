@@ -55,7 +55,7 @@
 -(void) addNewSprite:(NSString *)filename forCard:(Card *) card atLocation:(CGPoint) location
 {
   CardSprite *sprite;
-  sprite = [[[CardSprite alloc] initWithFile:filename] autorelease];
+  sprite = [[[CardSprite alloc] initWithFile:filename andCard:card] autorelease];
   sprite.position = location;
   [self addChild: sprite];
 }

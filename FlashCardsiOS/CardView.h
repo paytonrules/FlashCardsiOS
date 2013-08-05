@@ -12,6 +12,5 @@
 
 -(void) correct;
 -(void) incorrect;
-@property(readonly) CGSize textureSize;
 
 @end

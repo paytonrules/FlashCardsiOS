@@ -17,13 +17,12 @@
 
 @implementation CardSprite
 
--(id) initWithFile:(NSString *)fileName
+-(id) initWithFile:(NSString *)fileName andCard:(Card *)card
 {
   self = [super initWithFile:fileName];
   if (self)
   {
-    self.card = [Card cardWithView:self];
-    [self.card makeCurrent];
+    self.card = card;
     
     //Note - this isn't real optimized
     CCDirector* pDirector = [CCDirector sharedDirector];
@@ -33,14 +32,10 @@
   return self;
 }
 
--(CGSize) textureSize
-{
-  return [self.texture contentSizeInPixels];
-}
-
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-  if ([self.card contains: [self convertTouchToNodeSpaceAR:touch]])
+  CGSize textureSize = [self.texture contentSizeInPixels];
+  if ([Card contains: [self convertTouchToNodeSpaceAR:touch] inTextureSize:textureSize])
   {
     [self setScale:1.2f];
     return true;

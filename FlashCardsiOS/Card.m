@@ -43,13 +43,12 @@
   self.current = YES;
 }
 
--(BOOL) contains:(CGPoint)nodeSpaceLocation
++(BOOL) contains:(CGPoint)nodeSpaceLocation inTextureSize:(CGSize) textureSize
 {
-  CGSize textureSize = self.view.textureSize;
   CGRect tempRect = CGRectMake(-textureSize.width / 2,
                                -textureSize.height /2,
-                               self.view.textureSize.width,
-                               self.view.textureSize.height);
+                               textureSize.width,
+                               textureSize.height);
   return CGRectContainsPoint(tempRect, nodeSpaceLocation);
 }
 
