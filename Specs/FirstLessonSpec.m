@@ -187,7 +187,7 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     PendingStr(@"Finish up wiring the default dependencies and the view");
-    PendingStr(@"Play the sound when the new card is chosen");
+    PendingStr(@"Play the sound when the new card is chosen - card should notify this object, which notifies its view, removing the view dependency");
     
     // Plays the sound when the new card is chosen
     

@@ -2,40 +2,33 @@
 
 @interface Card()
 
-@property(strong) NSObject<CardView> *view;
+@property(strong) NSObject<Lesson> *lesson;
 @property(assign) BOOL current;
 
 @end
 
 @implementation Card
 
--(id) initWithView:(NSObject<CardView> *)view
+-(id) initWithLesson:(NSObject<Lesson> *) lesson
 {
     self = [super init];
     if (self) {
-      self.view = view;
+      self.lesson = lesson;
       self.current = NO;
     }
     return self;
 }
 
-+(Card *) cardWithView:(NSObject<CardView> *)view
++(Card *) cardWithLesson:(NSObject<Lesson> *) lesson
 {
-  Card *tempCard = [[[Card alloc] initWithView:view] autorelease];
+  Card *tempCard = [[[Card alloc] initWithLesson:lesson] autorelease];
   
   return tempCard;
 }
 
 -(void) tap
 {
-    if (self.current)
-    {
-      [self.view correct];
-    }
-    else
-    {
-      [self.view incorrect];
-    }
+  self.current ? [self.lesson correctGuess] : [self.lesson incorrectGuess];
 }
 
 -(void) makeCurrent

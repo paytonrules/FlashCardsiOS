@@ -1,7 +1,7 @@
 #import <OCDSpec2/OCDSpec2.h>
 #import "OCMock.h"
 #import "Card.h"
-#import "CardView.h"
+#import "Lesson.h"
 
 OCDSpec2Context(CardSpec) {
   
@@ -13,29 +13,29 @@ OCDSpec2Context(CardSpec) {
   
   Describe(@"tapping the card", ^{
     
-    __block id view;
+    __block id lesson;
     __block Card *card;
     
     BeforeEach(^{
-      view = [OCMockObject mockForProtocol:@protocol(CardView)];
-      card = [Card cardWithView: view];
+      lesson = [OCMockObject mockForProtocol:@protocol(Lesson)];
+      card = [Card cardWithLesson:lesson];
     });
     
-    It(@"lets the view know if the card is chosen correctly", ^{
-      [[view expect] correct];
+    It(@"lets the lesson know if the card is chosen correctly", ^{
+      [[lesson expect] correctGuess];
       
       [card makeCurrent];
       [card tap];
       
-      [view verify];
+      [lesson verify];
     });
     
-    It(@"says its incorrect if this is the wrong card", ^{
-      [[view expect] incorrect];
+    It(@"lets the lesson know about an incorrect guess if this is the wrong card", ^{
+      [[lesson expect] incorrectGuess];
       
       [card tap];
       
-      [view verify];
+      [lesson verify];
     });
   });
   

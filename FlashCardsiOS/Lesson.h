@@ -5,5 +5,7 @@
 
 -(void) startWithView:(NSObject<GameView> *)view;
 -(void) readFlashCard;
+-(void) correctGuess;
+-(void) incorrectGuess;
 
 @end

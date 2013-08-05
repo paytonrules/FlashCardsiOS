@@ -1,11 +1,12 @@
 
 #import <Foundation/Foundation.h>
 #import "CardView.h"
+#import "Lesson.h"
 
 @interface Card : NSObject
 
 +(BOOL) contains:(CGPoint) nodeSpaceLocation inTextureSize:(CGSize) size;
-+(Card *) cardWithView:(NSObject<CardView> *)view;
++(Card *) cardWithLesson:(NSObject<Lesson> *) lesson;
 
 
 -(void) tap;
