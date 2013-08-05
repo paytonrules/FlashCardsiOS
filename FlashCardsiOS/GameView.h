@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @protocol GameView <NSObject>
+
 -(void) addNewSprite:(NSString *)filename forCard:(NSObject *) card atLocation:(CGPoint) location;
+-(void) playCorrectSound;
+-(void) playInCorrectSound;
+
 @end

@@ -49,16 +49,6 @@
   [self.card tap];
 }
 
--(void) correct
-{
-  [[SimpleAudioEngine sharedEngine] playEffect:@"Powerup.wav"];
-}
-
--(void) incorrect
-{
-  [[SimpleAudioEngine sharedEngine] playEffect:@"jump.wav"];
-}
-
 - (void)dealloc
 {
   [self.card release];

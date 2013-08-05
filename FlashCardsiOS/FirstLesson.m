@@ -48,7 +48,7 @@
   
   for (NSValue *cardInfoValue in self.cardData)
   {
-    Card *card = [[Card new] autorelease];
+    Card *card = [[Card cardWithLesson:self] autorelease];
     CardInfo cardInfo;
     [cardInfoValue getValue:&cardInfo];
     
@@ -63,7 +63,6 @@
 -(Card *) getCard:(NSInteger) cardNumber
 {
   return [self.cards objectAtIndex:cardNumber];
-  
 }
 
 -(void) readFlashCard
@@ -71,6 +70,16 @@
   Card *card = [self.cards objectAtIndex:[self.randomNumberGenerator next] % self.cards.count];
   
   [card makeCurrent];
+}
+
+-(void) correctGuess
+{
+  [self.view playCorrectSound];
+}
+
+-(void) incorrectGuess
+{
+  [self.view playInCorrectSound];
 }
 
 @end

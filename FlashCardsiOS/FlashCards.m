@@ -30,6 +30,17 @@
 	return scene;
 }
 
+-(id) init
+{
+	if( (self=[super init])) {
+    [self createBackground];
+    
+    [self preloadSoundEffects];
+	}
+	
+	return self;
+}
+
 -(void) startLesson
 {
   self.lesson = [FirstLesson new];
@@ -60,15 +71,14 @@
   [self addChild: sprite];
 }
 
-// Does this belong in init?  Probably not right
--(id) init
+-(void) playCorrectSound
 {
-	if( (self=[super init])) {
-    [self createBackground];
-    
-    [self preloadSoundEffects];
-	}
-	
-	return self;
+  [[SimpleAudioEngine sharedEngine] playEffect:@"Powerup.wav"];
 }
+
+-(void) playInCorrectSound
+{
+  [[SimpleAudioEngine sharedEngine] playEffect:@"jump.wav"];
+}
+
 @end

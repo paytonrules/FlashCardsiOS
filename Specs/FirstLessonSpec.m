@@ -91,7 +91,9 @@ OCDSpec2Context(FirstLessonSpec) {
       NSObject<Lesson> *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory];
       
       [[view expect] addNewSprite:[OCMArg any]
-                           forCard:[OCMArg checkWithBlock:^BOOL(id value) { return [value isKindOfClass:[Card class]]; }]
+                           forCard:[OCMArg checkWithBlock:^BOOL(id value) {
+        return [value isKindOfClass:[Card class]] && ((Card*) value).lesson == lesson;
+      }]
                         atLocation:CGPointMake(2, 4)];
       
       [lesson startWithView:view];
@@ -184,6 +186,32 @@ OCDSpec2Context(FirstLessonSpec) {
       Card *card = [lesson getCard:1];
       
       [ExpectBool(card.current) toBeTrue];
+    });
+    
+    It(@"tells its view when there is a correct guess", ^{
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+      FirstLesson *lesson = [[FirstLesson new] autorelease];
+      
+      [lesson startWithView:view];
+      
+      [[view expect] playCorrectSound];
+      
+      [lesson correctGuess];
+      
+      [view verify];
+    });
+    
+    It(@"tess its view when there is an incorrect guess", ^{
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+      FirstLesson *lesson = [[FirstLesson new] autorelease];
+      
+      [lesson startWithView:view];
+      
+      [[view expect] playInCorrectSound];
+      
+      [lesson incorrectGuess];
+      
+      [view verify];
     });
     
     PendingStr(@"Finish up wiring the default dependencies and the view");

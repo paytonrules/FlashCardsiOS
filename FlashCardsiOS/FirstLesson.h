@@ -11,4 +11,5 @@
 +(id) lessonWithSpriteTableFactory:(NSObject<CardLookupFactory>*) tableFactory;
 
 -(Card *) getCard:(NSInteger) cardNumber;
+
 @end

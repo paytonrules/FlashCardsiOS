@@ -12,5 +12,6 @@
 -(void) makeCurrent;
 
 @property(readonly) BOOL current;
+@property(readonly) NSObject<Lesson> *lesson;
 
 @end
