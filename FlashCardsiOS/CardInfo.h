@@ -3,9 +3,10 @@
 
 typedef struct _CardInfo {
   NSString *spriteName;
+  NSString *reading;
   CGPoint location;
   
 } CardInfo;
 
-CardInfo *createCard(NSString *name, int x, int y);
+CardInfo *createCard(NSString *name, NSString *reading, int x, int y);
 #endif

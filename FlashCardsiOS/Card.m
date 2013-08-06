@@ -9,21 +9,21 @@
 
 @implementation Card
 
--(id) initWithLesson:(NSObject<Lesson> *) lesson
-{
-    self = [super init];
-    if (self) {
-      self.lesson = lesson;
-      self.current = NO;
-    }
-    return self;
-}
-
 +(Card *) cardWithLesson:(NSObject<Lesson> *) lesson
 {
   Card *tempCard = [[[Card alloc] initWithLesson:lesson] autorelease];
   
   return tempCard;
+}
+
+-(id) initWithLesson:(NSObject<Lesson> *) lesson
+{
+  self = [super init];
+  if (self) {
+    self.lesson = lesson;
+    self.current = NO;
+  }
+  return self;
 }
 
 -(void) tap

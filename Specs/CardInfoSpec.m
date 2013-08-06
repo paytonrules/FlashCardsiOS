@@ -18,11 +18,12 @@ OCDSpec2Context(CardInfoSpec) {
     });
     
     It(@"creates a card info structure", ^{
-      CardInfo *info = createCard(@"name", 0, 1);
+      CardInfo *info = createCard(@"name", @"reading", 0, 1);
       
       [ExpectInt(info->location.x) toBe:0];
       [ExpectInt(info->location.y) toBe:1];
       [ExpectStr(info->spriteName) toContain:@"name"];
+      [ExpectStr(info->reading) toContain:@"reading"];
     });
     
   });

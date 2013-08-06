@@ -7,7 +7,6 @@
 +(BOOL) contains:(CGPoint) nodeSpaceLocation inTextureSize:(CGSize) size;
 +(Card *) cardWithLesson:(NSObject<Lesson> *) lesson;
 
-
 -(void) tap;
 -(void) makeCurrent;
 

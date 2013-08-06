@@ -40,7 +40,7 @@ OCDSpec2Context(FirstLessonSpec) {
     It(@"starts by putting the visible sprites on the screen", ^{
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
-                                                            createCard(@"huzzah", 2, 4),
+                                                            createCard(@"huzzah", @"", 2, 4),
                                                             nil];
       
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
@@ -59,8 +59,8 @@ OCDSpec2Context(FirstLessonSpec) {
     It(@"puts ALL the visible cards on screen", ^{
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
-                                                            createCard(@"huzzah", 2, 4),
-                                                            createCard(@"alsoHuzzah", 1, 3),
+                                                            createCard(@"huzzah", @"", 2, 4),
+                                                            createCard(@"alsoHuzzah", @"", 1, 3),
                                                             nil];
       
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
@@ -83,7 +83,7 @@ OCDSpec2Context(FirstLessonSpec) {
     It(@"creates a new card for each of the card structures", ^{
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
-                                                         createCard(@"huzzah", 2, 4),
+                                                         createCard(@"huzzah", @"", 2, 4),
                                                          nil];
       
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
@@ -107,7 +107,7 @@ OCDSpec2Context(FirstLessonSpec) {
 
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
-                                                         createCard(@"huzzah", 2, 4),
+                                                         createCard(@"huzzah", @"", 2, 4),
                                                          nil];
       
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
@@ -127,8 +127,8 @@ OCDSpec2Context(FirstLessonSpec) {
                                                           initWithRandomNumbers:@[@2]] autorelease];
       
       NSObject<CardLookupFactory> *tableFactory = [SimpleCardLookupFactory factoryWithCards:
-                                                         createCard(@"huzzah", 2, 4),
-                                                         createCard(@"hullo", 1, 3),
+                                                         createCard(@"huzzah", @"", 2, 4),
+                                                         createCard(@"hullo", @"", 1, 3),
                                                          nil];
       
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
@@ -149,8 +149,8 @@ OCDSpec2Context(FirstLessonSpec) {
       
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
-                                                         createCard(@"huzzah", 2, 4),
-                                                         createCard(@"hullo", 1, 3),
+                                                         createCard(@"huzzah", @"", 2, 4),
+                                                         createCard(@"hullo", @"", 1, 3),
                                                          nil];
       
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
@@ -171,9 +171,9 @@ OCDSpec2Context(FirstLessonSpec) {
       
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
-                                                         createCard(@"huzzah", 2, 4),
-                                                         createCard(@"james", 2, 4),
-                                                         createCard(@"hullo", 1, 3),
+                                                         createCard(@"huzzah", @"", 2, 4),
+                                                         createCard(@"james", @"", 2, 4),
+                                                         createCard(@"hullo", @"", 1, 3),
                                                          nil];
       
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
@@ -201,7 +201,7 @@ OCDSpec2Context(FirstLessonSpec) {
       [view verify];
     });
     
-    It(@"tess its view when there is an incorrect guess", ^{
+    It(@"tells its view when there is an incorrect guess", ^{
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
       FirstLesson *lesson = [[FirstLesson new] autorelease];
       
@@ -213,8 +213,6 @@ OCDSpec2Context(FirstLessonSpec) {
       
       [view verify];
     });
-    
-    PendingStr(@"Start the game");
     
     // Plays the sound when the new card is chosen
     

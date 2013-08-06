@@ -39,6 +39,19 @@ OCDSpec2Context(CardSpec) {
     });
   });
   
+  Describe(@"Making the card current", ^{
+
+    It(@"makes the card curent", ^{
+      Card *card = [Card cardWithLesson:nil];
+      [ExpectBool(card.current) toBeFalse];
+
+      [card makeCurrent];
+
+      [ExpectBool(card.current) toBeTrue];
+    });
+
+  });
+
   Describe(@"Checking if a card contains a point", ^{
     __block CGSize textureSize;
     
