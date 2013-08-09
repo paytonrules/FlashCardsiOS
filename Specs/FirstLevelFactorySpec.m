@@ -16,9 +16,7 @@ OCDSpec2Context(FirstLevelFactorySpec) {
       FirstLevelFactory *fact = [[FirstLevelFactory new] autorelease];
       NSArray *cards = [fact create];
       
-      NSValue *rawCardInfo = [cards objectAtIndex:0];
-      CardInfo cardInfo;
-      [rawCardInfo getValue:&cardInfo];
+      CardInfo *cardInfo = [cards objectAtIndex:0];
       
       [ExpectStr(cardInfo.spriteName) toContain:@".png"];
     });

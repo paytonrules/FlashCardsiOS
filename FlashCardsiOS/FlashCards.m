@@ -64,6 +64,11 @@
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
 }
 
+-(void) addNewSprite:(CardInfo *)cardInfo forCard:(NSObject *) card
+{
+  
+}
+
 -(void) addNewSprite:(NSString *)filename forCard:(Card *) card atLocation:(CGPoint) location
 {
   CardSprite *sprite;

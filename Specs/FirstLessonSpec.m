@@ -33,23 +33,30 @@
 }
 @end
 
+CardInfo *createCard(NSString *name, NSString *reading, int x, int y)
+{
+  return [CardInfo cardInfoWithName:name reading:reading atLocation:CGPointMake(x, y)];
+}
+
 OCDSpec2Context(FirstLessonSpec) {
   
   Describe(@"The first lesson", ^{
     
     It(@"starts by putting the visible sprites on the screen", ^{
+      CardInfo *cardInfo = [CardInfo cardInfoWithName:@"huzzah"
+                                            reading:@""
+                                         atLocation:CGPointMake(2,4)];
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
-                                                            createCard(@"huzzah", @"", 2, 4),
+                                                            cardInfo,
                                                             nil];
       
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
       
       NSObject<Lesson> *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory];
       
-      [[view expect] addNewSprite:@"huzzah"
-                          forCard:[OCMArg any]
-                       atLocation:CGPointMake(2, 4)];
+      [[view expect] addNewSprite:cardInfo
+                          forCard:[OCMArg any]];
       
       [lesson startWithView:view];
       
@@ -57,23 +64,22 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"puts ALL the visible cards on screen", ^{
+      CardInfo *firstCard = createCard(@"huzzah", @"", 2, 4);
+      CardInfo *secondCard = createCard(@"alsoHuzzah", @"", 1, 3);
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
-                                                            createCard(@"huzzah", @"", 2, 4),
-                                                            createCard(@"alsoHuzzah", @"", 1, 3),
+                                                            firstCard,
+                                                            secondCard,
                                                             nil];
       
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
       
       NSObject<Lesson> *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory];
       
-      [[view expect] addNewSprite:@"huzzah"
-                          forCard:[OCMArg any]
-                       atLocation:CGPointMake(2, 4)];
+      [[view expect] addNewSprite:firstCard forCard:[OCMArg any]];
       
-      [[view expect] addNewSprite:@"alsoHuzzah"
-                          forCard:[OCMArg any]
-                       atLocation:CGPointMake(1, 3)];
+      [[view expect] addNewSprite:secondCard
+                          forCard:[OCMArg any]];
       
       [lesson startWithView:view];
       
@@ -93,8 +99,7 @@ OCDSpec2Context(FirstLessonSpec) {
       [[view expect] addNewSprite:[OCMArg any]
                            forCard:[OCMArg checkWithBlock:^BOOL(id value) {
         return [value isKindOfClass:[Card class]] && ((Card*) value).lesson == lesson;
-      }]
-                        atLocation:CGPointMake(2, 4)];
+      }]];
       
       [lesson startWithView:view];
       

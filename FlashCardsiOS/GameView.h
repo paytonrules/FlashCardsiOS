@@ -1,16 +1,12 @@
-//
-//  GameView.h
-//  FlashCardsiOS
-//
-//  Created by Eric Smith on 8/3/13.
-//  Copyright (c) 2013 Eric Smith. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
+#import "CardInfo.h"
 
 @protocol GameView <NSObject>
 
 -(void) addNewSprite:(NSString *)filename forCard:(NSObject *) card atLocation:(CGPoint) location;
+-(void) addNewSprite:(CardInfo *)cardInfo forCard:(NSObject *) card;
+
 -(void) playCorrectSound;
 -(void) playInCorrectSound;
 

@@ -15,13 +15,14 @@
     self = [super init];
     if (self) {
       self.simpleFactory = [SimpleCardLookupFactory factoryWithCards:
-       createCard(@"Enemy Bug.png", @"bug.mp3", 100, 200),
-       createCard(@"Star.png", @"star.mp3", 300, 400),
-       createCard(@"Tree Tall.png", @"tree.mp3", 500, 400),
-       nil];
+                            [CardInfo cardInfoWithName:@"Enemy Bug.png" reading:@"bug.mp3" atLocation:CGPointMake(100, 200)],
+                            [CardInfo cardInfoWithName:@"Star.png" reading:@"star.mp3" atLocation:CGPointMake(300, 400)],
+                            [CardInfo cardInfoWithName:@"Tree Tall.png" reading:@"tree.mp3" atLocation:CGPointMake(500, 400)],
+                            nil];
     }
     return self;
 }
+
 -(NSArray *) create
 {
   return [self.simpleFactory create];

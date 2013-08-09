@@ -1,12 +1,11 @@
-#ifndef FlashCardsiOS_CardInfo_h
-#define FlashCardsiOS_CardInfo_h
+#import <Foundation/Foundation.h>
 
-typedef struct _CardInfo {
-  NSString *spriteName;
-  NSString *reading;
-  CGPoint location;
-  
-} CardInfo;
+@interface CardInfo : NSObject
 
-CardInfo *createCard(NSString *name, NSString *reading, int x, int y);
-#endif
+@property(strong) NSString *spriteName;
+@property(strong) NSString *reading;
+@property(assign) CGPoint location;
+
++(CardInfo *) cardInfoWithName:(NSString *)name reading:(NSString *)reading atLocation:(CGPoint) location;
+
+@end

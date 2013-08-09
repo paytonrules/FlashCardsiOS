@@ -46,17 +46,13 @@
 {
   self.view = view;
   
-  for (NSValue *cardInfoValue in self.cardData)
+  for (CardInfo *cardInfo in self.cardData)
   {
     Card *card = [[Card cardWithLesson:self] autorelease];
-    CardInfo cardInfo;
-    [cardInfoValue getValue:&cardInfo];
     
     [self.cards addObject:card];
-    [self.view addNewSprite: cardInfo.spriteName
-                    forCard: card
-                 atLocation: cardInfo.location];
-    
+    [self.view addNewSprite: cardInfo
+                    forCard: card];
   }
 }
 

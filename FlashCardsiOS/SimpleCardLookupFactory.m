@@ -15,7 +15,7 @@
   va_start(args, card);
   for (CardInfo *arg = card; arg != nil; arg = va_arg(args, CardInfo *))
   {
-    [cards addObject:[NSValue valueWithBytes:arg objCType:@encode(CardInfo)]];
+    [cards addObject:arg];
   }
   va_end(args);
   
