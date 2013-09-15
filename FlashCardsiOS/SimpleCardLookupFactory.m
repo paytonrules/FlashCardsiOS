@@ -8,12 +8,12 @@
 
 @implementation SimpleCardLookupFactory
 
-+(id) factoryWithCards:(CardInfo *) card, ...
++(id) factoryWithCards:(CardLookupTable *) card, ...
 {
   NSMutableArray *cards = [NSMutableArray array];
   va_list args;
   va_start(args, card);
-  for (CardInfo *arg = card; arg != nil; arg = va_arg(args, CardInfo *))
+  for (CardLookupTable *arg = card; arg != nil; arg = va_arg(args, CardLookupTable *))
   {
     [cards addObject:arg];
   }

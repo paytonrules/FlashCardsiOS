@@ -3,7 +3,7 @@
 #import "FirstLesson.h"
 #import "SimpleCardLookupFactory.h"
 #import "RandomNumberGenerator.h"
-#import "CardInfo.h"
+#import "CardLookupTable.h"
 #import "Card.h"
 
 @interface SimpleRandomNumberGenerator : NSObject<RandomNumberGenerator>
@@ -33,9 +33,9 @@
 }
 @end
 
-CardInfo *createCard(NSString *name, NSString *reading, int x, int y)
+CardLookupTable *createCard(NSString *name, NSString *reading, int x, int y)
 {
-  return [CardInfo cardInfoWithName:name reading:reading atLocation:CGPointMake(x, y)];
+  return [CardLookupTable cardInfoWithName:name reading:reading atLocation:CGPointMake(x, y)];
 }
 
 OCDSpec2Context(FirstLessonSpec) {
@@ -43,7 +43,7 @@ OCDSpec2Context(FirstLessonSpec) {
   Describe(@"The first lesson", ^{
     
     It(@"starts by putting the visible sprites on the screen", ^{
-      CardInfo *cardInfo = [CardInfo cardInfoWithName:@"huzzah"
+      CardLookupTable *cardInfo = [CardLookupTable cardInfoWithName:@"huzzah"
                                             reading:@""
                                          atLocation:CGPointMake(2,4)];
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
@@ -64,8 +64,8 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"puts ALL the visible cards on screen", ^{
-      CardInfo *firstCard = createCard(@"huzzah", @"", 2, 4);
-      CardInfo *secondCard = createCard(@"alsoHuzzah", @"", 1, 3);
+      CardLookupTable *firstCard = createCard(@"huzzah", @"", 2, 4);
+      CardLookupTable *secondCard = createCard(@"alsoHuzzah", @"", 1, 3);
       NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
                                                          factoryWithCards:
                                                             firstCard,
@@ -220,14 +220,9 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     // Plays the sound when the new card is chosen
-    
-    
-    // Need to start the game by randomly choosing the current card see the commented test below.
+    // Need to start the game by randomly choosing a card
     // Make sure the defaults are set to the first level and the real random number generator
-
-
-    
-    
+    // Begin tweaking the game.
   });
   
 }

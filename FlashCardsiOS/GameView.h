@@ -1,13 +1,15 @@
 
 #import <Foundation/Foundation.h>
-#import "CardInfo.h"
+#import "CardLookupTable.h"
+
+@class Card;
 
 @protocol GameView <NSObject>
 
--(void) addNewSprite:(NSString *)filename forCard:(NSObject *) card atLocation:(CGPoint) location;
--(void) addNewSprite:(CardInfo *)cardInfo forCard:(NSObject *) card;
+-(void) addNewSprite:(CardLookupTable *)cardInfo forCard:(Card *) card;
 
 -(void) playCorrectSound;
 -(void) playInCorrectSound;
+-(void) playClue:(NSString *)reading;
 
 @end

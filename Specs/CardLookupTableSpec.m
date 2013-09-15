@@ -1,24 +1,12 @@
 #import <OCDSpec2/OCDSpec2.h>
-#import "CardInfo.h"
+#import "CardLookupTable.h"
 
-OCDSpec2Context(CardInfoSpec) {
+OCDSpec2Context(CardLookupTable) {
   
   Describe(@"creating card info structures", ^{
-    __block CardInfo *info;
-    
-    BeforeEach(^{
-      info = NULL;
-    });
-    
-    AfterEach(^{
-      if (info != NULL)
-      {
-        free(info);
-      }
-    });
     
     It(@"creates a card info structure", ^{
-      CardInfo *info = [CardInfo cardInfoWithName:@"name"
+      CardLookupTable *info = [CardLookupTable cardInfoWithName:@"name"
                                         reading:@"reading"
                                      atLocation:CGPointMake(0, 1)];
       
@@ -26,6 +14,10 @@ OCDSpec2Context(CardInfoSpec) {
       [ExpectInt(info.location.y) toBe:1];
       [ExpectStr(info.spriteName) toContain:@"name"];
       [ExpectStr(info.reading) toContain:@"reading"];
+    });
+    
+    It("it returns location information for a card", ^{
+      
     });
     
   });

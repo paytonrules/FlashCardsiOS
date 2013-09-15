@@ -1,7 +1,7 @@
 #import "FirstLesson.h"
 #import "StandardRandomNumberGenerator.h"
 #import "FirstLevelFactory.h"
-#import "CardInfo.h"
+#import "CardLookupTable.h"
 #import "Card.h"
 
 @interface FirstLesson()
@@ -46,7 +46,7 @@
 {
   self.view = view;
   
-  for (CardInfo *cardInfo in self.cardData)
+  for (CardLookupTable *cardInfo in self.cardData)
   {
     Card *card = [[Card cardWithLesson:self] autorelease];
     

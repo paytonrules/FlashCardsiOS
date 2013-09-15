@@ -1,6 +1,6 @@
 #import "SimpleCardLookupFactory.h"
 #import "FirstLevelFactory.h"
-#import "CardInfo.h"
+#import "CardLookupTable.h"
 
 @interface FirstLevelFactory()
 
@@ -15,9 +15,9 @@
     self = [super init];
     if (self) {
       self.simpleFactory = [SimpleCardLookupFactory factoryWithCards:
-                            [CardInfo cardInfoWithName:@"Enemy Bug.png" reading:@"bug.mp3" atLocation:CGPointMake(100, 200)],
-                            [CardInfo cardInfoWithName:@"Star.png" reading:@"star.mp3" atLocation:CGPointMake(300, 400)],
-                            [CardInfo cardInfoWithName:@"Tree Tall.png" reading:@"tree.mp3" atLocation:CGPointMake(500, 400)],
+                            [CardLookupTable cardInfoWithName:@"Enemy Bug.png" reading:@"bug.mp3" atLocation:CGPointMake(200, 400)],
+                            [CardLookupTable cardInfoWithName:@"Star.png" reading:@"star.mp3" atLocation:CGPointMake(700, 400)],
+                            [CardLookupTable cardInfoWithName:@"Tree Tall.png" reading:@"tree.mp3" atLocation:CGPointMake(450, 600)],
                             nil];
     }
     return self;

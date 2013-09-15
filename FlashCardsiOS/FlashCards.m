@@ -64,17 +64,13 @@
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
 }
 
--(void) addNewSprite:(CardInfo *)cardInfo forCard:(NSObject *) card
-{
-  
-}
-
--(void) addNewSprite:(NSString *)filename forCard:(Card *) card atLocation:(CGPoint) location
+-(void) addNewSprite:(CardLookupTable *)cardInfo forCard:(Card *) card
 {
   CardSprite *sprite;
-  sprite = [[[CardSprite alloc] initWithFile:filename andCard:card] autorelease];
-  sprite.position = location;
+  sprite = [[[CardSprite alloc] initWithFile:cardInfo.spriteName andCard:card] autorelease];
+  sprite.position = cardInfo.location;
   [self addChild: sprite];
+  
 }
 
 -(void) playCorrectSound
@@ -85,6 +81,11 @@
 -(void) playInCorrectSound
 {
   [[SimpleAudioEngine sharedEngine] playEffect:@"jump.wav"];
+}
+
+-(void) playClue:(NSString *)reading
+{
+  [[SimpleAudioEngine sharedEngine] playEffect:reading];
 }
 
 @end
