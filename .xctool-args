@@ -1,0 +1,7 @@
+[
+  "-workspace", "FlashCardsiOS.xcworkspace",
+  "-scheme", "Specs",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-arch", "i386"
+]
