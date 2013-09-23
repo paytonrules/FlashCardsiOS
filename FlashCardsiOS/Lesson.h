@@ -7,5 +7,6 @@
 -(void) readFlashCard;
 -(void) correctGuess;
 -(void) incorrectGuess;
+@property(readonly) NSMutableArray *cards;
 
 @end

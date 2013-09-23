@@ -1,15 +1,8 @@
-//
-//  AppDelegate.m
-//  FlashCardsiOS
-//
-//  Created by Eric Smith on 7/31/13.
-//  Copyright Eric Smith 2013. All rights reserved.
-//
-
 #import "cocos2d.h"
-
 #import "AppDelegate.h"
 #import "FlashCards.h"
+#import "FirstLesson.h"
+#import "Lesson.h"
 
 @implementation MyNavigationController
 
@@ -28,7 +21,7 @@
 
 // Supported orientations. Customize it for your own needs
 // Only valid on iOS 4 / 5. NOT VALID for iOS 6.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+-(BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	// iPhone only
 	if( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
@@ -37,18 +30,6 @@
 	// iPad only
 	// iPhone only
 	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
-}
-
-// This is needed for iOS4 and iOS5 in order to ensure
-// that the 1st scene has the correct dimensions
-// This is not needed on iOS6 and could be added to the application:didFinish...
--(void) directorDidReshapeProjection:(CCDirector*)director
-{
-	if(director.runningScene == nil) {
-		// Add the first scene to the stack. The director will draw it immediately into the framebuffer. (Animation is started automatically when the view is displayed.)
-		// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-		[director runWithScene: [FlashCards scene]];
-	}
 }
 @end
 
@@ -135,7 +116,11 @@
 	
 	// make main window visible
 	[window_ makeKeyAndVisible];
-	
+
+  // 'Main'
+  CardLookupTable *lookupTable = [CardLookupTable new];
+  NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup:lookupTable];
+  [director_ runWithScene: [FlashCards sceneWithLesson:lesson spriteLookup: lookupTable]];
 	return YES;
 }
 

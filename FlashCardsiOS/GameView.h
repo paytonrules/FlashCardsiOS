@@ -7,6 +7,7 @@
 @protocol GameView <NSObject>
 
 -(void) addNewSprite:(CardLookupTable *)cardInfo forCard:(Card *) card;
+-(void) addNewSprite:(NSString *)cardName;
 
 -(void) playCorrectSound;
 -(void) playInCorrectSound;
