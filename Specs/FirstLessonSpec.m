@@ -44,7 +44,7 @@ OCDSpec2Context(FirstLessonSpec) {
     
     It(@"starts by telling the view to add any visible cards", ^{
       id location = [OCMockObject mockForProtocol:@protocol(CardLookup)];
-      [[[location stub] andReturn:@[@"card"]] allCards];
+      [[[location stub] andReturn:@[@"card", @"two"]] allCards];
 
       NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup: location];
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
@@ -54,10 +54,12 @@ OCDSpec2Context(FirstLessonSpec) {
         Card *card = (Card *)obj;
         return [card.name isEqualToString:@"card"];
       }]];
+ 
+      [[view expect] addCard:[OCMArg checkWithBlock:^(id obj) {
+        Card *card = (Card *)obj;
+        return [card.name isEqualToString:@"two"];
+      }]];
         
-/*      [[view expect] addCard:@"of"];
-      [[view expect] addCard:@"names"];*/
-      
       [lesson startWithView:view];
       
       [view verify];
@@ -72,21 +74,20 @@ OCDSpec2Context(FirstLessonSpec) {
       
       [lesson startWithView:view];
 
-      [ExpectInt([lesson.cards count]) toBe:3];
+      [ExpectObj(((Card *)[lesson.cards objectAtIndex:0]).name) toBe:@"list"];
+      [ExpectObj(((Card *)[lesson.cards objectAtIndex:1]).name) toBe:@"of"];
+      [ExpectObj(((Card *)[lesson.cards objectAtIndex:2]).name) toBe:@"names"];
     });
   
     It(@"chooses a card to guess", ^{
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
       NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
                                                             initWithRandomNumbers:@[@0]] autorelease];
-
-      NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
-                                                         factoryWithCards:
-                                                         createCard(@"huzzah", @"", 2, 4),
-                                                         nil];
+      id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
+      [[[lookup stub] andReturn:@[@"list", @"of", @"names"]] allCards];
       
-      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
-      FirstLesson *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
-                                                  andRandomNumberGenerator: simpleGenerator];
+      FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup
+                                     andRandomNumberGenerator: simpleGenerator];
       
       [lesson startWithView:view];
       [lesson readFlashCard];
@@ -95,19 +96,16 @@ OCDSpec2Context(FirstLessonSpec) {
       
       [ExpectBool(card.current) toBeTrue];
     });
-/*    
+    
     It(@"has its minimum random card be the first one in the array", ^{
       NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
                                                           initWithRandomNumbers:@[@2]] autorelease];
-      
-      NSObject<CardLookupFactory> *tableFactory = [SimpleCardLookupFactory factoryWithCards:
-                                                         createCard(@"huzzah", @"", 2, 4),
-                                                         createCard(@"hullo", @"", 1, 3),
-                                                         nil];
+      id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
+      [[[lookup stub] andReturn:@[@"huzzah", @"hullo"]] allCards];
       
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
-      FirstLesson *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
-                                             andRandomNumberGenerator: simpleGenerator];
+      FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup
+                                     andRandomNumberGenerator: simpleGenerator];
       
       [lesson startWithView:view];
       [lesson readFlashCard];
@@ -120,16 +118,12 @@ OCDSpec2Context(FirstLessonSpec) {
     It(@"The maximum random card is the last entry in the list", ^{
       NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
                                                           initWithRandomNumbers:@[@3]] autorelease];
-      
-      NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
-                                                         factoryWithCards:
-                                                         createCard(@"huzzah", @"", 2, 4),
-                                                         createCard(@"hullo", @"", 1, 3),
-                                                         nil];
-      
+      id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
+      [[[lookup stub] andReturn:@[@"huzzah", @"hullo"]] allCards];
+     
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
-      FirstLesson *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
-                                             andRandomNumberGenerator: simpleGenerator];
+      FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup
+                                     andRandomNumberGenerator: simpleGenerator];
       
       [lesson startWithView:view];
       [lesson readFlashCard];
@@ -143,16 +137,12 @@ OCDSpec2Context(FirstLessonSpec) {
       NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
                                                           initWithRandomNumbers:@[@4]] autorelease];
       
-      NSObject<CardLookupFactory> *tableFactory =[SimpleCardLookupFactory
-                                                         factoryWithCards:
-                                                         createCard(@"huzzah", @"", 2, 4),
-                                                         createCard(@"james", @"", 2, 4),
-                                                         createCard(@"hullo", @"", 1, 3),
-                                                         nil];
-      
+      id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
+      [[[lookup stub] andReturn:@[@"huzzah", @"james", @"hullo"]] allCards];
+     
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
-      FirstLesson *lesson = [FirstLesson lessonWithSpriteTableFactory: tableFactory
-                                             andRandomNumberGenerator: simpleGenerator];
+      FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup
+                                     andRandomNumberGenerator: simpleGenerator];
       
       [lesson startWithView:view];
       [lesson readFlashCard];
@@ -186,7 +176,7 @@ OCDSpec2Context(FirstLessonSpec) {
       [lesson incorrectGuess];
       
       [view verify];
-    });*/
+    });
     
     // Plays the sound when the new card is chosen
     // Need to start the game by randomly choosing a card

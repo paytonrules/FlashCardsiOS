@@ -5,7 +5,6 @@
 #import "Card.h"
 
 @interface FirstLesson()
-@property(strong) NSArray *cardData;
 @property(strong) NSObject<RandomNumberGenerator> *randomNumberGenerator;
 @property(strong) NSObject<GameView> *view;
 @property(strong) NSMutableArray *cards;
@@ -19,42 +18,23 @@
   return [[[FirstLesson alloc] initWithCardLookup: cardLookup] autorelease];
 }
 
-+(id) lessonWithSpriteTableFactory:(NSObject<CardLookupFactory> *)tableFactory
++(id) lessonWithCardLookup:(NSObject<CardLookup> *) cardLookup andRandomNumberGenerator:(NSObject<RandomNumberGenerator>*) gen
 {
-  return [self lessonWithSpriteTableFactory:tableFactory
-                   andRandomNumberGenerator:nil];
-}
-
-+(id) lessonWithSpriteTableFactory:(NSObject<CardLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *)generator
-{
-  return [[[FirstLesson alloc] initWithCardInfoFactory:factory
-                             andRandomNumberGenerator:generator] autorelease];
-}
-
-
--(id) init
-{
-  return [self initWithCardInfoFactory:[[FirstLevelFactory new] autorelease]
-              andRandomNumberGenerator:[[StandardRandomNumberGenerator new] autorelease]];
+  return [[[FirstLesson alloc] initWithCardLookup: cardLookup andRandomNumberGenerator:gen] autorelease];
 }
 
 -(id) initWithCardLookup:(NSObject<CardLookup> *) lookup
+{
+  return [self initWithCardLookup:lookup andRandomNumberGenerator: [[StandardRandomNumberGenerator new] autorelease]];
+}
+
+-(id) initWithCardLookup:(NSObject<CardLookup> *) lookup andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *)gen
 {
   self = [super init];
   if (self) {
     self.cardLookup = lookup;
     self.cards = [NSMutableArray new];
-  }
-  return self;
-}
-
--(id) initWithCardInfoFactory:(NSObject<CardLookupFactory> *) factory andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *) generator
-{
-  self = [super init];
-  if (self) {
-    self.cards = [NSMutableArray new];
-    self.cardData = [[factory create] autorelease];
-    self.randomNumberGenerator = generator;
+    self.randomNumberGenerator = gen;
   }
   return self;
 }
@@ -62,28 +42,13 @@
 -(void) startWithView:(NSObject<GameView> *)view
 {
   self.view = view;
- 
-  if (self.cardData != nil) 
-  {
-    for (CardLookupTable *cardInfo in self.cardData)
-    {
-      Card *card = [[Card cardWithName: @"" lesson:self] autorelease];
-      
-      [self.cards addObject:card];
-      [self.view addNewSprite: cardInfo
-                      forCard: card];
-    }
-  }
 
-  if (self.cardLookup != nil)
+  for (NSString *cardName in [self.cardLookup allCards])
   {
-    for (NSString *cardName in [self.cardLookup allCards])
-    {
-      Card *card = [[Card cardWithName: cardName lesson:self] autorelease];
-      
-      [self.cards addObject:card];
-      [self.view addCard:card];
-    }
+    Card *card = [[Card cardWithName: cardName lesson:self] autorelease];
+
+    [self.cards addObject:card];
+    [self.view addCard:card];
   }
 }
 
