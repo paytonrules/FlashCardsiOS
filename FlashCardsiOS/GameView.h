@@ -8,6 +8,7 @@
 
 -(void) addNewSprite:(CardLookupTable *)cardInfo forCard:(Card *) card;
 -(void) addNewSprite:(NSString *)cardName;
+-(void) addCard:(Card *) card;
 
 -(void) playCorrectSound;
 -(void) playInCorrectSound;

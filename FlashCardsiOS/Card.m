@@ -4,24 +4,31 @@
 
 @property(strong) NSObject<Lesson> *lesson;
 @property(assign) BOOL current;
+@property(strong) NSString *name;
 
 @end
 
 @implementation Card
 
-+(Card *) cardWithLesson:(NSObject<Lesson> *) lesson
++(Card *) cardWithName: (NSString *) name lesson:(NSObject<Lesson> *) lesson
 {
-  Card *tempCard = [[[Card alloc] initWithLesson:lesson] autorelease];
+  Card *tempCard = [[[Card alloc] initWithName:name lesson:lesson] autorelease];
   
   return tempCard;
 }
 
--(id) initWithLesson:(NSObject<Lesson> *) lesson
+-(id) initWithName:(NSString *) name
+{
+  return [self initWithName:name lesson: nil];
+}
+
+-(id) initWithName:(NSString *) name lesson:(NSObject<Lesson> *) lesson
 {
   self = [super init];
   if (self) {
     self.lesson = lesson;
     self.current = NO;
+    self.name = name;
   }
   return self;
 }

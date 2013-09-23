@@ -67,7 +67,7 @@
   {
     for (CardLookupTable *cardInfo in self.cardData)
     {
-      Card *card = [[Card cardWithLesson:self] autorelease];
+      Card *card = [[Card cardWithName: @"" lesson:self] autorelease];
       
       [self.cards addObject:card];
       [self.view addNewSprite: cardInfo
@@ -79,10 +79,10 @@
   {
     for (NSString *cardName in [self.cardLookup allCards])
     {
-      Card *card = [[Card cardWithLesson:self] autorelease];
+      Card *card = [[Card cardWithName: cardName lesson:self] autorelease];
       
       [self.cards addObject:card];
-      [self.view addNewSprite:cardName];
+      [self.view addCard:card];
     }
   }
 }

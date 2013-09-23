@@ -5,10 +5,23 @@
 
 OCDSpec2Context(CardSpec) {
   
-  Describe(@"Can be created without a view", ^{
-    Card *card = [[Card new] autorelease];
-    
-    [ExpectBool(card.current) toBeFalse];
+  Describe(@"Creation", ^{
+
+    It(@"requires a name", ^{
+      Card *card = [[[Card alloc] initWithName:@"name"] autorelease];
+      
+      [ExpectBool(card.current) toBeFalse];
+      [ExpectObj(card.name) toBe:@"name"];
+    });
+
+    It(@"optionally has a view", ^{
+      id lesson = [OCMockObject mockForProtocol:@protocol(Lesson)];
+      Card *card = [[[Card alloc] initWithName:@"name" lesson:lesson] autorelease];
+      
+      [ExpectBool(card.current) toBeFalse];
+      [ExpectObj(card.name) toBe:@"name"];
+      [ExpectObj(card.lesson) toBe:lesson];
+    });
   });
   
   Describe(@"tapping the card", ^{
@@ -18,7 +31,7 @@ OCDSpec2Context(CardSpec) {
     
     BeforeEach(^{
       lesson = [OCMockObject mockForProtocol:@protocol(Lesson)];
-      card = [Card cardWithLesson:lesson];
+      card = [Card cardWithName: @"" lesson:lesson];
     });
     
     It(@"lets the lesson know if the card is chosen correctly", ^{
@@ -42,7 +55,7 @@ OCDSpec2Context(CardSpec) {
   Describe(@"Making the card current", ^{
 
     It(@"makes the card curent", ^{
-      Card *card = [Card cardWithLesson:nil];
+      Card *card = [Card cardWithName: @"" lesson:nil];
       [ExpectBool(card.current) toBeFalse];
 
       [card makeCurrent];

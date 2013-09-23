@@ -44,14 +44,19 @@ OCDSpec2Context(FirstLessonSpec) {
     
     It(@"starts by telling the view to add any visible cards", ^{
       id location = [OCMockObject mockForProtocol:@protocol(CardLookup)];
-      [[[location stub] andReturn:@[@"list", @"of", @"names"]] allCards];
+      [[[location stub] andReturn:@[@"card"]] allCards];
 
       NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup: location];
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
+      [[view stub] addNewSprite:[OCMArg any]];
       
-      [[view expect] addNewSprite:@"list"];
-      [[view expect] addNewSprite:@"of"];
-      [[view expect] addNewSprite:@"names"];
+      [[view expect] addCard:[OCMArg checkWithBlock:^(id obj) {
+        Card *card = (Card *)obj;
+        return [card.name isEqualToString:@"card"];
+      }]];
+        
+/*      [[view expect] addCard:@"of"];
+      [[view expect] addCard:@"names"];*/
       
       [lesson startWithView:view];
       
