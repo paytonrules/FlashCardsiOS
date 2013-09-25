@@ -8,13 +8,14 @@
 @interface FlashCards()
 
 @property(strong) NSObject<Lesson> *lesson;
+@property(strong) NSObject<SpriteLookup> *lookup;
+
 @end
 
 @implementation FlashCards
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
-//+(CCScene *) sceneWithLesson: lookup:
-+(CCScene *) scene
++(CCScene *) sceneWithLesson:(NSObject<Lesson> *)lesson spriteLookup:(NSObject<SpriteLookup> *)lookup
 {
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
@@ -24,8 +25,11 @@
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
-  
-  [layer startLesson];
+
+  layer.lesson = lesson;
+  [layer.lesson startWithView:layer];
+  [layer.lesson readFlashCard];
+  layer.lookup = lookup;
 	
 	// return the scene
 	return scene;
@@ -40,13 +44,6 @@
 	}
 	
 	return self;
-}
-
--(void) startLesson
-{
-  self.lesson = [FirstLesson new];
-  [self.lesson startWithView:self];
-  [self.lesson readFlashCard];
 }
 
 -(void) createBackground
@@ -68,10 +65,10 @@
 -(void) addCard:(Card *)card
 {
   CardSprite *sprite;
-  sprite = [[[CardSprite alloc] initWithFile:[self.spriteLookup spriteByName:card.name]
+  sprite = [[[CardSprite alloc] initWithFile:[self.lookup spriteByName:card.name]
                                      andCard: card] autorelease];
-  sprite.position = [self.spriteLookup locationByName: card.name];
-  [self addChild sprite];
+  sprite.position = [self.lookup locationByName: card.name];
+  [self addChild: sprite];
 }
 
 -(void) playCorrectSound

@@ -16,7 +16,7 @@ OCDSpec2Context(CardLookupTable) {
       [ExpectStr(info.reading) toContain:@"reading"];
     });
     
-    It(@"it returns location information for a card", ^{
+    It(@"returns location information for a card", ^{
       CardLookupTable *table = [CardLookupTable new];
       [table add:@{@"name" : @"eric", 
                     @"location-x" : [NSNumber numberWithInt:1],
@@ -28,7 +28,7 @@ OCDSpec2Context(CardLookupTable) {
       [ExpectInt([lookup locationByName:@"eric"].y) toBe: 2];
     });
 
-    It(@"it returns sprite information for a card", ^{
+    It(@"returns sprite information for a card", ^{
       CardLookupTable *table = [CardLookupTable new];
       [table add:@{@"name" : @"eric", 
                     @"sprite" : @"sprite.png"}];
@@ -38,7 +38,7 @@ OCDSpec2Context(CardLookupTable) {
       [ExpectObj([lookup spriteByName:@"eric"]) toBe: @"sprite.png"];
     });
 
-    It(@"it returns reading information for a card", ^{
+    It(@"returns reading information for a card", ^{
       CardLookupTable *table = [CardLookupTable new];
       [table add:@{@"name" : @"eric", 
                     @"reading" : @"reading.mp3"}];
@@ -47,7 +47,16 @@ OCDSpec2Context(CardLookupTable) {
 
       [ExpectObj([lookup readingByName:@"eric"]) toBe: @"reading.mp3"];
     });
-    
+
+    It(@"retruns all the cards in the table, by name", ^{
+      CardLookupTable *table = [CardLookupTable new];
+      [table add:@{@"name" : @"eric"}];
+      [table add:@{@"name" : @"rick"}];
+
+      NSObject<CardLookup> *lookup = table;
+
+      [ExpectObj([[lookup allCards] objectAtIndex:0]) toBe:@"eric"];
+      [ExpectObj([[lookup allCards] objectAtIndex:1]) toBe:@"rick"];
+    });
   });
-  
 }

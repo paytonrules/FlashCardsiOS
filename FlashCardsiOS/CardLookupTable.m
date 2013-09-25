@@ -51,4 +51,9 @@
   return [card objectForKey:@"reading"];
 }
 
+-(NSArray *) allCards
+{
+  return [self.cards allKeys];
+}
+
 @end
