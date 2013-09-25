@@ -48,7 +48,6 @@ OCDSpec2Context(FirstLessonSpec) {
 
       NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup: location];
       id view = [OCMockObject mockForProtocol:@protocol(GameView)];
-      [[view stub] addNewSprite:[OCMArg any]];
       
       [[view expect] addCard:[OCMArg checkWithBlock:^(id obj) {
         Card *card = (Card *)obj;

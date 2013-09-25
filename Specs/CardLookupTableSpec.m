@@ -22,7 +22,7 @@ OCDSpec2Context(CardLookupTable) {
                     @"location-x" : [NSNumber numberWithInt:1],
                     @"location-y" : [NSNumber numberWithInt:2]}];
 
-      NSObject<CardLookup> *lookup = table;
+      NSObject<SpriteLookup> *lookup = table;
 
       [ExpectInt([lookup locationByName:@"eric"].x) toBe: 1];
       [ExpectInt([lookup locationByName:@"eric"].y) toBe: 2];

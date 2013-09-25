@@ -65,13 +65,13 @@
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
 }
 
--(void) addNewSprite:(CardLookupTable *)cardInfo forCard:(Card *) card
+-(void) addCard:(Card *)card
 {
   CardSprite *sprite;
-  sprite = [[[CardSprite alloc] initWithFile:cardInfo.spriteName andCard:card] autorelease];
-  sprite.position = cardInfo.location;
-  [self addChild: sprite];
-  
+  sprite = [[[CardSprite alloc] initWithFile:[self.spriteLookup spriteByName:card.name]
+                                     andCard: card] autorelease];
+  sprite.position = [self.spriteLookup locationByName: card.name];
+  [self addChild sprite];
 }
 
 -(void) playCorrectSound

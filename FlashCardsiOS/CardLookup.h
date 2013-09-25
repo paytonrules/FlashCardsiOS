@@ -2,6 +2,5 @@
 
 @protocol CardLookup <NSObject>
 
--(CGPoint) locationByName:(NSString *)name;
 -(NSArray *) allCards;
 @end
