@@ -7,17 +7,6 @@
 
 @implementation CardLookupTable
 
-// This should die
-// it makes no sense
-+(CardLookupTable *) cardInfoWithName:(NSString *)name reading:(NSString *)reading atLocation:(CGPoint) location
-{
-  CardLookupTable *info = [[CardLookupTable new] autorelease];
-  info.spriteName = name;
-  info.reading = reading;
-  info.location = location;
-  return info;
-}
-
 -(id) init
 {
   self = [super init];
@@ -27,9 +16,9 @@
   return self;
 }
 
--(void) add:(NSDictionary *)cardData
+-(void) add:(NSDictionary *)cardData named:(NSString *)name
 {
-  [self.cards setObject:cardData forKey:[cardData objectForKey:@"name"]];
+  [self.cards setObject:cardData forKey:name];
 }
 
 -(CGPoint) locationByName:(NSString *) name

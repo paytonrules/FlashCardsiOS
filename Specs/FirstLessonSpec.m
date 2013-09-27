@@ -1,7 +1,6 @@
 #import <OCDSpec2/OCDSpec2.h>
 #import <OCMock/OCMock.h>
 #import "FirstLesson.h"
-#import "SimpleCardLookupFactory.h"
 #import "RandomNumberGenerator.h"
 #import "CardLookupTable.h"
 #import "Card.h"
@@ -32,11 +31,6 @@
   return nextNum;
 }
 @end
-
-CardLookupTable *createCard(NSString *name, NSString *reading, int x, int y)
-{
-  return [CardLookupTable cardInfoWithName:name reading:reading atLocation:CGPointMake(x, y)];
-}
 
 OCDSpec2Context(FirstLessonSpec) {
   

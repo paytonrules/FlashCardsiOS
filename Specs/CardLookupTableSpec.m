@@ -4,23 +4,12 @@
 OCDSpec2Context(CardLookupTable) {
   
   Describe(@"creating card info structures", ^{
-    
-    It(@"creates a card info structure", ^{
-      CardLookupTable *info = [CardLookupTable cardInfoWithName:@"name"
-                                        reading:@"reading"
-                                     atLocation:CGPointMake(0, 1)];
-      
-      [ExpectInt(info.location.x) toBe:0];
-      [ExpectInt(info.location.y) toBe:1];
-      [ExpectStr(info.spriteName) toContain:@"name"];
-      [ExpectStr(info.reading) toContain:@"reading"];
-    });
-    
+       
     It(@"returns location information for a card", ^{
       CardLookupTable *table = [CardLookupTable new];
-      [table add:@{@"name" : @"eric", 
-                    @"location-x" : [NSNumber numberWithInt:1],
-                    @"location-y" : [NSNumber numberWithInt:2]}];
+      [table add:@{@"location-x" : [NSNumber numberWithInt:1],
+                   @"location-y" : [NSNumber numberWithInt:2]}
+           named:@"eric"];
 
       NSObject<SpriteLookup> *lookup = table;
 
@@ -30,8 +19,7 @@ OCDSpec2Context(CardLookupTable) {
 
     It(@"returns sprite information for a card", ^{
       CardLookupTable *table = [CardLookupTable new];
-      [table add:@{@"name" : @"eric", 
-                    @"sprite" : @"sprite.png"}];
+      [table add:@{@"sprite" : @"sprite.png"} named:@"eric"];
 
       NSObject<SpriteLookup> *lookup = table;
 
@@ -40,8 +28,7 @@ OCDSpec2Context(CardLookupTable) {
 
     It(@"returns reading information for a card", ^{
       CardLookupTable *table = [CardLookupTable new];
-      [table add:@{@"name" : @"eric", 
-                    @"reading" : @"reading.mp3"}];
+      [table add:@{@"reading" : @"reading.mp3"} named:@"eric"];
 
       NSObject<SpriteLookup> *lookup = table;
 
@@ -50,8 +37,8 @@ OCDSpec2Context(CardLookupTable) {
 
     It(@"retruns all the cards in the table, by name", ^{
       CardLookupTable *table = [CardLookupTable new];
-      [table add:@{@"name" : @"eric"}];
-      [table add:@{@"name" : @"rick"}];
+      [table add:@{} named:@"eric"];
+      [table add:@{} named:@"rick"];
 
       NSObject<CardLookup> *lookup = table;
 

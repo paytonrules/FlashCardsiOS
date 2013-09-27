@@ -4,12 +4,6 @@
 
 @interface CardLookupTable : NSObject<CardLookup, SpriteLookup>
 
-@property(strong) NSString *spriteName;
-@property(strong) NSString *reading;
-@property(assign) CGPoint location;
-
-+(CardLookupTable *) cardInfoWithName:(NSString *)name reading:(NSString *)reading atLocation:(CGPoint) location;
-
--(void) add:(NSDictionary *)cardData;
+-(void) add:(NSDictionary *)cardData named:(NSString *) name;
 
 @end

@@ -27,9 +27,9 @@
 	[scene addChild: layer];
 
   layer.lesson = lesson;
+  layer.lookup = lookup;
   [layer.lesson startWithView:layer];
   [layer.lesson readFlashCard];
-  layer.lookup = lookup;
 	
 	// return the scene
 	return scene;

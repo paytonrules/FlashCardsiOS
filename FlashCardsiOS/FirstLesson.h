@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "Lesson.h"
-#import "CardLookupFactory.h"
+#import "CardLookup.h"
 #import "RandomNumberGenerator.h"
 
 @class Card;
