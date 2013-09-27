@@ -61,6 +61,7 @@
   Card *card = [self.cards objectAtIndex:[self.randomNumberGenerator next] % self.cards.count];
   
   [card makeCurrent];
+  [self.view playClue:card];
 }
 
 -(void) correctGuess

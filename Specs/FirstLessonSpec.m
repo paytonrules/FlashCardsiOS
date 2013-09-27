@@ -170,8 +170,31 @@ OCDSpec2Context(FirstLessonSpec) {
       
       [view verify];
     });
+
+    It(@"Plays the sound when the new card is chosen", ^{
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@0]] autorelease];
+      
+      id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
+      [[[lookup stub] andReturn:@[@"huzzah"]] allCards];
+     
+       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+       FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup 
+                                      andRandomNumberGenerator: simpleGenerator];
+
+      [lesson startWithView:view];
+
+      [[view expect] playClue:[OCMArg checkWithBlock:^(id obj) {
+        Card *card = (Card *)obj;
+        return [card.name isEqualToString:@"huzzah"];
+      }]];
+
+      [lesson startWithView:view];
+      [lesson readFlashCard];
+
+      [view verify];
+    });
     
-    // Plays the sound when the new card is chosen
     // Need to start the game by randomly choosing a card
     // Make sure the defaults are set to the first level and the real random number generator
     // Begin tweaking the game.

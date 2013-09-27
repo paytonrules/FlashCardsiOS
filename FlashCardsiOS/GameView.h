@@ -9,6 +9,6 @@
 -(void) addCard:(Card *) card;
 -(void) playCorrectSound;
 -(void) playInCorrectSound;
--(void) playClue:(NSString *)reading;
+-(void) playClue:(Card *)card;
 
 @end

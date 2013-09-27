@@ -58,8 +58,8 @@
 
 -(void) preloadSoundEffects
 {
-    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Powerup.wav"];
-    [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
+  [[SimpleAudioEngine sharedEngine] preloadEffect:@"Powerup.wav"];
+  [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
 }
 
 -(void) addCard:(Card *)card
@@ -81,8 +81,9 @@
   [[SimpleAudioEngine sharedEngine] playEffect:@"jump.wav"];
 }
 
--(void) playClue:(NSString *)reading
+-(void) playClue:(Card *)card
 {
+  NSString *reading = [self.lookup readingByName:card.name];
   [[SimpleAudioEngine sharedEngine] playEffect:reading];
 }
 
