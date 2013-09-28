@@ -58,15 +58,18 @@
 
 -(void) readFlashCard
 {
-  Card *card = [self.cards objectAtIndex:[self.randomNumberGenerator next] % self.cards.count];
-  
-  [card makeCurrent];
-  [self.view playClue:card];
+  if (self.cards.count > 0) {
+    Card *card = [self.cards objectAtIndex:[self.randomNumberGenerator next] % self.cards.count];
+    
+    [card makeCurrent];
+    [self.view playClue:card];
+  }
 }
 
 -(void) correctGuess
 {
   [self.view playCorrectSound];
+  [self readFlashCard];
 }
 
 -(void) incorrectGuess
