@@ -479,7 +479,7 @@
 		07DE980217AF294D0013AFDC /* CardLookupTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLookupTable.m; sourceTree = "<group>"; };
 		07DE981317AF37AC0013AFDC /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		07DE981417AF37AC0013AFDC /* Tree Tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree Tall.png"; sourceTree = "<group>"; };
-		07EFE79617F733F600244FB2 /* SpecsPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecsPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07EFE79617F733F600244FB2 /* Specs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EFE79C17F733F600244FB2 /* SpecsPods-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpecsPods-Info.plist"; sourceTree = "<group>"; };
 		07EFE79E17F733F600244FB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07EFE7A017F733F600244FB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -527,7 +527,7 @@
 			children = (
 				07EFE7BB17F7382F00244FB2 /* Default-568h@2x.png */,
 				074D878A17AA1BD300985CD3 /* FlashCardsiOS */,
-				07EFE79A17F733F600244FB2 /* SpecsPods */,
+				07EFE79A17F733F600244FB2 /* Specs */,
 				074D877517AA1BD300985CD3 /* Frameworks */,
 				074D877417AA1BD300985CD3 /* Products */,
 				385674D539444B7D952A1309 /* Pods-Specs.xcconfig */,
@@ -539,7 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				074D877317AA1BD300985CD3 /* FlashCardsiOS.app */,
-				07EFE79617F733F600244FB2 /* SpecsPods.app */,
+				07EFE79617F733F600244FB2 /* Specs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1013,7 +1013,7 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
-		07EFE79A17F733F600244FB2 /* SpecsPods */ = {
+		07EFE79A17F733F600244FB2 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
 				074D896917AA833D00985CD3 /* CardSpec.m */,
@@ -1022,6 +1022,7 @@
 				07DE980017AF28890013AFDC /* CardLookupTableSpec.m */,
 				07EFE79B17F733F600244FB2 /* Supporting Files */,
 			);
+			name = Specs;
 			path = SpecsPods;
 			sourceTree = "<group>";
 		};
@@ -1056,9 +1057,9 @@
 			productReference = 074D877317AA1BD300985CD3 /* FlashCardsiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07EFE79517F733F600244FB2 /* SpecsPods */ = {
+		07EFE79517F733F600244FB2 /* Specs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07EFE7AA17F733F600244FB2 /* Build configuration list for PBXNativeTarget "SpecsPods" */;
+			buildConfigurationList = 07EFE7AA17F733F600244FB2 /* Build configuration list for PBXNativeTarget "Specs" */;
 			buildPhases = (
 				33BAB789CF7C40AA9D38A32F /* Check Pods Manifest.lock */,
 				07EFE79117F733F600244FB2 /* Sources */,
@@ -1071,9 +1072,9 @@
 			);
 			dependencies = (
 			);
-			name = SpecsPods;
+			name = Specs;
 			productName = SpecsPods;
-			productReference = 07EFE79617F733F600244FB2 /* SpecsPods.app */;
+			productReference = 07EFE79617F733F600244FB2 /* Specs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1098,7 +1099,7 @@
 			projectRoot = "";
 			targets = (
 				074D877217AA1BD300985CD3 /* FlashCardsiOS */,
-				07EFE79517F733F600244FB2 /* SpecsPods */,
+				07EFE79517F733F600244FB2 /* Specs */,
 			);
 		};
 /* End PBXProject section */
@@ -1502,7 +1503,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07EFE7AA17F733F600244FB2 /* Build configuration list for PBXNativeTarget "SpecsPods" */ = {
+		07EFE7AA17F733F600244FB2 /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07EFE7A317F733F600244FB2 /* Debug */,
