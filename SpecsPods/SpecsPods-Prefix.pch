@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'SpecsPods' target in the 'SpecsPods' project
+//
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+#endif

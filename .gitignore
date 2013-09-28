@@ -27,3 +27,6 @@ DerivedData
 FlashCardsiOS.approj/assets
 *.generated
 *.final
+
+#CocoaPods
+Pods/

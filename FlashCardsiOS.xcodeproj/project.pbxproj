@@ -150,24 +150,31 @@
 		074D896017AA7CAB00985CD3 /* CardSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D895F17AA7CAB00985CD3 /* CardSprite.m */; };
 		074D896417AA818C00985CD3 /* Enemy Bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 074D896317AA818C00985CD3 /* Enemy Bug.png */; };
 		074D896817AA822000985CD3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896717AA822000985CD3 /* Card.m */; };
-		074D896A17AA833D00985CD3 /* CardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896917AA833D00985CD3 /* CardSpec.m */; };
-		074D896B17AA834E00985CD3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896717AA822000985CD3 /* Card.m */; };
 		07DE97D917ABDC710013AFDC /* bug.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D417ABDC710013AFDC /* bug.mp3 */; };
 		07DE97DA17ABDC710013AFDC /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D517ABDC710013AFDC /* jump.wav */; };
 		07DE97DB17ABDC710013AFDC /* Powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D617ABDC710013AFDC /* Powerup.wav */; };
 		07DE97DC17ABDC710013AFDC /* star.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D717ABDC710013AFDC /* star.mp3 */; };
 		07DE97DD17ABDC710013AFDC /* tree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D817ABDC710013AFDC /* tree.mp3 */; };
 		07DE97EA17AD55FD0013AFDC /* FirstLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97E917AD55FD0013AFDC /* FirstLesson.m */; };
-		07DE97EB17AD56D10013AFDC /* FirstLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97E917AD55FD0013AFDC /* FirstLesson.m */; };
-		07DE97ED17AD58120013AFDC /* FirstLessonSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97EC17AD58120013AFDC /* FirstLessonSpec.m */; };
-		07DE97F217AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F117AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m */; };
 		07DE97F517AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F417AE802F0013AFDC /* StandardRandomNumberGenerator.m */; };
-		07DE97F617AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F417AE802F0013AFDC /* StandardRandomNumberGenerator.m */; };
-		07DE980117AF28890013AFDC /* CardLookupTableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980017AF28890013AFDC /* CardLookupTableSpec.m */; };
 		07DE980317AF294D0013AFDC /* CardLookupTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980217AF294D0013AFDC /* CardLookupTable.m */; };
-		07DE980417AF294D0013AFDC /* CardLookupTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980217AF294D0013AFDC /* CardLookupTable.m */; };
 		07DE981517AF37AC0013AFDC /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DE981317AF37AC0013AFDC /* Star.png */; };
 		07DE981617AF37AC0013AFDC /* Tree Tall.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DE981417AF37AC0013AFDC /* Tree Tall.png */; };
+		07EFE79717F733F600244FB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D878017AA1BD300985CD3 /* UIKit.framework */; };
+		07EFE79817F733F600244FB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D878217AA1BD300985CD3 /* Foundation.framework */; };
+		07EFE79917F733F600244FB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D878417AA1BD300985CD3 /* CoreGraphics.framework */; };
+		07EFE79F17F733F600244FB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07EFE79D17F733F600244FB2 /* InfoPlist.strings */; };
+		07EFE7A117F733F600244FB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFE7A017F733F600244FB2 /* main.m */; };
+		07EFE7B317F737FF00244FB2 /* CardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896917AA833D00985CD3 /* CardSpec.m */; };
+		07EFE7B417F737FF00244FB2 /* FirstLessonSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97EC17AD58120013AFDC /* FirstLessonSpec.m */; };
+		07EFE7B517F737FF00244FB2 /* StandardRandomNumberGeneratorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F117AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m */; };
+		07EFE7B617F737FF00244FB2 /* CardLookupTableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980017AF28890013AFDC /* CardLookupTableSpec.m */; };
+		07EFE7B717F7381700244FB2 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896717AA822000985CD3 /* Card.m */; };
+		07EFE7B817F7381B00244FB2 /* FirstLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97E917AD55FD0013AFDC /* FirstLesson.m */; };
+		07EFE7B917F7381E00244FB2 /* CardLookupTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE980217AF294D0013AFDC /* CardLookupTable.m */; };
+		07EFE7BA17F7382100244FB2 /* StandardRandomNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DE97F417AE802F0013AFDC /* StandardRandomNumberGenerator.m */; };
+		07EFE7BC17F7382F00244FB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EFE7BB17F7382F00244FB2 /* Default-568h@2x.png */; };
+		99D81961C4A348CFBF4C4EF5 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C45B9C921F14FD1A546B942 /* libPods-test.a */; };
 		A35EDC01BFAD4772AE508509 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA5749873D4856ADDDAF27 /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
 
@@ -523,7 +530,15 @@
 		07DE980217AF294D0013AFDC /* CardLookupTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLookupTable.m; sourceTree = "<group>"; };
 		07DE981317AF37AC0013AFDC /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		07DE981417AF37AC0013AFDC /* Tree Tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree Tall.png"; sourceTree = "<group>"; };
+		07EFE79617F733F600244FB2 /* SpecsPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecsPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07EFE79C17F733F600244FB2 /* SpecsPods-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpecsPods-Info.plist"; sourceTree = "<group>"; };
+		07EFE79E17F733F600244FB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07EFE7A017F733F600244FB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07EFE7A217F733F600244FB2 /* SpecsPods-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpecsPods-Prefix.pch"; sourceTree = "<group>"; };
+		07EFE7BB17F7382F00244FB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		385674D539444B7D952A1309 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
+		3C45B9C921F14FD1A546B942 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF285CC13FB4D8DAB2129C2 /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -556,18 +571,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07EFE79217F733F600244FB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EFE79717F733F600244FB2 /* UIKit.framework in Frameworks */,
+				07EFE79817F733F600244FB2 /* Foundation.framework in Frameworks */,
+				07EFE79917F733F600244FB2 /* CoreGraphics.framework in Frameworks */,
+				99D81961C4A348CFBF4C4EF5 /* libPods-test.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		074D876A17AA1BD300985CD3 = {
 			isa = PBXGroup;
 			children = (
+				07EFE7BB17F7382F00244FB2 /* Default-568h@2x.png */,
 				074D878A17AA1BD300985CD3 /* FlashCardsiOS */,
 				074D893217AA1D5200985CD3 /* Specs */,
+				07EFE79A17F733F600244FB2 /* SpecsPods */,
 				074D877517AA1BD300985CD3 /* Frameworks */,
 				074D877417AA1BD300985CD3 /* Products */,
 				074D893E17AA1D6600985CD3 /* OCDSpec2.xcodeproj */,
 				385674D539444B7D952A1309 /* Pods-Specs.xcconfig */,
+				ABF285CC13FB4D8DAB2129C2 /* Pods-test.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -576,6 +605,7 @@
 			children = (
 				074D877317AA1BD300985CD3 /* FlashCardsiOS.app */,
 				074D892E17AA1D5200985CD3 /* Specs.app */,
+				07EFE79617F733F600244FB2 /* SpecsPods.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -594,6 +624,7 @@
 				074D878617AA1BD300985CD3 /* CoreText.framework */,
 				074D878817AA1BD300985CD3 /* GameKit.framework */,
 				04EA5749873D4856ADDDAF27 /* libPods-Specs.a */,
+				3C45B9C921F14FD1A546B942 /* libPods-test.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1083,6 +1114,25 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
+		07EFE79A17F733F600244FB2 /* SpecsPods */ = {
+			isa = PBXGroup;
+			children = (
+				07EFE79B17F733F600244FB2 /* Supporting Files */,
+			);
+			path = SpecsPods;
+			sourceTree = "<group>";
+		};
+		07EFE79B17F733F600244FB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07EFE79C17F733F600244FB2 /* SpecsPods-Info.plist */,
+				07EFE79D17F733F600244FB2 /* InfoPlist.strings */,
+				07EFE7A017F733F600244FB2 /* main.m */,
+				07EFE7A217F733F600244FB2 /* SpecsPods-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1123,6 +1173,26 @@
 			productReference = 074D892E17AA1D5200985CD3 /* Specs.app */;
 			productType = "com.apple.product-type.application";
 		};
+		07EFE79517F733F600244FB2 /* SpecsPods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07EFE7AA17F733F600244FB2 /* Build configuration list for PBXNativeTarget "SpecsPods" */;
+			buildPhases = (
+				33BAB789CF7C40AA9D38A32F /* Check Pods Manifest.lock */,
+				07EFE79117F733F600244FB2 /* Sources */,
+				07EFE79217F733F600244FB2 /* Frameworks */,
+				07EFE79317F733F600244FB2 /* Resources */,
+				07EFE79417F733F600244FB2 /* ShellScript */,
+				F4241BC30A81448C892FC06D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpecsPods;
+			productName = SpecsPods;
+			productReference = 07EFE79617F733F600244FB2 /* SpecsPods.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1152,6 +1222,7 @@
 			targets = (
 				074D877217AA1BD300985CD3 /* FlashCardsiOS */,
 				074D892D17AA1D5200985CD3 /* Specs */,
+				07EFE79517F733F600244FB2 /* SpecsPods */,
 			);
 		};
 /* End PBXProject section */
@@ -1231,6 +1302,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07EFE79317F733F600244FB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EFE79F17F733F600244FB2 /* InfoPlist.strings in Resources */,
+				07EFE7BC17F7382F00244FB2 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1246,6 +1326,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\n#  RunIPhoneUnitTest.sh\n#  Copyright 2008 Google Inc.\n#\n#  Licensed under the Apache License, Version 2.0 (the \"License\"); you may not\n#  use this file except in compliance with the License.  You may obtain a copy\n#  of the License at\n#\n#  http://www.apache.org/licenses/LICENSE-2.0\n#\n#  Unless required by applicable law or agreed to in writing, software\n#  distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT\n#  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the\n#  License for the specific language governing permissions and limitations under\n#  the License.\n#\n#  Runs all unittests through the iPhone simulator. We don't handle running them\n#  on the device. To run on the device just choose \"run\".\n\nset -o errexit\nset -o nounset\nset -o verbose\n\n#  Controlling environment variables:\n# GTM_DISABLE_ZOMBIES -\n#   Set to a non-zero value to turn on zombie checks. You will probably\n#   want to turn this off if you enable leaks.\nGTM_DISABLE_ZOMBIES=${GTM_DISABLE_ZOMBIES:=1}\n\n# GTM_ENABLE_LEAKS -\n#   Set to a non-zero value to turn on the leaks check. You will probably want\n#   to disable zombies, otherwise you will get a lot of false positives.\n\n# GTM_DISABLE_TERMINATION\n#   Set to a non-zero value so that the app doesn't terminate when it's finished\n#   running tests. This is useful when using it with external tools such\n#   as Instruments.\n\n# GTM_LEAKS_SYMBOLS_TO_IGNORE\n#   List of comma separated symbols that leaks should ignore. Mainly to control\n#   leaks in frameworks you don't have control over.\n#   Search this file for GTM_LEAKS_SYMBOLS_TO_IGNORE to see examples.\n#   Please feel free to add other symbols as you find them but make sure to\n#   reference Radars or other bug systems so we can track them.\n\n# GTM_REMOVE_GCOV_DATA\n#   Before starting the test, remove any *.gcda files for the current run so\n#   you won't get failures when the source file has changed and the data can't\n#   be merged.\n#\nGTM_REMOVE_GCOV_DATA=${GTM_REMOVE_GCOV_DATA:=0}\n\n# GTM_DISABLE_USERDIR_SETUP\n#   Controls whether or not CFFIXED_USER_HOME is erased and set up from scratch\n#   for you each time the script is run. In some cases you may have a wrapper\n#   script calling this one that takes care of that for us so you can set up\n#   a certain user configuration.\nGTM_DISABLE_USERDIR_SETUP=${GTM_DISABLE_USERDIR_SETUP:=0}\n\n# GTM_DISABLE_IPHONE_LAUNCH_DAEMONS\n#   Controls whether or not we launch up the iPhone Launch Daemons before\n#   we start testing. You need Launch Daemons to test anything that interacts\n#   with security.\nGTM_DISABLE_IPHONE_LAUNCH_DAEMONS=1 #${GTM_DISABLE_IPHONE_LAUNCH_DAEMONS:=0}\n\nScriptDir=$(dirname \"$(echo $0 | sed -e \"s,^\\([^/]\\),$(pwd)/\\1,\")\")\nScriptName=$(basename \"$0\")\nThisScript=\"${ScriptDir}/${ScriptName}\"\n\nGTMXcodeNote() {\n    echo ${ThisScript}:${1}: note: GTM ${2}\n}\n\nif [ \"$PLATFORM_NAME\" == \"iphonesimulator\" ]; then\n  # We kill the iPhone simulator because otherwise we run into issues where\n  # the unittests fail becuase the simulator is currently running, and\n  # at this time the iPhone SDK won't allow two simulators running at the same\n  # time.\n  set +e\n  /usr/bin/killall \"iPhone Simulator\"\n  set -e\n\n  if [ $GTM_REMOVE_GCOV_DATA -ne 0 ]; then\n    if [ \"${OBJECT_FILE_DIR}-${CURRENT_VARIANT}\" != \"-\" ]; then\n      if [ -d \"${OBJECT_FILE_DIR}-${CURRENT_VARIANT}\" ]; then\n        GTMXcodeNote ${LINENO} \"Removing any .gcda files\"\n        (cd \"${OBJECT_FILE_DIR}-${CURRENT_VARIANT}\" && \\\n            find . -type f -name \"*.gcda\" -print0 | xargs -0 rm -f )\n      fi\n    fi\n  fi\n\n  export DYLD_ROOT_PATH=\"$SDKROOT\"\n  export DYLD_FRAMEWORK_PATH=\"$CONFIGURATION_BUILD_DIR\"\n  export IPHONE_SIMULATOR_ROOT=\"$SDKROOT\"\n  export CFFIXED_USER_HOME=\"$TEMP_FILES_DIR/iPhone Simulator User Dir\"\n\n  # See http://developer.apple.com/technotes/tn2004/tn2124.html for an\n  # explanation of these environment variables.\n\n  #export MallocScribble=YES\n  export MallocPreScribble=YES\n  #export MallocGuardEdges=YES\n  #export MallocStackLogging=YES\n  export NSAutoreleaseFreedObjectCheckEnabled=YES\n\n  # Turn on the mostly undocumented OBJC_DEBUG stuff.\n  export OBJC_DEBUG_FRAGILE_SUPERCLASSES=YES\n  export OBJC_DEBUG_UNLOAD=YES\n  # Turned off due to the amount of false positives from NS classes.\n  # export OBJC_DEBUG_FINALIZERS=YES\n  export OBJC_DEBUG_NIL_SYNC=YES\n  export OBJC_PRINT_REPLACED_METHODS=NO\n\n  if [ $GTM_DISABLE_ZOMBIES -eq 0 ]; then\n    GTMXcodeNote ${LINENO} \"Enabling zombies\"\n    export CFZombieLevel=3\n    export NSZombieEnabled=YES\n  fi\n\n  if [ $GTM_DISABLE_USERDIR_SETUP -eq 0 ]; then\n    # Cleanup user home directory\n    if [ -d \"$CFFIXED_USER_HOME\" ]; then\n      rm -rf \"$CFFIXED_USER_HOME\"\n    fi\n    mkdir \"$CFFIXED_USER_HOME\"\n    mkdir \"$CFFIXED_USER_HOME/Documents\"\n    mkdir -p \"$CFFIXED_USER_HOME/Library/Caches\"\n  fi\n\n  # 6251475 iPhone simulator leaks @ CFHTTPCookieStore shutdown if\n  #         CFFIXED_USER_HOME empty\n  GTM_LEAKS_SYMBOLS_TO_IGNORE=\"CFHTTPCookieStore\"\n\n  if [ $GTM_DISABLE_IPHONE_LAUNCH_DAEMONS -eq 0 ]; then\n    # If we want to test anything that interacts with the keychain, we need\n    # securityd up and running. See RunIPhoneLaunchDaemons.sh for details.\n    launchctl submit -l RunIPhoneLaunchDaemons -- \"${ScriptDir}/RunIPhoneLaunchDaemons.sh\" $IPHONE_SIMULATOR_ROOT $CFFIXED_USER_HOME\n    # No matter how we exit, we want to shut down our launchctl job.\n    trap \"launchctl remove RunIPhoneLaunchDaemons\" INT TERM EXIT\n  fi\n\n  # Start our app.\n  \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" -RegisterForSystemEvents\n\nelse\n  GTMXcodeNote ${LINENO} \"Skipping running of unittests for device build.\"\nfi\nexit 0";
+		};
+		07EFE79417F733F600244FB2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n#  RunIPhoneUnitTest.sh\n#  Copyright 2008 Google Inc.\n#\n#  Licensed under the Apache License, Version 2.0 (the \"License\"); you may not\n#  use this file except in compliance with the License.  You may obtain a copy\n#  of the License at\n#\n#  http://www.apache.org/licenses/LICENSE-2.0\n#\n#  Unless required by applicable law or agreed to in writing, software\n#  distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT\n#  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the\n#  License for the specific language governing permissions and limitations under\n#  the License.\n#\n#  Runs all unittests through the iPhone simulator. We don't handle running them\n#  on the device. To run on the device just choose \"run\".\n\nset -o errexit\nset -o nounset\nset -o verbose\n\n#  Controlling environment variables:\n# GTM_DISABLE_ZOMBIES -\n#   Set to a non-zero value to turn on zombie checks. You will probably\n#   want to turn this off if you enable leaks.\nGTM_DISABLE_ZOMBIES=${GTM_DISABLE_ZOMBIES:=1}\n\n# GTM_ENABLE_LEAKS -\n#   Set to a non-zero value to turn on the leaks check. You will probably want\n#   to disable zombies, otherwise you will get a lot of false positives.\n\n# GTM_DISABLE_TERMINATION\n#   Set to a non-zero value so that the app doesn't terminate when it's finished\n#   running tests. This is useful when using it with external tools such\n#   as Instruments.\n\n# GTM_LEAKS_SYMBOLS_TO_IGNORE\n#   List of comma separated symbols that leaks should ignore. Mainly to control\n#   leaks in frameworks you don't have control over.\n#   Search this file for GTM_LEAKS_SYMBOLS_TO_IGNORE to see examples.\n#   Please feel free to add other symbols as you find them but make sure to\n#   reference Radars or other bug systems so we can track them.\n\n# GTM_REMOVE_GCOV_DATA\n#   Before starting the test, remove any *.gcda files for the current run so\n#   you won't get failures when the source file has changed and the data can't\n#   be merged.\n#\nGTM_REMOVE_GCOV_DATA=${GTM_REMOVE_GCOV_DATA:=0}\n\n# GTM_DISABLE_USERDIR_SETUP\n#   Controls whether or not CFFIXED_USER_HOME is erased and set up from scratch\n#   for you each time the script is run. In some cases you may have a wrapper\n#   script calling this one that takes care of that for us so you can set up\n#   a certain user configuration.\nGTM_DISABLE_USERDIR_SETUP=${GTM_DISABLE_USERDIR_SETUP:=0}\n\n# GTM_DISABLE_IPHONE_LAUNCH_DAEMONS\n#   Controls whether or not we launch up the iPhone Launch Daemons before\n#   we start testing. You need Launch Daemons to test anything that interacts\n#   with security.\nGTM_DISABLE_IPHONE_LAUNCH_DAEMONS=1 #${GTM_DISABLE_IPHONE_LAUNCH_DAEMONS:=0}\n\nScriptDir=$(dirname \"$(echo $0 | sed -e \"s,^\\([^/]\\),$(pwd)/\\1,\")\")\nScriptName=$(basename \"$0\")\nThisScript=\"${ScriptDir}/${ScriptName}\"\n\nGTMXcodeNote() {\n    echo ${ThisScript}:${1}: note: GTM ${2}\n}\n\nif [ \"$PLATFORM_NAME\" == \"iphonesimulator\" ]; then\n  # We kill the iPhone simulator because otherwise we run into issues where\n  # the unittests fail becuase the simulator is currently running, and\n  # at this time the iPhone SDK won't allow two simulators running at the same\n  # time.\n  set +e\n  /usr/bin/killall \"iPhone Simulator\"\n  set -e\n\n  if [ $GTM_REMOVE_GCOV_DATA -ne 0 ]; then\n    if [ \"${OBJECT_FILE_DIR}-${CURRENT_VARIANT}\" != \"-\" ]; then\n      if [ -d \"${OBJECT_FILE_DIR}-${CURRENT_VARIANT}\" ]; then\n        GTMXcodeNote ${LINENO} \"Removing any .gcda files\"\n        (cd \"${OBJECT_FILE_DIR}-${CURRENT_VARIANT}\" && \\\n            find . -type f -name \"*.gcda\" -print0 | xargs -0 rm -f )\n      fi\n    fi\n  fi\n\n  export DYLD_ROOT_PATH=\"$SDKROOT\"\n  export DYLD_FRAMEWORK_PATH=\"$CONFIGURATION_BUILD_DIR\"\n  export IPHONE_SIMULATOR_ROOT=\"$SDKROOT\"\n  export CFFIXED_USER_HOME=\"$TEMP_FILES_DIR/iPhone Simulator User Dir\"\n\n  # See http://developer.apple.com/technotes/tn2004/tn2124.html for an\n  # explanation of these environment variables.\n\n  #export MallocScribble=YES\n  export MallocPreScribble=YES\n  #export MallocGuardEdges=YES\n  #export MallocStackLogging=YES\n  export NSAutoreleaseFreedObjectCheckEnabled=YES\n\n  # Turn on the mostly undocumented OBJC_DEBUG stuff.\n  export OBJC_DEBUG_FRAGILE_SUPERCLASSES=YES\n  export OBJC_DEBUG_UNLOAD=YES\n  # Turned off due to the amount of false positives from NS classes.\n  # export OBJC_DEBUG_FINALIZERS=YES\n  export OBJC_DEBUG_NIL_SYNC=YES\n  export OBJC_PRINT_REPLACED_METHODS=NO\n\n  if [ $GTM_DISABLE_ZOMBIES -eq 0 ]; then\n    GTMXcodeNote ${LINENO} \"Enabling zombies\"\n    export CFZombieLevel=3\n    export NSZombieEnabled=YES\n  fi\n\n  if [ $GTM_DISABLE_USERDIR_SETUP -eq 0 ]; then\n    # Cleanup user home directory\n    if [ -d \"$CFFIXED_USER_HOME\" ]; then\n      rm -rf \"$CFFIXED_USER_HOME\"\n    fi\n    mkdir \"$CFFIXED_USER_HOME\"\n    mkdir \"$CFFIXED_USER_HOME/Documents\"\n    mkdir -p \"$CFFIXED_USER_HOME/Library/Caches\"\n  fi\n\n  # 6251475 iPhone simulator leaks @ CFHTTPCookieStore shutdown if\n  #         CFFIXED_USER_HOME empty\n  GTM_LEAKS_SYMBOLS_TO_IGNORE=\"CFHTTPCookieStore\"\n\n  if [ $GTM_DISABLE_IPHONE_LAUNCH_DAEMONS -eq 0 ]; then\n    # If we want to test anything that interacts with the keychain, we need\n    # securityd up and running. See RunIPhoneLaunchDaemons.sh for details.\n    launchctl submit -l RunIPhoneLaunchDaemons -- \"${ScriptDir}/RunIPhoneLaunchDaemons.sh\" $IPHONE_SIMULATOR_ROOT $CFFIXED_USER_HOME\n    # No matter how we exit, we want to shut down our launchctl job.\n    trap \"launchctl remove RunIPhoneLaunchDaemons\" INT TERM EXIT\n  fi\n\n  # Start our app.\n  \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\" -RegisterForSystemEvents\n\nelse\n  GTMXcodeNote ${LINENO} \"Skipping running of unittests for device build.\"\nfi\nexit 0";
+		};
+		33BAB789CF7C40AA9D38A32F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		57203A8BE6DB490DBBACD7D5 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1275,6 +1383,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4241BC30A81448C892FC06D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-test-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1408,14 +1531,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				074D893917AA1D5200985CD3 /* main.m in Sources */,
-				074D896A17AA833D00985CD3 /* CardSpec.m in Sources */,
-				074D896B17AA834E00985CD3 /* Card.m in Sources */,
-				07DE97EB17AD56D10013AFDC /* FirstLesson.m in Sources */,
-				07DE97ED17AD58120013AFDC /* FirstLessonSpec.m in Sources */,
-				07DE97F217AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m in Sources */,
-				07DE97F617AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */,
-				07DE980117AF28890013AFDC /* CardLookupTableSpec.m in Sources */,
-				07DE980417AF294D0013AFDC /* CardLookupTable.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07EFE79117F733F600244FB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EFE7A117F733F600244FB2 /* main.m in Sources */,
+				07EFE7B317F737FF00244FB2 /* CardSpec.m in Sources */,
+				07EFE7B417F737FF00244FB2 /* FirstLessonSpec.m in Sources */,
+				07EFE7B517F737FF00244FB2 /* StandardRandomNumberGeneratorSpec.m in Sources */,
+				07EFE7B617F737FF00244FB2 /* CardLookupTableSpec.m in Sources */,
+				07EFE7B717F7381700244FB2 /* Card.m in Sources */,
+				07EFE7B817F7381B00244FB2 /* FirstLesson.m in Sources */,
+				07EFE7B917F7381E00244FB2 /* CardLookupTable.m in Sources */,
+				07EFE7BA17F7382100244FB2 /* StandardRandomNumberGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1426,6 +1557,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				074D893617AA1D5200985CD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07EFE79D17F733F600244FB2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07EFE79E17F733F600244FB2 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1581,6 +1720,64 @@
 			};
 			name = Release;
 		};
+		07EFE7A317F733F600244FB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABF285CC13FB4D8DAB2129C2 /* Pods-test.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpecsPods/SpecsPods-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07EFE7A417F733F600244FB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABF285CC13FB4D8DAB2129C2 /* Pods-test.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpecsPods/SpecsPods-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1607,6 +1804,15 @@
 			buildConfigurations = (
 				074D893C17AA1D5200985CD3 /* Debug */,
 				074D893D17AA1D5200985CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07EFE7AA17F733F600244FB2 /* Build configuration list for PBXNativeTarget "SpecsPods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07EFE7A317F733F600244FB2 /* Debug */,
+				07EFE7A417F733F600244FB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

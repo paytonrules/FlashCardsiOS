@@ -1,10 +1,17 @@
 PODS:
-  - OCMock (2.2)
+  - OCDSpec2 (1.5.1)
+  - OCMock (2.2.1)
 
 DEPENDENCIES:
+  - OCDSpec2 (from `https://github.com/OCDSpec/OCDSpec2.git`)
   - OCMock
 
+EXTERNAL SOURCES:
+  OCDSpec2:
+    :git: https://github.com/OCDSpec/OCDSpec2.git
+
 SPEC CHECKSUMS:
-  OCMock: 5300ae6b75398fc3ae6cbf9102191333d35f6852
+  OCDSpec2: c07f07f8f4c2eafed7af4522e5b8f60249777ed8
+  OCMock: 80e4cfbc71a0e1bd28caf10a9fda27da7c4c8402
 
 COCOAPODS: 0.22.3
