@@ -49,10 +49,6 @@
   [self.card tap];
 }
 
-- (void)dealloc
-{
-  [self.card release];
-  [super dealloc];
-}
+
 
 @end

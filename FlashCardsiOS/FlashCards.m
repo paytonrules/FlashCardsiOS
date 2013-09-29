@@ -35,7 +35,7 @@
 
 -(id) init
 {
-	if( (self=[super init])) {
+	if( (self = [super init])) {
     // Not sure this belongs here
     [self createBackground];
     [self preloadSoundEffects];
@@ -47,7 +47,7 @@
 -(void) createBackground
 {
     CGSize size = [[CCDirector sharedDirector] winSize];
-    
+  
     CCSprite *background;		
     background = [CCSprite spriteWithFile:@"background.jpg"];
     background.position = ccp(size.width/2, size.height/2);
@@ -63,8 +63,8 @@
 -(void) addCard:(Card *)card
 {
   CardSprite *sprite;
-  sprite = [[[CardSprite alloc] initWithFile:[self.lookup spriteByName:card.name]
-                                     andCard: card] autorelease];
+  sprite = [[CardSprite alloc] initWithFile:[self.lookup spriteByName:card.name]
+                                     andCard: card];
   sprite.position = [self.lookup locationByName: card.name];
   [self addChild: sprite];
 }

@@ -12,7 +12,7 @@
 
 +(Card *) cardWithName: (NSString *) name lesson:(NSObject<Lesson> *) lesson
 {
-  Card *tempCard = [[[Card alloc] initWithName:name lesson:lesson] autorelease];
+  Card *tempCard = [[Card alloc] initWithName:name lesson:lesson];
   
   return tempCard;
 }

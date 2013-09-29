@@ -8,7 +8,7 @@ OCDSpec2Context(CardSpec) {
   Describe(@"Creation", ^{
 
     It(@"requires a name", ^{
-      Card *card = [[[Card alloc] initWithName:@"name"] autorelease];
+      Card *card = [[Card alloc] initWithName:@"name"];
       
       [ExpectBool(card.current) toBeFalse];
       [ExpectObj(card.name) toBe:@"name"];
@@ -16,7 +16,7 @@ OCDSpec2Context(CardSpec) {
 
     It(@"optionally has a view", ^{
       id lesson = [OCMockObject mockForProtocol:@protocol(Lesson)];
-      Card *card = [[[Card alloc] initWithName:@"name" lesson:lesson] autorelease];
+      Card *card = [[Card alloc] initWithName:@"name" lesson:lesson];
       
       [ExpectBool(card.current) toBeFalse];
       [ExpectObj(card.name) toBe:@"name"];

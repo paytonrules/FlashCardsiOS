@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		072AF9E717F879EF0031C89F /* FlashCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D892217AA1BD500985CD3 /* FlashCards.m */; };
 		072AF9E817F87A210031C89F /* CardSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D895F17AA7CAB00985CD3 /* CardSprite.m */; };
+		072AF9ED17F8BE2B0031C89F /* FlashCardsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AF9EC17F8BE2B0031C89F /* FlashCardsController.m */; };
+		072AF9EE17F8BE2B0031C89F /* FlashCardsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AF9EC17F8BE2B0031C89F /* FlashCardsController.m */; };
 		074D877717AA1BD300985CD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D877617AA1BD300985CD3 /* QuartzCore.framework */; };
 		074D877917AA1BD300985CD3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D877817AA1BD300985CD3 /* OpenGLES.framework */; };
 		074D877B17AA1BD300985CD3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D877A17AA1BD300985CD3 /* OpenAL.framework */; };
@@ -63,12 +65,14 @@
 		07EFE7BC17F7382F00244FB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EFE7BB17F7382F00244FB2 /* Default-568h@2x.png */; };
 		0B99B2FE3C6240A58A812E62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0008341FAFE428398A80D64 /* libPods.a */; };
 		2FA2849014BE0B9E174D25EE /* .!13545!TemplateIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2FA28E7B90D1B8CB11C78F0D /* .!13545!TemplateIcon.icns */; };
-		2FA287E461D709C3F380ACFB /* FlashCardsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28CB87FB5EBB3AC923434 /* FlashCardsSpec.m */; };
+		2FA287E461D709C3F380ACFB /* FlashCardsControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28CB87FB5EBB3AC923434 /* FlashCardsControllerSpec.m */; };
 		99D81961C4A348CFBF4C4EF5 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C45B9C921F14FD1A546B942 /* libPods-test.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04EA5749873D4856ADDDAF27 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		072AF9EB17F8BE2B0031C89F /* FlashCardsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardsController.h; sourceTree = "<group>"; };
+		072AF9EC17F8BE2B0031C89F /* FlashCardsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardsController.m; sourceTree = "<group>"; };
 		074D877317AA1BD300985CD3 /* FlashCardsiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCardsiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		074D877617AA1BD300985CD3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		074D877817AA1BD300985CD3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -132,7 +136,7 @@
 		07EFE7A217F733F600244FB2 /* SpecsPods-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpecsPods-Prefix.pch"; sourceTree = "<group>"; };
 		07EFE7BB17F7382F00244FB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		07EFE7C217F739AB00244FB2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		2FA28CB87FB5EBB3AC923434 /* FlashCardsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardsSpec.m; sourceTree = "<group>"; };
+		2FA28CB87FB5EBB3AC923434 /* FlashCardsControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardsControllerSpec.m; sourceTree = "<group>"; };
 		2FA28E7B90D1B8CB11C78F0D /* .!13545!TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ".!13545!TemplateIcon.icns"; sourceTree = "<group>"; };
 		385674D539444B7D952A1309 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3C45B9C921F14FD1A546B942 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +178,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		072AF9EA17F8BD530031C89F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				072AF9EB17F8BE2B0031C89F /* FlashCardsController.h */,
+				072AF9EC17F8BE2B0031C89F /* FlashCardsController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		074D876A17AA1BD300985CD3 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +282,7 @@
 		074D895617AA1F0A00985CD3 /* CocosDependent */ = {
 			isa = PBXGroup;
 			children = (
+				072AF9EA17F8BD530031C89F /* Controllers */,
 				074D895A17AA7C8100985CD3 /* Sprites */,
 				074D895917AA7C4000985CD3 /* Layers */,
 				074D891B17AA1BD500985CD3 /* AppDelegate.h */,
@@ -351,7 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				2FA28E7B90D1B8CB11C78F0D /* .!13545!TemplateIcon.icns */,
-				2FA28CB87FB5EBB3AC923434 /* FlashCardsSpec.m */,
+				2FA28CB87FB5EBB3AC923434 /* FlashCardsControllerSpec.m */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -554,6 +568,7 @@
 				07DE97EA17AD55FD0013AFDC /* FirstLesson.m in Sources */,
 				07DE97F517AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */,
 				07DE980317AF294D0013AFDC /* CardLookupTable.m in Sources */,
+				072AF9ED17F8BE2B0031C89F /* FlashCardsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,9 +585,10 @@
 				07EFE7B817F7381B00244FB2 /* FirstLesson.m in Sources */,
 				07EFE7B917F7381E00244FB2 /* CardLookupTable.m in Sources */,
 				07EFE7BA17F7382100244FB2 /* StandardRandomNumberGenerator.m in Sources */,
-				2FA287E461D709C3F380ACFB /* FlashCardsSpec.m in Sources */,
+				2FA287E461D709C3F380ACFB /* FlashCardsControllerSpec.m in Sources */,
 				072AF9E717F879EF0031C89F /* FlashCards.m in Sources */,
 				072AF9E817F87A210031C89F /* CardSprite.m in Sources */,
+				072AF9EE17F8BE2B0031C89F /* FlashCardsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +651,7 @@
 			baseConfigurationReference = A6E5FB40DE094BBE83EEE774 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -652,6 +669,7 @@
 			baseConfigurationReference = A6E5FB40DE094BBE83EEE774 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FlashCardsiOS/Prefix.pch;
@@ -671,6 +689,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -706,6 +725,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;

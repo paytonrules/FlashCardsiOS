@@ -74,8 +74,8 @@ OCDSpec2Context(FirstLessonSpec) {
   
     It(@"chooses a card to guess", ^{
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
-                                                            initWithRandomNumbers:@[@0]] autorelease];
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                            initWithRandomNumbers:@[@0]];
       id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
       [[[lookup stub] andReturn:@[@"list", @"of", @"names"]] allCards];
       
@@ -91,8 +91,8 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"has its minimum random card be the first one in the array", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
-                                                          initWithRandomNumbers:@[@2]] autorelease];
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@2]];
       id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
       [[[lookup stub] andReturn:@[@"huzzah", @"hullo"]] allCards];
       
@@ -109,8 +109,8 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"The maximum random card is the last entry in the list", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
-                                                          initWithRandomNumbers:@[@3]] autorelease];
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@3]];
       id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
       [[[lookup stub] andReturn:@[@"huzzah", @"hullo"]] allCards];
      
@@ -127,8 +127,8 @@ OCDSpec2Context(FirstLessonSpec) {
     });
     
     It(@"Can find random cards in the middle too", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
-                                                          initWithRandomNumbers:@[@4]] autorelease];
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@4]];
       
       id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
       [[[lookup stub] andReturn:@[@"huzzah", @"james", @"hullo"]] allCards];
@@ -174,8 +174,8 @@ OCDSpec2Context(FirstLessonSpec) {
     });
 
     It(@"Plays the sound when the new card is chosen", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
-                                                          initWithRandomNumbers:@[@0]] autorelease];
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@0]];
       
       id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
       [[[lookup stub] andReturn:@[@"huzzah"]] allCards];
@@ -198,8 +198,8 @@ OCDSpec2Context(FirstLessonSpec) {
     });
 
     It(@"Reads the next card on a successful guess", ^{
-      NSObject<RandomNumberGenerator> *simpleGenerator = [[[SimpleRandomNumberGenerator alloc]
-                                                          initWithRandomNumbers:@[@0, @1]] autorelease];
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@0, @1]];
      
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
       id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];

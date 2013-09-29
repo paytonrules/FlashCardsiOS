@@ -14,17 +14,17 @@
 
 +(id) lessonWithCardLookup:(NSObject<CardLookup> *) cardLookup
 {
-  return [[[FirstLesson alloc] initWithCardLookup: cardLookup] autorelease];
+  return [[FirstLesson alloc] initWithCardLookup: cardLookup];
 }
 
 +(id) lessonWithCardLookup:(NSObject<CardLookup> *) cardLookup andRandomNumberGenerator:(NSObject<RandomNumberGenerator>*) gen
 {
-  return [[[FirstLesson alloc] initWithCardLookup: cardLookup andRandomNumberGenerator:gen] autorelease];
+  return [[FirstLesson alloc] initWithCardLookup: cardLookup andRandomNumberGenerator:gen];
 }
 
 -(id) initWithCardLookup:(NSObject<CardLookup> *) lookup
 {
-  return [self initWithCardLookup:lookup andRandomNumberGenerator: [[StandardRandomNumberGenerator new] autorelease]];
+  return [self initWithCardLookup:lookup andRandomNumberGenerator: [StandardRandomNumberGenerator new]];
 }
 
 -(id) initWithCardLookup:(NSObject<CardLookup> *) lookup andRandomNumberGenerator:(NSObject<RandomNumberGenerator> *)gen
@@ -44,7 +44,7 @@
 
   for (NSString *cardName in [self.cardLookup allCards])
   {
-    Card *card = [[Card cardWithName: cardName lesson:self] autorelease];
+    Card *card = [Card cardWithName: cardName lesson:self];
 
     [self.cards addObject:card];
     [self.view addCard:card];
