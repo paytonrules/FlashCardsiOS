@@ -1,17 +1,18 @@
 PODS:
+  - cocos2d (2.1):
+    - cocos2d/CocosDenshion
+  - cocos2d/CocosDenshion (2.1)
   - OCDSpec2 (1.5.1)
   - OCMock (2.2.1)
 
 DEPENDENCIES:
-  - OCDSpec2 (from `https://github.com/OCDSpec/OCDSpec2.git`)
+  - cocos2d
+  - OCDSpec2
   - OCMock
 
-EXTERNAL SOURCES:
-  OCDSpec2:
-    :git: https://github.com/OCDSpec/OCDSpec2.git
-
 SPEC CHECKSUMS:
-  OCDSpec2: c07f07f8f4c2eafed7af4522e5b8f60249777ed8
+  cocos2d: 173f234c5236b90c674d087cb7b2a7babf243b13
+  OCDSpec2: 69409a830da0e0ad80ea0cb6082cf29b6d148c27
   OCMock: 80e4cfbc71a0e1bd28caf10a9fda27da7c4c8402
 
-COCOAPODS: 0.22.3
+COCOAPODS: 0.25.0

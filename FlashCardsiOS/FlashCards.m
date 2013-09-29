@@ -1,9 +1,7 @@
 #import "FlashCards.h"
 #import "Card.h"
 #import "CardSprite.h"
-#import "FirstLesson.h"
 #import "SimpleAudioEngine.h"
-#import "Lesson.h"
 
 @interface FlashCards()
 
@@ -38,8 +36,8 @@
 -(id) init
 {
 	if( (self=[super init])) {
+    // Not sure this belongs here
     [self createBackground];
-    
     [self preloadSoundEffects];
 	}
 	
