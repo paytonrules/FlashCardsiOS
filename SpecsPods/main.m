@@ -1,13 +1,4 @@
-//
-//  main.m
-//  SpecsPods
-//
-//  Created by Eric Smith on 9/28/13.
-//  Copyright (c) 2013 Eric Smith. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
-
 #import <OCDSpec2/OCDSpec2.h>
 
 @interface OCDSpec2AppDelegate :NSObject <UIApplicationDelegate>
@@ -34,7 +25,7 @@
 
 int main(int argc, char *argv[])
 {
-    @autoreleasepool {
-      return UIApplicationMain(argc, argv, NSStringFromClass([OCDSpec2ApplicationRunner class]), @"OCDSpec2AppDelegate");
-    }
+  @autoreleasepool {
+    return UIApplicationMain(argc, argv, NSStringFromClass([OCDSpec2ApplicationRunner class]), @"OCDSpec2AppDelegate");
+  }
 }
