@@ -7,8 +7,8 @@ OCDSpec2Context(CardLookupTable) {
        
     It(@"returns location information for a card", ^{
       CardLookupTable *table = [CardLookupTable new];
-      [table add:@{@"location-x" : [NSNumber numberWithInt:1],
-                   @"location-y" : [NSNumber numberWithInt:2]}
+      [table add:@{@"location-x" : @1,
+                   @"location-y" : @2}
            named:@"eric"];
 
       NSObject<SpriteLookup> *lookup = table;
@@ -42,8 +42,8 @@ OCDSpec2Context(CardLookupTable) {
 
       NSObject<CardLookup> *lookup = table;
 
-      [ExpectObj([[lookup allCards] objectAtIndex:0]) toBe:@"eric"];
-      [ExpectObj([[lookup allCards] objectAtIndex:1]) toBe:@"rick"];
+      [ExpectObj([lookup allCards][0]) toBe:@"eric"];
+      [ExpectObj([lookup allCards][1]) toBe:@"rick"];
     });
   });
 }

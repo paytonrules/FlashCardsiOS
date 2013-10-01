@@ -18,26 +18,26 @@
 
 -(void) add:(NSDictionary *)cardData named:(NSString *)name
 {
-  [self.cards setObject:cardData forKey:name];
+  (self.cards)[name] = cardData;
 }
 
 -(CGPoint) locationByName:(NSString *) name
 {
-  NSDictionary *card = [self.cards objectForKey:name];
-  return CGPointMake([[card objectForKey:@"location-x"] floatValue],
-                     [[card objectForKey:@"location-y"] floatValue]);
+  NSDictionary *card = (self.cards)[name];
+  return CGPointMake([card[@"location-x"] floatValue],
+                     [card[@"location-y"] floatValue]);
 }
 
 -(NSString *) spriteByName:(NSString *) name
 {
-  NSDictionary *card = [self.cards objectForKey:name];
-  return [card objectForKey:@"sprite"];
+  NSDictionary *card = (self.cards)[name];
+  return card[@"sprite"];
 }
 
 -(NSString *) readingByName:(NSString *) name
 {
-  NSDictionary *card = [self.cards objectForKey:name];
-  return [card objectForKey:@"reading"];
+  NSDictionary *card = (self.cards)[name];
+  return card[@"reading"];
 }
 
 -(NSArray *) allCards

@@ -53,13 +53,13 @@
 
 -(Card *) getCard:(NSInteger) cardNumber
 {
-  return [self.cards objectAtIndex:cardNumber];
+  return (self.cards)[cardNumber];
 }
 
 -(void) readFlashCard
 {
   if (self.cards.count > 0) {
-    Card *card = [self.cards objectAtIndex:[self.randomNumberGenerator next] % self.cards.count];
+    Card *card = (self.cards)[[self.randomNumberGenerator next] % self.cards.count];
     
     [card makeCurrent];
     [self.view playClue:card];

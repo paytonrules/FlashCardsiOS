@@ -22,7 +22,7 @@
 
 -(int) next
 {
-  int nextNum = [[self.numbers objectAtIndex:0] intValue];
+  int nextNum = [(self.numbers)[0] intValue];
   if (self.numbers.count > 1)
   {
     [self.numbers removeObjectAtIndex:0];
@@ -67,9 +67,9 @@ OCDSpec2Context(FirstLessonSpec) {
       
       [lesson startWithView:view];
 
-      [ExpectObj(((Card *)[lesson.cards objectAtIndex:0]).name) toBe:@"list"];
-      [ExpectObj(((Card *)[lesson.cards objectAtIndex:1]).name) toBe:@"of"];
-      [ExpectObj(((Card *)[lesson.cards objectAtIndex:2]).name) toBe:@"names"];
+      [ExpectObj(((Card *)(lesson.cards)[0]).name) toBe:@"list"];
+      [ExpectObj(((Card *)(lesson.cards)[1]).name) toBe:@"of"];
+      [ExpectObj(((Card *)(lesson.cards)[2]).name) toBe:@"names"];
     });
   
     It(@"chooses a card to guess", ^{
