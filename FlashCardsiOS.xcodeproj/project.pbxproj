@@ -39,6 +39,10 @@
 		074D896017AA7CAB00985CD3 /* CardSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D895F17AA7CAB00985CD3 /* CardSprite.m */; };
 		074D896417AA818C00985CD3 /* Enemy Bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 074D896317AA818C00985CD3 /* Enemy Bug.png */; };
 		074D896817AA822000985CD3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896717AA822000985CD3 /* Card.m */; };
+		077096A518098EC4003435FC /* PlayClueCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 077096A318098EC4003435FC /* PlayClueCommandSpec.m */; };
+		077096AA1809D423003435FC /* SchedulerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 077096A91809D423003435FC /* SchedulerWrapper.m */; };
+		07ACF0E41808C82200F8B3F5 /* PlayClueCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ACF0E31808C82200F8B3F5 /* PlayClueCommand.m */; };
+		07ACF0E51808C82200F8B3F5 /* PlayClueCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ACF0E31808C82200F8B3F5 /* PlayClueCommand.m */; };
 		07DE97D917ABDC710013AFDC /* bug.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D417ABDC710013AFDC /* bug.mp3 */; };
 		07DE97DA17ABDC710013AFDC /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D517ABDC710013AFDC /* jump.wav */; };
 		07DE97DB17ABDC710013AFDC /* Powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D617ABDC710013AFDC /* Powerup.wav */; };
@@ -109,6 +113,12 @@
 		074D896617AA822000985CD3 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		074D896717AA822000985CD3 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		074D896917AA833D00985CD3 /* CardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardSpec.m; path = ../Specs/CardSpec.m; sourceTree = "<group>"; };
+		077096A318098EC4003435FC /* PlayClueCommandSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayClueCommandSpec.m; path = Specs/PlayClueCommandSpec.m; sourceTree = SOURCE_ROOT; };
+		077096A61809D3D5003435FC /* Scheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scheduler.h; sourceTree = "<group>"; };
+		077096A81809D423003435FC /* SchedulerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulerWrapper.h; sourceTree = "<group>"; };
+		077096A91809D423003435FC /* SchedulerWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulerWrapper.m; sourceTree = "<group>"; };
+		07ACF0E21808C82200F8B3F5 /* PlayClueCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayClueCommand.h; sourceTree = "<group>"; };
+		07ACF0E31808C82200F8B3F5 /* PlayClueCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayClueCommand.m; sourceTree = "<group>"; };
 		07DE97D417ABDC710013AFDC /* bug.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bug.mp3; sourceTree = "<group>"; };
 		07DE97D517ABDC710013AFDC /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
 		07DE97D617ABDC710013AFDC /* Powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Powerup.wav; sourceTree = "<group>"; };
@@ -136,7 +146,7 @@
 		07EFE7A217F733F600244FB2 /* SpecsPods-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpecsPods-Prefix.pch"; sourceTree = "<group>"; };
 		07EFE7BB17F7382F00244FB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		07EFE7C217F739AB00244FB2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		2FA28CB87FB5EBB3AC923434 /* FlashCardsControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardsControllerSpec.m; sourceTree = "<group>"; };
+		2FA28CB87FB5EBB3AC923434 /* FlashCardsControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlashCardsControllerSpec.m; path = Layers/FlashCardsControllerSpec.m; sourceTree = "<group>"; };
 		2FA28E7B90D1B8CB11C78F0D /* .!13545!TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ".!13545!TemplateIcon.icns"; sourceTree = "<group>"; };
 		385674D539444B7D952A1309 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3C45B9C921F14FD1A546B942 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +292,10 @@
 		074D895617AA1F0A00985CD3 /* CocosDependent */ = {
 			isa = PBXGroup;
 			children = (
+				077096A71809D408003435FC /* Wrappers */,
+				077096A61809D3D5003435FC /* Scheduler.h */,
+				07ACF0E21808C82200F8B3F5 /* PlayClueCommand.h */,
+				07ACF0E31808C82200F8B3F5 /* PlayClueCommand.m */,
 				072AF9EA17F8BD530031C89F /* Controllers */,
 				074D895A17AA7C8100985CD3 /* Sprites */,
 				074D895917AA7C4000985CD3 /* Layers */,
@@ -328,6 +342,23 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
+		077096A218098C6E003435FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2FA28CB87FB5EBB3AC923434 /* FlashCardsControllerSpec.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		077096A71809D408003435FC /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				077096A81809D423003435FC /* SchedulerWrapper.h */,
+				077096A91809D423003435FC /* SchedulerWrapper.m */,
+			);
+			name = Wrappers;
+			sourceTree = "<group>";
+		};
 		07EFE79A17F733F600244FB2 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +387,9 @@
 		2FA287579DF094229FAE9964 /* CocosDependent */ = {
 			isa = PBXGroup;
 			children = (
+				077096A218098C6E003435FC /* Controllers */,
 				2FA287EB000853D0D6EDDAB8 /* Layers */,
+				077096A318098EC4003435FC /* PlayClueCommandSpec.m */,
 			);
 			path = CocosDependent;
 			sourceTree = "<group>";
@@ -365,7 +398,6 @@
 			isa = PBXGroup;
 			children = (
 				2FA28E7B90D1B8CB11C78F0D /* .!13545!TemplateIcon.icns */,
-				2FA28CB87FB5EBB3AC923434 /* FlashCardsControllerSpec.m */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -563,9 +595,11 @@
 				074D891A17AA1BD500985CD3 /* main.m in Sources */,
 				074D891D17AA1BD500985CD3 /* AppDelegate.m in Sources */,
 				074D892317AA1BD500985CD3 /* FlashCards.m in Sources */,
+				077096AA1809D423003435FC /* SchedulerWrapper.m in Sources */,
 				074D896017AA7CAB00985CD3 /* CardSprite.m in Sources */,
 				074D896817AA822000985CD3 /* Card.m in Sources */,
 				07DE97EA17AD55FD0013AFDC /* FirstLesson.m in Sources */,
+				07ACF0E41808C82200F8B3F5 /* PlayClueCommand.m in Sources */,
 				07DE97F517AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */,
 				07DE980317AF294D0013AFDC /* CardLookupTable.m in Sources */,
 				072AF9ED17F8BE2B0031C89F /* FlashCardsController.m in Sources */,
@@ -584,8 +618,10 @@
 				07EFE7B717F7381700244FB2 /* Card.m in Sources */,
 				07EFE7B817F7381B00244FB2 /* FirstLesson.m in Sources */,
 				07EFE7B917F7381E00244FB2 /* CardLookupTable.m in Sources */,
+				07ACF0E51808C82200F8B3F5 /* PlayClueCommand.m in Sources */,
 				07EFE7BA17F7382100244FB2 /* StandardRandomNumberGenerator.m in Sources */,
 				2FA287E461D709C3F380ACFB /* FlashCardsControllerSpec.m in Sources */,
+				077096A518098EC4003435FC /* PlayClueCommandSpec.m in Sources */,
 				072AF9E717F879EF0031C89F /* FlashCards.m in Sources */,
 				072AF9E817F87A210031C89F /* CardSprite.m in Sources */,
 				072AF9EE17F8BE2B0031C89F /* FlashCardsController.m in Sources */,

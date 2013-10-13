@@ -11,6 +11,7 @@
 -(id) initWithName:(NSString *) name lesson:(NSObject<Lesson> *) lesson;
 -(void) tap;
 -(void) makeCurrent;
+-(void) makeUnCurrent;
 
 @property(readonly) BOOL current;
 @property(readonly) NSObject<Lesson> *lesson;

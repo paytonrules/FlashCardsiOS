@@ -38,6 +38,11 @@
   self.current ? [self.lesson correctGuess] : [self.lesson incorrectGuess];
 }
 
+-(void) makeUnCurrent
+{
+  self.current = NO;
+}
+
 -(void) makeCurrent
 {
   self.current = YES;
