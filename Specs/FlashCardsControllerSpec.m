@@ -1,5 +1,6 @@
 #import <OCDSpec2/OCDSpec2.h>
 #import <OCMock/OCMock.h>
+#import "SchedulerWrapper.h"
 #import "FlashCardsController.h"
 #import "PlayClueCommand.h"
 #import "Card.h"
@@ -29,7 +30,7 @@ OCDSpec2Context(FlashCardsControllerSpec) {
     It(@"schedules a playClue when an observed card becomes current", ^{
       [[[lesson stub] andReturn:@[card]] cards];
       
-      [[mockPlayCue expect] commandWithCard:card view:gameView];
+      [[mockPlayCue expect] commandWithCard:card view:gameView scheduler:[OCMArg any]];
      
       [card makeCurrent];
 
@@ -41,11 +42,11 @@ OCDSpec2Context(FlashCardsControllerSpec) {
     It(@"only does it once for the given card", ^{
       [[[lesson stub] andReturn:@[card]] cards];
       
-      [[mockPlayCue expect] commandWithCard:card view:gameView];
+      [[mockPlayCue expect] commandWithCard:card view:gameView scheduler:[OCMArg any]];
       [card makeCurrent];
       [cont update:0];
       
-      [[mockPlayCue reject] commandWithCard:card view:gameView];
+      [[mockPlayCue reject] commandWithCard:card view:gameView scheduler:[OCMArg any]];
       [cont update:1];
       
       [mockPlayCue verify];
@@ -55,13 +56,31 @@ OCDSpec2Context(FlashCardsControllerSpec) {
       Card *secondCard = [Card new];
       [[[lesson stub] andReturn:@[card, secondCard]] cards];
 
-      [[mockPlayCue expect] commandWithCard:card view:gameView];
-      [[mockPlayCue expect] commandWithCard:secondCard view:gameView];
+      [[mockPlayCue expect] commandWithCard:card view:gameView scheduler:[OCMArg any]];
+      [[mockPlayCue expect] commandWithCard:secondCard view:gameView scheduler:[OCMArg any]];
 
       [card makeCurrent];
       [cont update:0];
       [card makeUnCurrent];
       [secondCard makeCurrent];
+      [cont update:0];
+      
+      [mockPlayCue verify];
+    });
+    
+    It(@"creates a schedule wrapper with its scheduler", ^{
+      [[[lesson stub] andReturn:@[card]] cards];
+      
+      [[mockPlayCue expect] commandWithCard:[OCMArg any]
+                                       view:[OCMArg any]
+                                  scheduler:[OCMArg checkWithBlock:^BOOL(id obj) {
+        SchedulerWrapper *wrapper = (SchedulerWrapper *) obj;
+        
+        return wrapper.scheduler == cont.scheduler;
+      }]];
+      
+      [card makeCurrent];
+      
       [cont update:0];
       
       [mockPlayCue verify];

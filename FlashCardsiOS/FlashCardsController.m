@@ -1,6 +1,7 @@
 #import "FlashCardsController.h"
 #import "PlayClueCommand.h"
 #import "Card.h"
+#import "SchedulerWrapper.h"
 
 @interface FlashCardsController()
 @property(strong) NSObject<Lesson> *lesson;
@@ -30,16 +31,13 @@
   for (Card *card in self.lesson.cards) {
     if (card.current && self.currentCard != card) {
       self.currentCard = card;
-      [PlayClueCommand commandWithCard:card view:self.view];
+      [PlayClueCommand commandWithCard:card
+                                  view:self.view
+                             scheduler:[SchedulerWrapper schedulerWrapperWithCocosScheduler:self.scheduler]];
       break;
     }
   }
 }
-/*
--(void) playClue:(Card *) card
-{
-  [self.view playClue:card];
-}*/
 
 
 @end
