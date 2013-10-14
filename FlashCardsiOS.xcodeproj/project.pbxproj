@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		072AF9E717F879EF0031C89F /* FlashCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D892217AA1BD500985CD3 /* FlashCards.m */; };
 		072AF9E817F87A210031C89F /* CardSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D895F17AA7CAB00985CD3 /* CardSprite.m */; };
-		072AF9ED17F8BE2B0031C89F /* FlashCardsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AF9EC17F8BE2B0031C89F /* FlashCardsController.m */; };
-		072AF9EE17F8BE2B0031C89F /* FlashCardsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AF9EC17F8BE2B0031C89F /* FlashCardsController.m */; };
+		072AF9ED17F8BE2B0031C89F /* LessonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AF9EC17F8BE2B0031C89F /* LessonController.m */; };
+		072AF9EE17F8BE2B0031C89F /* LessonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AF9EC17F8BE2B0031C89F /* LessonController.m */; };
 		074D877717AA1BD300985CD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D877617AA1BD300985CD3 /* QuartzCore.framework */; };
 		074D877917AA1BD300985CD3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D877817AA1BD300985CD3 /* OpenGLES.framework */; };
 		074D877B17AA1BD300985CD3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D877A17AA1BD300985CD3 /* OpenAL.framework */; };
@@ -41,7 +41,7 @@
 		074D896817AA822000985CD3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D896717AA822000985CD3 /* Card.m */; };
 		077096A518098EC4003435FC /* PlayClueCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 077096A318098EC4003435FC /* PlayClueCommandSpec.m */; };
 		077096AA1809D423003435FC /* SchedulerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 077096A91809D423003435FC /* SchedulerWrapper.m */; };
-		077096AC180AC6BA003435FC /* FlashCardsControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 077096AB180AC6BA003435FC /* FlashCardsControllerSpec.m */; };
+		077096AC180AC6BA003435FC /* LessonControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 077096AB180AC6BA003435FC /* LessonControllerSpec.m */; };
 		077096AD180ACBD8003435FC /* SchedulerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 077096A91809D423003435FC /* SchedulerWrapper.m */; };
 		07ACF0E41808C82200F8B3F5 /* PlayClueCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ACF0E31808C82200F8B3F5 /* PlayClueCommand.m */; };
 		07ACF0E51808C82200F8B3F5 /* PlayClueCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ACF0E31808C82200F8B3F5 /* PlayClueCommand.m */; };
@@ -76,8 +76,8 @@
 
 /* Begin PBXFileReference section */
 		04EA5749873D4856ADDDAF27 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		072AF9EB17F8BE2B0031C89F /* FlashCardsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardsController.h; sourceTree = "<group>"; };
-		072AF9EC17F8BE2B0031C89F /* FlashCardsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardsController.m; sourceTree = "<group>"; };
+		072AF9EB17F8BE2B0031C89F /* LessonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonController.h; sourceTree = "<group>"; };
+		072AF9EC17F8BE2B0031C89F /* LessonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonController.m; sourceTree = "<group>"; };
 		074D877317AA1BD300985CD3 /* FlashCardsiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCardsiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		074D877617AA1BD300985CD3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		074D877817AA1BD300985CD3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -118,7 +118,7 @@
 		077096A61809D3D5003435FC /* Scheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scheduler.h; sourceTree = "<group>"; };
 		077096A81809D423003435FC /* SchedulerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulerWrapper.h; sourceTree = "<group>"; };
 		077096A91809D423003435FC /* SchedulerWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulerWrapper.m; sourceTree = "<group>"; };
-		077096AB180AC6BA003435FC /* FlashCardsControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlashCardsControllerSpec.m; path = Specs/FlashCardsControllerSpec.m; sourceTree = SOURCE_ROOT; };
+		077096AB180AC6BA003435FC /* LessonControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LessonControllerSpec.m; path = Specs/LessonControllerSpec.m; sourceTree = SOURCE_ROOT; };
 		07ACF0E21808C82200F8B3F5 /* PlayClueCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayClueCommand.h; sourceTree = "<group>"; };
 		07ACF0E31808C82200F8B3F5 /* PlayClueCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayClueCommand.m; sourceTree = "<group>"; };
 		07DE97D417ABDC710013AFDC /* bug.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bug.mp3; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 		072AF9EA17F8BD530031C89F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				072AF9EB17F8BE2B0031C89F /* FlashCardsController.h */,
-				072AF9EC17F8BE2B0031C89F /* FlashCardsController.m */,
+				072AF9EB17F8BE2B0031C89F /* LessonController.h */,
+				072AF9EC17F8BE2B0031C89F /* LessonController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -346,7 +346,7 @@
 		077096A218098C6E003435FC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				077096AB180AC6BA003435FC /* FlashCardsControllerSpec.m */,
+				077096AB180AC6BA003435FC /* LessonControllerSpec.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -603,7 +603,7 @@
 				07ACF0E41808C82200F8B3F5 /* PlayClueCommand.m in Sources */,
 				07DE97F517AE802F0013AFDC /* StandardRandomNumberGenerator.m in Sources */,
 				07DE980317AF294D0013AFDC /* CardLookupTable.m in Sources */,
-				072AF9ED17F8BE2B0031C89F /* FlashCardsController.m in Sources */,
+				072AF9ED17F8BE2B0031C89F /* LessonController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,8 +625,8 @@
 				072AF9E717F879EF0031C89F /* FlashCards.m in Sources */,
 				072AF9E817F87A210031C89F /* CardSprite.m in Sources */,
 				077096AD180ACBD8003435FC /* SchedulerWrapper.m in Sources */,
-				072AF9EE17F8BE2B0031C89F /* FlashCardsController.m in Sources */,
-				077096AC180AC6BA003435FC /* FlashCardsControllerSpec.m in Sources */,
+				072AF9EE17F8BE2B0031C89F /* LessonController.m in Sources */,
+				077096AC180AC6BA003435FC /* LessonControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

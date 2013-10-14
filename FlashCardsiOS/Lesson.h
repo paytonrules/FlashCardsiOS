@@ -8,5 +8,6 @@
 -(void) correctGuess;
 -(void) incorrectGuess;
 @property(readonly) NSMutableArray *cards;
+@property(readonly) Card *currentCard;
 
 @end

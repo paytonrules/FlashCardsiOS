@@ -117,25 +117,7 @@
 	// make main window visible
 	[window_ makeKeyAndVisible];
 
-  // 'Main'
-  CardLookupTable *lookupTable = [CardLookupTable new];
-  [lookupTable add:@{@"sprite" : @"Enemy Bug.png",
-       @"reading" : @"bug.mp3",
-    @"location-x" : @200,
-    @"location-y" : @400} named: @"bug"];
-
-  [lookupTable add:@{@"sprite" : @"Star.png",
-       @"reading" : @"star.mp3",
-    @"location-x" : @700,
-    @"location-y" : @400} named: @"star"];
-  
-  [lookupTable add:@{@"sprite" : @"Tree Tall.png",
-       @"reading" : @"tree.mp3",
-    @"location-x" : @450,
-    @"location-y" : @600} named: @"tree"];
-
-  NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup:lookupTable];
-  [director_ runWithScene: [FlashCards sceneWithLesson:lesson spriteLookup: lookupTable]];
+  [director_ runWithScene: [FlashCards scene]];
 	return YES;
 }
 

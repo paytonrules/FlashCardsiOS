@@ -1,25 +1,25 @@
 #import <OCDSpec2/OCDSpec2.h>
 #import <OCMock/OCMock.h>
 #import "SchedulerWrapper.h"
-#import "FlashCardsController.h"
+#import "LessonController.h"
 #import "PlayClueCommand.h"
 #import "Card.h"
 
-OCDSpec2Context(FlashCardsControllerSpec) {
+OCDSpec2Context(LessonControllerSpec) {
   
-  Describe(@"Observing changes to the Flashcards", ^{
+  Describe(@"Observing changes to the Lesson", ^{
   
     __block id                    gameView;
     __block id                    lesson;
     __block Card                  *card;
-    __block FlashCardsController  *cont;
+    __block LessonController  *cont;
     __block id                    mockPlayCue;
     
     BeforeEach(^{
       gameView = [OCMockObject mockForProtocol:@protocol(GameView)];
       lesson = [OCMockObject mockForProtocol:@protocol(Lesson)];
       card = [Card new];
-      cont = [FlashCardsController flashCardsControllerWith:lesson view:gameView];
+      cont = [LessonController flashCardsControllerWith:lesson view:gameView];
       mockPlayCue = [OCMockObject mockForClass:[PlayClueCommand class]];
     });
     
@@ -27,11 +27,12 @@ OCDSpec2Context(FlashCardsControllerSpec) {
       [mockPlayCue stopMocking];
     });
     
-    It(@"schedules a playClue when an observed card becomes current", ^{
-      [[[lesson stub] andReturn:@[card]] cards];
+    It(@"schedules a playClue when a new card becomes current", ^{
+      [[[lesson stub] andReturn:@[]] cards];
+      [[[lesson stub] andReturn:card] currentCard];
       
       [[mockPlayCue expect] commandWithCard:card view:gameView scheduler:[OCMArg any]];
-     
+      
       [card makeCurrent];
 
       [cont update:0];
@@ -41,6 +42,7 @@ OCDSpec2Context(FlashCardsControllerSpec) {
 
     It(@"only does it once for the given card", ^{
       [[[lesson stub] andReturn:@[card]] cards];
+      [[[lesson stub] andReturn:card] currentCard];
       
       [[mockPlayCue expect] commandWithCard:card view:gameView scheduler:[OCMArg any]];
       [card makeCurrent];
@@ -51,25 +53,10 @@ OCDSpec2Context(FlashCardsControllerSpec) {
       
       [mockPlayCue verify];
     });
-    
-    It(@"Schedules the playClue when the card switches", ^{
-      Card *secondCard = [Card new];
-      [[[lesson stub] andReturn:@[card, secondCard]] cards];
 
-      [[mockPlayCue expect] commandWithCard:card view:gameView scheduler:[OCMArg any]];
-      [[mockPlayCue expect] commandWithCard:secondCard view:gameView scheduler:[OCMArg any]];
-
-      [card makeCurrent];
-      [cont update:0];
-      [card makeUnCurrent];
-      [secondCard makeCurrent];
-      [cont update:0];
-      
-      [mockPlayCue verify];
-    });
-    
     It(@"creates a schedule wrapper with its scheduler", ^{
       [[[lesson stub] andReturn:@[card]] cards];
+      [[[lesson stub] andReturn:card] currentCard];
       
       [[mockPlayCue expect] commandWithCard:[OCMArg any]
                                        view:[OCMArg any]

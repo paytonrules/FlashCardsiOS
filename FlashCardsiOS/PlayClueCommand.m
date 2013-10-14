@@ -29,14 +29,12 @@
       self.view = view;
       self.scheduler = sched;
       [self.scheduler scheduleOnce: self action: @selector(playClue:) delay:1];
-   //   [self scheduleOnce:@selector(playClue:) delay:1];
     }
     return self;
 }
 
 -(void) playClue:(ccTime) delta
 {
-  NSLog(@"THAT'S THE RULE");
   [self.view playClue:self.card];
 }
 

@@ -7,6 +7,7 @@
 @property(strong) NSObject<RandomNumberGenerator> *randomNumberGenerator;
 @property(strong) NSObject<GameView> *view;
 @property(strong) NSMutableArray *cards;
+@property(strong) Card *currentCard;
 @property(strong) NSObject<CardLookup> *cardLookup;
 @end
 
@@ -59,10 +60,12 @@
 -(void) readFlashCard
 {
   if (self.cards.count > 0) {
-    Card *card = (self.cards)[[self.randomNumberGenerator next] % self.cards.count];
+    if (self.currentCard) {
+      [self.currentCard makeUnCurrent];
+    }
+    self.currentCard = (self.cards)[[self.randomNumberGenerator next] % self.cards.count];
     
-    [card makeCurrent];
-    [self.view playClue:card];
+    [self.currentCard makeCurrent];
   }
 }
 
