@@ -72,7 +72,7 @@ OCDSpec2Context(FirstLessonSpec) {
       [ExpectObj(((Card *)(lesson.cards)[2]).name) toBe:@"names"];
     });
   
-    It(@"chooses a card to guess", ^{
+    It(@"chooses a card to guess on update", ^{
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
       NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
                                                             initWithRandomNumbers:@[@0]];
@@ -83,7 +83,7 @@ OCDSpec2Context(FirstLessonSpec) {
                                      andRandomNumberGenerator: simpleGenerator];
       
       [lesson startWithView:view];
-      [lesson readFlashCard];
+      [lesson update];
       
       Card *card = [lesson getCard:0];
       
@@ -101,7 +101,7 @@ OCDSpec2Context(FirstLessonSpec) {
                                      andRandomNumberGenerator: simpleGenerator];
       
       [lesson startWithView:view];
-      [lesson readFlashCard];
+      [lesson update];
       
       [ExpectBool(lesson.currentCard.current) toBeTrue];
     });
@@ -117,7 +117,7 @@ OCDSpec2Context(FirstLessonSpec) {
                                      andRandomNumberGenerator: simpleGenerator];
       
       [lesson startWithView:view];
-      [lesson readFlashCard];
+      [lesson update];
       
       Card *card = [lesson getCard:1];
       
@@ -136,7 +136,7 @@ OCDSpec2Context(FirstLessonSpec) {
                                      andRandomNumberGenerator: simpleGenerator];
       
       [lesson startWithView:view];
-      [lesson readFlashCard];
+      [lesson update];
       
       Card *card = [lesson getCard:1];
       
@@ -171,7 +171,7 @@ OCDSpec2Context(FirstLessonSpec) {
       [view verify];
     });
 
-    It(@"Reads the next card on a successful guess", ^{
+    It(@"Reads the clears the card on a successful guess", ^{
       NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
                                                           initWithRandomNumbers:@[@0, @1]];
      
@@ -182,12 +182,11 @@ OCDSpec2Context(FirstLessonSpec) {
       FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup 
                                      andRandomNumberGenerator: simpleGenerator];
       [lesson startWithView:view];
-      [lesson readFlashCard];
+      [lesson update];
 
       [lesson correctGuess];
       
-      [ExpectObj(lesson.currentCard) toBe:[lesson getCard:1]];
-      [ExpectBool(lesson.currentCard.current) toBeTrue];
+      [ExpectObj(lesson.currentCard) toBeNil];
     });
     
     It(@"marks the old current card as no longer current", ^{
@@ -201,12 +200,60 @@ OCDSpec2Context(FirstLessonSpec) {
       FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup
                                      andRandomNumberGenerator: simpleGenerator];
       [lesson startWithView:view];
-      [lesson readFlashCard];
+      [lesson update];
       
       [lesson correctGuess];
       
       [ExpectBool([lesson getCard:0].current) toBeFalse];
+    });
+    
+    It(@"creates a new current card on the next update after a correct guess", ^{
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@0, @1]];
       
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+      id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
+      [[[lookup stub] andReturn:@[@"huzzah", @"you did it"]] allCards];
+      
+      FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup
+                                     andRandomNumberGenerator: simpleGenerator];
+      [lesson startWithView:view];
+      [lesson update];
+      [lesson correctGuess];
+      [lesson update];
+      
+      [ExpectBool([lesson getCard:1].current) toBeTrue];
+    });
+    
+    It(@"doesn't recreate a current card if there is a current card", ^{
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@0, @1]];
+      
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+      id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
+      [[[lookup stub] andReturn:@[@"huzzah", @"you did it"]] allCards];
+      
+      FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup
+                                     andRandomNumberGenerator: simpleGenerator];
+      [lesson startWithView:view];
+      [lesson update];
+      [lesson update];
+      
+      [ExpectBool([lesson getCard:1].current) toBeFalse];
+    });
+    
+    It(@"doesn't create a current card if the game isn't started", ^{
+      NSObject<RandomNumberGenerator> *simpleGenerator = [[SimpleRandomNumberGenerator alloc]
+                                                          initWithRandomNumbers:@[@0]];
+      
+      id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
+      [[[lookup stub] andReturn:@[@"huzzah"]] allCards];
+      
+      FirstLesson *lesson = [FirstLesson lessonWithCardLookup: lookup
+                                     andRandomNumberGenerator: simpleGenerator];
+      [lesson update];
+      
+      [ExpectObj(lesson.currentCard) toBe:nil];
     });
   });
   

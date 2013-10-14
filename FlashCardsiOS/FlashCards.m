@@ -46,7 +46,6 @@
   layer.lesson = lesson;
   layer.lookup = lookupTable;
   [layer.lesson startWithView:layer];
-  [layer.lesson readFlashCard];
   layer.cont = cont;
 
   [layer scheduleUpdate];

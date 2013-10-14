@@ -9,6 +9,7 @@
 @property(strong) NSMutableArray *cards;
 @property(strong) Card *currentCard;
 @property(strong) NSObject<CardLookup> *cardLookup;
+@property(assign) BOOL started;
 @end
 
 @implementation FirstLesson
@@ -35,6 +36,7 @@
     self.cardLookup = lookup;
     self.cards = [NSMutableArray new];
     self.randomNumberGenerator = gen;
+    self.started = NO;
   }
   return self;
 }
@@ -50,6 +52,7 @@
     [self.cards addObject:card];
     [self.view addCard:card];
   }
+  self.started = YES;
 }
 
 -(Card *) getCard:(NSInteger) cardNumber
@@ -57,14 +60,11 @@
   return (self.cards)[cardNumber];
 }
 
--(void) readFlashCard
+-(void) update
 {
-  if (self.cards.count > 0) {
-    if (self.currentCard) {
-      [self.currentCard makeUnCurrent];
-    }
+  if (self.started && self.currentCard == nil)
+  {
     self.currentCard = (self.cards)[[self.randomNumberGenerator next] % self.cards.count];
-    
     [self.currentCard makeCurrent];
   }
 }
@@ -72,7 +72,8 @@
 -(void) correctGuess
 {
   [self.view playCorrectSound];
-  [self readFlashCard];
+  [self.currentCard makeUnCurrent];
+  self.currentCard = nil;
 }
 
 -(void) incorrectGuess

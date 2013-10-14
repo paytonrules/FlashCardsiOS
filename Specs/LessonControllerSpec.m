@@ -28,6 +28,7 @@ OCDSpec2Context(LessonControllerSpec) {
     });
     
     It(@"schedules a playClue when a new card becomes current", ^{
+      [[lesson stub] update];
       [[[lesson stub] andReturn:@[]] cards];
       [[[lesson stub] andReturn:card] currentCard];
       
@@ -41,6 +42,7 @@ OCDSpec2Context(LessonControllerSpec) {
     });
 
     It(@"only does it once for the given card", ^{
+      [[lesson stub] update];
       [[[lesson stub] andReturn:@[card]] cards];
       [[[lesson stub] andReturn:card] currentCard];
       
@@ -55,6 +57,7 @@ OCDSpec2Context(LessonControllerSpec) {
     });
 
     It(@"creates a schedule wrapper with its scheduler", ^{
+      [[lesson stub] update];
       [[[lesson stub] andReturn:@[card]] cards];
       [[[lesson stub] andReturn:card] currentCard];
       
@@ -71,6 +74,15 @@ OCDSpec2Context(LessonControllerSpec) {
       [cont update:0];
       
       [mockPlayCue verify];
+    });
+    
+    It(@"updates the lesson controller each update", ^{
+      [[[lesson stub] andReturn:nil] currentCard];
+      [[lesson expect] update];
+      
+      [cont update:0];
+      
+      [lesson verify];
     });
   });
   

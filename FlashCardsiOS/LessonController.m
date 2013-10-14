@@ -34,6 +34,7 @@
                                 view:self.view
                            scheduler:[SchedulerWrapper schedulerWrapperWithCocosScheduler:self.scheduler]];
   }
+  [self.lesson update];
 }
 
 

@@ -4,9 +4,9 @@
 @protocol Lesson <NSObject>
 
 -(void) startWithView:(NSObject<GameView> *)view;
--(void) readFlashCard;
 -(void) correctGuess;
 -(void) incorrectGuess;
+-(void) update;
 @property(readonly) NSMutableArray *cards;
 @property(readonly) Card *currentCard;
 
