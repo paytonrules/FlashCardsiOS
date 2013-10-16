@@ -1,11 +1,3 @@
-//
-//  Bug.m
-//  FlashCardsiOS
-//
-//  Created by Eric Smith on 8/1/13.
-//  Copyright 2013 Eric Smith. All rights reserved.
-//
-
 #import "CardSprite.h"
 #import "Card.h"
 #import "SimpleAudioEngine.h"
