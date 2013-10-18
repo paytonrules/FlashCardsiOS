@@ -49,6 +49,11 @@
 		07B6E64D180E390D00CDF147 /* Enemy Bug-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6E64C180E390D00CDF147 /* Enemy Bug-ipadhd.png */; };
 		07B6E64F180E396800CDF147 /* Star-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6E64E180E396800CDF147 /* Star-ipadhd.png */; };
 		07B6E651180E399000CDF147 /* Tree Tall-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6E650180E399000CDF147 /* Tree Tall-ipadhd.png */; };
+		07B6E654180EB80200CDF147 /* lost-stuff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07B6E653180EB80200CDF147 /* lost-stuff.mp3 */; };
+		07B6E65C181004C000CDF147 /* mole.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6E65A181004C000CDF147 /* mole.png */; };
+		07B6E65D181004C000CDF147 /* mole.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6E65A181004C000CDF147 /* mole.png */; };
+		07B6E65E181004C000CDF147 /* mole-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6E65B181004C000CDF147 /* mole-ipadhd.png */; };
+		07B6E65F181004C000CDF147 /* mole-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6E65B181004C000CDF147 /* mole-ipadhd.png */; };
 		07DE97D917ABDC710013AFDC /* bug.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D417ABDC710013AFDC /* bug.mp3 */; };
 		07DE97DA17ABDC710013AFDC /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D517ABDC710013AFDC /* jump.wav */; };
 		07DE97DB17ABDC710013AFDC /* Powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 07DE97D617ABDC710013AFDC /* Powerup.wav */; };
@@ -129,6 +134,9 @@
 		07B6E64C180E390D00CDF147 /* Enemy Bug-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Enemy Bug-ipadhd.png"; sourceTree = "<group>"; };
 		07B6E64E180E396800CDF147 /* Star-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star-ipadhd.png"; sourceTree = "<group>"; };
 		07B6E650180E399000CDF147 /* Tree Tall-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree Tall-ipadhd.png"; sourceTree = "<group>"; };
+		07B6E653180EB80200CDF147 /* lost-stuff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "lost-stuff.mp3"; path = "Resources/lost-stuff.mp3"; sourceTree = "<group>"; };
+		07B6E65A181004C000CDF147 /* mole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mole.png; path = Resources/mole.png; sourceTree = "<group>"; };
+		07B6E65B181004C000CDF147 /* mole-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mole-ipadhd.png"; path = "Resources/mole-ipadhd.png"; sourceTree = "<group>"; };
 		07DE97D417ABDC710013AFDC /* bug.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bug.mp3; sourceTree = "<group>"; };
 		07DE97D517ABDC710013AFDC /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
 		07DE97D617ABDC710013AFDC /* Powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Powerup.wav; sourceTree = "<group>"; };
@@ -264,6 +272,9 @@
 		074D878B17AA1BD300985CD3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				07B6E65A181004C000CDF147 /* mole.png */,
+				07B6E65B181004C000CDF147 /* mole-ipadhd.png */,
+				07B6E653180EB80200CDF147 /* lost-stuff.mp3 */,
 				074D895717AA20A500985CD3 /* background.jpg */,
 				07B6E64A180E2DB000CDF147 /* background-ipadhd.jpg */,
 				07DE981317AF37AC0013AFDC /* Star.png */,
@@ -372,7 +383,7 @@
 			name = Wrappers;
 			sourceTree = "<group>";
 		};
-		07EFE79A17F733F600244FB2 /* Specs */ = {
+		07B6E652180EB7C900CDF147 /* Game */ = {
 			isa = PBXGroup;
 			children = (
 				077096A318098EC4003435FC /* PlayClueCommandSpec.m */,
@@ -380,6 +391,14 @@
 				07DE97EC17AD58120013AFDC /* FirstLessonSpec.m */,
 				07DE97F117AE7F790013AFDC /* StandardRandomNumberGeneratorSpec.m */,
 				07DE980017AF28890013AFDC /* CardLookupTableSpec.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		07EFE79A17F733F600244FB2 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				07B6E652180EB7C900CDF147 /* Game */,
 				07EFE79B17F733F600244FB2 /* Supporting Files */,
 				2FA287579DF094229FAE9964 /* CocosDependent */,
 			);
@@ -489,14 +508,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B6E65C181004C000CDF147 /* mole.png in Resources */,
 				07B6E64F180E396800CDF147 /* Star-ipadhd.png in Resources */,
 				074D878D17AA1BD300985CD3 /* Default.png in Resources */,
 				074D878F17AA1BD300985CD3 /* Default@2x.png in Resources */,
 				074D879117AA1BD300985CD3 /* Default-568h@2x.png in Resources */,
 				074D879317AA1BD300985CD3 /* Default-Landscape~ipad.png in Resources */,
+				07B6E654180EB80200CDF147 /* lost-stuff.mp3 in Resources */,
 				074D879517AA1BD300985CD3 /* Icon-72.png in Resources */,
 				074D879717AA1BD300985CD3 /* Icon-Small-50.png in Resources */,
 				074D879917AA1BD300985CD3 /* Icon-Small.png in Resources */,
+				07B6E65E181004C000CDF147 /* mole-ipadhd.png in Resources */,
 				074D879B17AA1BD300985CD3 /* Icon-Small@2x.png in Resources */,
 				074D879D17AA1BD300985CD3 /* Icon.png in Resources */,
 				074D879F17AA1BD300985CD3 /* Icon@2x.png in Resources */,
@@ -520,8 +542,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B6E65D181004C000CDF147 /* mole.png in Resources */,
 				07EFE79F17F733F600244FB2 /* InfoPlist.strings in Resources */,
 				07EFE7BC17F7382F00244FB2 /* Default-568h@2x.png in Resources */,
+				07B6E65F181004C000CDF147 /* mole-ipadhd.png in Resources */,
 				2FA2849014BE0B9E174D25EE /* .!13545!TemplateIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

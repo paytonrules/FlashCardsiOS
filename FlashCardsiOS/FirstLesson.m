@@ -19,6 +19,11 @@
   return [[FirstLesson alloc] initWithCardLookup: cardLookup];
 }
 
++(id) lessonWithCardLookup:(NSObject<CardLookup> *) cardLookup scheduler:(NSObject<Scheduler> *)scheduler
+{
+  return [[FirstLesson alloc] initWithCardLookup: cardLookup];
+}
+
 +(id) lessonWithCardLookup:(NSObject<CardLookup> *) cardLookup andRandomNumberGenerator:(NSObject<RandomNumberGenerator>*) gen
 {
   return [[FirstLesson alloc] initWithCardLookup: cardLookup andRandomNumberGenerator:gen];
@@ -52,6 +57,7 @@
     [self.cards addObject:card];
     [self.view addCard:card];
   }
+  [self.view showIntroduction];
   self.started = YES;
 }
 

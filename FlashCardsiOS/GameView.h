@@ -10,5 +10,6 @@
 -(void) playCorrectSound;
 -(void) playInCorrectSound;
 -(void) playClue:(Card *)card;
+-(void) showIntroduction;
 
 @end

@@ -1,6 +1,7 @@
 #import <OCDSpec2/OCDSpec2.h>
 #import <OCMock/OCMock.h>
 #import "FirstLesson.h"
+#import "Scheduler.h"
 #import "RandomNumberGenerator.h"
 #import "CardLookupTable.h"
 #import "Card.h"
@@ -41,7 +42,7 @@ OCDSpec2Context(FirstLessonSpec) {
       [[[location stub] andReturn:@[@"card", @"two"]] allCards];
 
       NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup: location];
-      id view = [OCMockObject mockForProtocol:@protocol(GameView)];
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
       
       [[view expect] addCard:[OCMArg checkWithBlock:^(id obj) {
         Card *card = (Card *)obj;
@@ -57,7 +58,7 @@ OCDSpec2Context(FirstLessonSpec) {
       
       [view verify];
     });
-       
+    
     It(@"adds a new card for each of the card lookups", ^{
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
       id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
@@ -71,6 +72,27 @@ OCDSpec2Context(FirstLessonSpec) {
       [ExpectObj(((Card *)(lesson.cards)[1]).name) toBe:@"of"];
       [ExpectObj(((Card *)(lesson.cards)[2]).name) toBe:@"names"];
     });
+    
+    It(@"displays the character introduction", ^{
+      id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
+      id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
+    //  id scheduler = [OCMockObject mockForProtocol:@protocol(Scheduler)];
+      [[[lookup stub] andReturn:@[@""]] allCards];
+      
+      NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup: lookup];
+      
+      [[view expect] showIntroduction];
+      
+      [lesson startWithView:view];
+      
+      [view verify];
+    });
+    
+    It(@"doesnt start choosing cards until after the character introduction", ^{
+      
+    });
+    
+    It(@"only plays the character intro for a specified amount of time, or gets an event when it's complete", ^{});
   
     It(@"chooses a card to guess on update", ^{
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];

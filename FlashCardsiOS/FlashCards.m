@@ -22,6 +22,8 @@
 	
 	// 'layer' is an autorelease object.
 	FlashCards *layer = [FlashCards node];
+
+  // Move this out
   CardLookupTable *lookupTable = [CardLookupTable new];
   [lookupTable add:@{@"sprite" : @"Enemy Bug.png",
                      @"reading" : @"bug.mp3",
@@ -82,6 +84,7 @@
 {
   [[SimpleAudioEngine sharedEngine] preloadEffect:@"Powerup.wav"];
   [[SimpleAudioEngine sharedEngine] preloadEffect:@"jump.wav"];
+  [[SimpleAudioEngine sharedEngine] preloadEffect:@"lost-stuff.mp3"];
 }
 
 -(void) addCard:(Card *)card
@@ -107,6 +110,20 @@
 {
   NSString *reading = [self.lookup readingByName:card.name];
   [[SimpleAudioEngine sharedEngine] playEffect:reading];
+}
+
+// Refactoring to behavior
+-(void) showIntroduction
+{
+  [self stopAllActions];
+  CCSprite *mole = [CCSprite spriteWithFile:@"mole.png"];
+  [mole setPosition:CGPointMake(-100.0, 0.0)]; // behavior
+  [self addChild:mole];
+
+  // Callback is behavior
+  id move = [CCMoveBy actionWithDuration:0.3 position:CGPointMake(200, 0)];
+  id easein = [CCEaseIn actionWithAction:move rate:1.0];
+  [mole runAction:easein];
 }
 
 -(void) update:(ccTime)delta
