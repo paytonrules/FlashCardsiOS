@@ -3,7 +3,7 @@
 #import "GameView.h"
 #import "Lesson.h"
 
-@interface FlashCards : CCLayer<GameView>
+@interface LessonLayer : CCLayer<GameView>
 {
 }
 

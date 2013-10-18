@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		072AF9E717F879EF0031C89F /* FlashCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D892217AA1BD500985CD3 /* FlashCards.m */; };
+		072AF9E717F879EF0031C89F /* LessonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D892217AA1BD500985CD3 /* LessonLayer.m */; };
 		072AF9E817F87A210031C89F /* CardSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D895F17AA7CAB00985CD3 /* CardSprite.m */; };
 		072AF9ED17F8BE2B0031C89F /* LessonUserInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AF9EC17F8BE2B0031C89F /* LessonUserInterface.m */; };
 		072AF9EE17F8BE2B0031C89F /* LessonUserInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 072AF9EC17F8BE2B0031C89F /* LessonUserInterface.m */; };
@@ -34,7 +34,7 @@
 		074D87A217AA1BD300985CD3 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 074D87A117AA1BD300985CD3 /* iTunesArtwork */; };
 		074D891A17AA1BD500985CD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D891917AA1BD500985CD3 /* main.m */; };
 		074D891D17AA1BD500985CD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D891C17AA1BD500985CD3 /* AppDelegate.m */; };
-		074D892317AA1BD500985CD3 /* FlashCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D892217AA1BD500985CD3 /* FlashCards.m */; };
+		074D892317AA1BD500985CD3 /* LessonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D892217AA1BD500985CD3 /* LessonLayer.m */; };
 		074D895817AA20A500985CD3 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 074D895717AA20A500985CD3 /* background.jpg */; };
 		074D896017AA7CAB00985CD3 /* CardSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 074D895F17AA7CAB00985CD3 /* CardSprite.m */; };
 		074D896417AA818C00985CD3 /* Enemy Bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 074D896317AA818C00985CD3 /* Enemy Bug.png */; };
@@ -114,8 +114,8 @@
 		074D891917AA1BD500985CD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		074D891B17AA1BD500985CD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		074D891C17AA1BD500985CD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		074D892117AA1BD500985CD3 /* FlashCards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashCards.h; sourceTree = "<group>"; };
-		074D892217AA1BD500985CD3 /* FlashCards.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashCards.m; sourceTree = "<group>"; };
+		074D892117AA1BD500985CD3 /* LessonLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessonLayer.h; sourceTree = "<group>"; };
+		074D892217AA1BD500985CD3 /* LessonLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LessonLayer.m; sourceTree = "<group>"; };
 		074D895717AA20A500985CD3 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		074D895E17AA7CAB00985CD3 /* CardSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSprite.h; sourceTree = "<group>"; };
 		074D895F17AA7CAB00985CD3 /* CardSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSprite.m; sourceTree = "<group>"; };
@@ -328,8 +328,8 @@
 		074D895917AA7C4000985CD3 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
-				074D892117AA1BD500985CD3 /* FlashCards.h */,
-				074D892217AA1BD500985CD3 /* FlashCards.m */,
+				074D892117AA1BD500985CD3 /* LessonLayer.h */,
+				074D892217AA1BD500985CD3 /* LessonLayer.m */,
 			);
 			name = Layers;
 			sourceTree = "<group>";
@@ -627,7 +627,7 @@
 			files = (
 				074D891A17AA1BD500985CD3 /* main.m in Sources */,
 				074D891D17AA1BD500985CD3 /* AppDelegate.m in Sources */,
-				074D892317AA1BD500985CD3 /* FlashCards.m in Sources */,
+				074D892317AA1BD500985CD3 /* LessonLayer.m in Sources */,
 				077096AA1809D423003435FC /* SchedulerWrapper.m in Sources */,
 				074D896017AA7CAB00985CD3 /* CardSprite.m in Sources */,
 				074D896817AA822000985CD3 /* Card.m in Sources */,
@@ -654,7 +654,7 @@
 				07ACF0E51808C82200F8B3F5 /* PlayClueCommand.m in Sources */,
 				07EFE7BA17F7382100244FB2 /* StandardRandomNumberGenerator.m in Sources */,
 				077096A518098EC4003435FC /* PlayClueCommandSpec.m in Sources */,
-				072AF9E717F879EF0031C89F /* FlashCards.m in Sources */,
+				072AF9E717F879EF0031C89F /* LessonLayer.m in Sources */,
 				072AF9E817F87A210031C89F /* CardSprite.m in Sources */,
 				077096AD180ACBD8003435FC /* SchedulerWrapper.m in Sources */,
 				072AF9EE17F8BE2B0031C89F /* LessonUserInterface.m in Sources */,

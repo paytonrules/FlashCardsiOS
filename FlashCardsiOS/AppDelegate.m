@@ -1,6 +1,6 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
-#import "FlashCards.h"
+#import "LessonLayer.h"
 #import "FirstLesson.h"
 #import "Lesson.h"
 
@@ -117,7 +117,7 @@
 	// make main window visible
 	[window_ makeKeyAndVisible];
 
-  [director_ runWithScene: [FlashCards scene]];
+  [director_ runWithScene: [LessonLayer scene]];
 	return YES;
 }
 

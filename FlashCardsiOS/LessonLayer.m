@@ -1,11 +1,11 @@
-#import "FlashCards.h"
+#import "LessonLayer.h"
 #import "Card.h"
 #import "CardSprite.h"
 #import "SimpleAudioEngine.h"
 #import "FirstLesson.h"
 #import "LessonUserInterface.h"
 
-@interface FlashCards()
+@interface LessonLayer()
 
 @property(strong) NSObject<Lesson> *lesson;
 @property(strong) NSObject<SpriteLookup> *lookup;
@@ -13,7 +13,7 @@
 
 @end
 
-@implementation FlashCards
+@implementation LessonLayer
 
 +(CCScene *) scene
 {
@@ -21,7 +21,7 @@
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
-	FlashCards *layer = [FlashCards node];
+	LessonLayer *layer = [LessonLayer node];
 
   // Move this out
   CardLookupTable *lookupTable = [CardLookupTable new];
