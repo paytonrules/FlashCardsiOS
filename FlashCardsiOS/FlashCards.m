@@ -3,13 +3,13 @@
 #import "CardSprite.h"
 #import "SimpleAudioEngine.h"
 #import "FirstLesson.h"
-#import "LessonController.h"
+#import "LessonUserInterface.h"
 
 @interface FlashCards()
 
 @property(strong) NSObject<Lesson> *lesson;
 @property(strong) NSObject<SpriteLookup> *lookup;
-@property(strong) LessonController *cont;
+@property(strong) LessonUserInterface *cont;
 
 @end
 
@@ -42,7 +42,7 @@
   
   NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup:lookupTable];
   
-  LessonController *cont = [LessonController flashCardsControllerWith:lesson view:layer];
+  LessonUserInterface *cont = [LessonUserInterface flashCardsControllerWith:lesson view:layer];
   [layer addChild:cont];
   
   layer.lesson = lesson;

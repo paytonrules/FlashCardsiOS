@@ -1,19 +1,19 @@
-#import "LessonController.h"
+#import "LessonUserInterface.h"
 #import "PlayClueCommand.h"
 #import "Card.h"
 #import "SchedulerWrapper.h"
 
-@interface LessonController()
+@interface LessonUserInterface()
 @property(strong) NSObject<Lesson> *lesson;
 @property(strong) NSObject<GameView> *view;
 @property(strong) Card* currentCard;
 @end
 
-@implementation LessonController
+@implementation LessonUserInterface
 
 +(id) flashCardsControllerWith:(NSObject<Lesson>*) lesson view:(NSObject<GameView> *) view
 {
-  return [[LessonController alloc] initWithLesson:lesson view:view];
+  return [[LessonUserInterface alloc] initWithLesson:lesson view:view];
 }
 
 -(id) initWithLesson:(NSObject<Lesson> *) lesson view:(NSObject<GameView> *)view

@@ -3,7 +3,7 @@
 #import "Lesson.h"
 #import "cocos2d.h"
 
-@interface LessonController : CCNode {
+@interface LessonUserInterface : CCNode {
     
 }
 

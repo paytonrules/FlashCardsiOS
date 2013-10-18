@@ -1,25 +1,25 @@
 #import <OCDSpec2/OCDSpec2.h>
 #import <OCMock/OCMock.h>
 #import "SchedulerWrapper.h"
-#import "LessonController.h"
+#import "LessonUserInterface.h"
 #import "PlayClueCommand.h"
 #import "Card.h"
 
-OCDSpec2Context(LessonControllerSpec) {
+OCDSpec2Context(LessonUserInterfaceSpec){
   
   Describe(@"Observing changes to the Lesson", ^{
   
     __block id                    gameView;
     __block id                    lesson;
     __block Card                  *card;
-    __block LessonController  *cont;
+    __block LessonUserInterface  *cont;
     __block id                    mockPlayCue;
     
     BeforeEach(^{
       gameView = [OCMockObject mockForProtocol:@protocol(GameView)];
       lesson = [OCMockObject mockForProtocol:@protocol(Lesson)];
       card = [Card new];
-      cont = [LessonController flashCardsControllerWith:lesson view:gameView];
+      cont = [LessonUserInterface flashCardsControllerWith:lesson view:gameView];
       mockPlayCue = [OCMockObject mockForClass:[PlayClueCommand class]];
     });
     
