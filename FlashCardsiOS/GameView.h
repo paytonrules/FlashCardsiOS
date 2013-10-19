@@ -1,6 +1,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CardLookupTable.h"
+#import "UserInterface.h"
 
 @class Card;
 
@@ -10,6 +11,6 @@
 -(void) playCorrectSound;
 -(void) playInCorrectSound;
 -(void) playClue:(Card *)card;
--(void) showIntroduction;
+-(void) showIntroduction:(NSObject<UserInterface>*) del;
 
 @end

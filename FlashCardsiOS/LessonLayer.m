@@ -112,18 +112,25 @@
   [[SimpleAudioEngine sharedEngine] playEffect:reading];
 }
 
-// Refactoring to behavior
--(void) showIntroduction
+-(void) showIntroduction:(NSObject<UserInterface>*)ui
 {
   [self stopAllActions];
   CCSprite *mole = [CCSprite spriteWithFile:@"mole.png"];
-  [mole setPosition:CGPointMake(-100.0, 0.0)]; // behavior
+  [mole setPosition:CGPointMake(-100.0, 0.0)];
   [self addChild:mole];
+  
+  id removeMySprite = [CCCallFuncND actionWithTarget:mole
+                                            selector:@selector(removeFromParentAndCleanup:)
+                                                data:(void*)NO];
 
-  // Callback is behavior
   id move = [CCMoveBy actionWithDuration:0.3 position:CGPointMake(200, 0)];
-  id easein = [CCEaseIn actionWithAction:move rate:1.0];
-  [mole runAction:easein];
+  id moveBack = [CCMoveBy actionWithDuration:0.3 position:CGPointMake(-100.0, 0)];
+  [mole runAction:[CCSequence actions:
+                   [CCEaseIn actionWithAction:move rate:1.0],
+                   [CCEaseIn actionWithAction:moveBack rate:1.0],
+                   removeMySprite,
+                   [CCCallFunc actionWithTarget:ui selector:@selector(introductionComplete)],
+                   nil]];
 }
 
 -(void) update:(ccTime)delta

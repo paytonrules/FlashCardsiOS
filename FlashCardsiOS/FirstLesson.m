@@ -60,7 +60,7 @@
     [self.cards addObject:card];
     [self.view addCard:card];
   }
-  [self.view showIntroduction];
+// [self.view showIntroduction];
   self.started = YES;
 }
 

@@ -28,21 +28,21 @@ OCDSpec2Context(LessonUserInterfaceSpec){
       [mockPlayCue stopMocking];
     });
     
-    It(@"tells the view to show the introduction on start", ^{
+    It(@"tells the view to show the introduction on start - passing itself as the delegate", ^{
       [(NSObject<Lesson> *)[lesson stub] start];
-      [[gameView expect] showIntroduction];
+      [[gameView expect] showIntroduction:ui];
       
       [ui startLesson];
       
       [lesson verify];
     });
     
-    It(@"tells the view to play introduction", ^{
-      [[gameView expect] showIntroduction];
+    It(@"starts the lesson when the introduction is complete", ^{
+      [[lesson expect] startWithView:gameView];
       
-      [ui playIntroduction];
+      [ui introductionComplete];
       
-      [gameView verify];
+      [lesson verify];
     });
     
     It(@"schedules a playClue when a new card becomes current", ^{

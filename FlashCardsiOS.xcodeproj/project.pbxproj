@@ -85,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		04EA5749873D4856ADDDAF27 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0722FDAE1812E1EE000FD2BD /* UserInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInterface.h; sourceTree = "<group>"; };
 		072AF9EB17F8BE2B0031C89F /* LessonUserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonUserInterface.h; sourceTree = "<group>"; };
 		072AF9EC17F8BE2B0031C89F /* LessonUserInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonUserInterface.m; sourceTree = "<group>"; };
 		074D877317AA1BD300985CD3 /* FlashCardsiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCardsiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,6 +355,7 @@
 				07DE980217AF294D0013AFDC /* CardLookupTable.m */,
 				07DE97F317AE802E0013AFDC /* StandardRandomNumberGenerator.h */,
 				07DE97F417AE802F0013AFDC /* StandardRandomNumberGenerator.m */,
+				0722FDAE1812E1EE000FD2BD /* UserInterface.h */,
 			);
 			name = Game;
 			sourceTree = "<group>";

@@ -28,13 +28,12 @@
 
 -(void) startLesson
 {
-  [self.lesson start];
-  [self.view showIntroduction];
+  [self.view showIntroduction:self];
 }
 
--(void) playIntroduction
+-(void) introductionComplete
 {
-  [self.view showIntroduction];
+  [self.lesson startWithView:self.view];
 }
 
 -(void) update:(ccTime)delta
