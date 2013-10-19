@@ -7,6 +7,7 @@
 -(void) correctGuess;
 -(void) incorrectGuess;
 -(void) update;
+-(void) start;
 @property(readonly) NSMutableArray *cards;
 @property(readonly) Card *currentCard;
 

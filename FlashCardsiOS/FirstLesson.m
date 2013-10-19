@@ -46,6 +46,9 @@
   return self;
 }
 
+-(void) start {
+}
+
 -(void) startWithView:(NSObject<GameView> *)view
 {
   self.view = view;

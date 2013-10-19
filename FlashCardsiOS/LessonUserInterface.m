@@ -26,6 +26,16 @@
   return self;
 }
 
+-(void) startLesson
+{
+  [self.lesson start];
+}
+
+-(void) playIntroduction
+{
+  [self.view showIntroduction];
+}
+
 -(void) update:(ccTime)delta
 {
   if (self.currentCard != self.lesson.currentCard) {

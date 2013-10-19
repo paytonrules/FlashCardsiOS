@@ -205,13 +205,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		072AF9EA17F8BD530031C89F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		074D876A17AA1BD300985CD3 = {
 			isa = PBXGroup;
 			children = (
@@ -316,7 +309,6 @@
 			children = (
 				077096A71809D408003435FC /* Wrappers */,
 				077096A61809D3D5003435FC /* Scheduler.h */,
-				072AF9EA17F8BD530031C89F /* Controllers */,
 				074D895A17AA7C8100985CD3 /* Sprites */,
 				074D895917AA7C4000985CD3 /* Layers */,
 				074D891B17AA1BD500985CD3 /* AppDelegate.h */,

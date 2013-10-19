@@ -76,7 +76,6 @@ OCDSpec2Context(FirstLessonSpec) {
     It(@"displays the character introduction", ^{
       id view = [OCMockObject niceMockForProtocol:@protocol(GameView)];
       id lookup = [OCMockObject mockForProtocol:@protocol(CardLookup)];
-    //  id scheduler = [OCMockObject mockForProtocol:@protocol(Scheduler)];
       [[[lookup stub] andReturn:@[@""]] allCards];
       
       NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup: lookup];

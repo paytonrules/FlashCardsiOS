@@ -4,6 +4,7 @@
 #import "LessonUserInterface.h"
 #import "PlayClueCommand.h"
 #import "Card.h"
+#import "Lesson.h"
 
 OCDSpec2Context(LessonUserInterfaceSpec){
   
@@ -12,19 +13,35 @@ OCDSpec2Context(LessonUserInterfaceSpec){
     __block id                    gameView;
     __block id                    lesson;
     __block Card                  *card;
-    __block LessonUserInterface  *cont;
+    __block LessonUserInterface  *ui;
     __block id                    mockPlayCue;
     
     BeforeEach(^{
       gameView = [OCMockObject mockForProtocol:@protocol(GameView)];
       lesson = [OCMockObject mockForProtocol:@protocol(Lesson)];
       card = [Card new];
-      cont = [LessonUserInterface flashCardsControllerWith:lesson view:gameView];
+      ui = [LessonUserInterface flashCardsControllerWith:lesson view:gameView];
       mockPlayCue = [OCMockObject mockForClass:[PlayClueCommand class]];
     });
     
     AfterEach(^{
       [mockPlayCue stopMocking];
+    });
+    
+    It(@"tells the lesson to start on start", ^{
+      [(NSObject<Lesson>*)[lesson expect] start];
+      
+      [ui startLesson];
+      
+      [lesson verify];
+    });
+    
+    It(@"tells the view to play introduction", ^{
+      [[gameView expect] showIntroduction];
+      
+      [ui playIntroduction];
+      
+      [gameView verify];
     });
     
     It(@"schedules a playClue when a new card becomes current", ^{
@@ -36,7 +53,7 @@ OCDSpec2Context(LessonUserInterfaceSpec){
       
       [card makeCurrent];
 
-      [cont update:0];
+      [ui update:0];
       
       [mockPlayCue verify];
     });
@@ -48,10 +65,10 @@ OCDSpec2Context(LessonUserInterfaceSpec){
       
       [[mockPlayCue expect] commandWithCard:card view:gameView scheduler:[OCMArg any]];
       [card makeCurrent];
-      [cont update:0];
+      [ui update:0];
       
       [[mockPlayCue reject] commandWithCard:card view:gameView scheduler:[OCMArg any]];
-      [cont update:1];
+      [ui update:1];
       
       [mockPlayCue verify];
     });
@@ -66,12 +83,12 @@ OCDSpec2Context(LessonUserInterfaceSpec){
                                   scheduler:[OCMArg checkWithBlock:^BOOL(id obj) {
         SchedulerWrapper *wrapper = (SchedulerWrapper *) obj;
         
-        return wrapper.scheduler == cont.scheduler;
+        return wrapper.scheduler == ui.scheduler;
       }]];
       
       [card makeCurrent];
       
-      [cont update:0];
+      [ui update:0];
       
       [mockPlayCue verify];
     });
@@ -80,7 +97,7 @@ OCDSpec2Context(LessonUserInterfaceSpec){
       [[[lesson stub] andReturn:nil] currentCard];
       [[lesson expect] update];
       
-      [cont update:0];
+      [ui update:0];
       
       [lesson verify];
     });
