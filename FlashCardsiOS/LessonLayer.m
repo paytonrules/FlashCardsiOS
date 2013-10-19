@@ -47,8 +47,8 @@
   
   layer.lesson = lesson;
   layer.lookup = lookupTable;
-  [layer.lesson startWithView:layer];
   layer.cont = cont;
+  [layer.cont startLesson];
 
   [layer scheduleUpdate];
   
@@ -116,21 +116,28 @@
 {
   [self stopAllActions];
   CCSprite *mole = [CCSprite spriteWithFile:@"mole.png"];
-  [mole setPosition:CGPointMake(-100.0, 0.0)];
+  [mole setPosition:CGPointMake(-100.0, 100.0)];
   [self addChild:mole];
   
   id removeMySprite = [CCCallFuncND actionWithTarget:mole
                                             selector:@selector(removeFromParentAndCleanup:)
                                                 data:(void*)NO];
 
-  id move = [CCMoveBy actionWithDuration:0.3 position:CGPointMake(200, 0)];
-  id moveBack = [CCMoveBy actionWithDuration:0.3 position:CGPointMake(-100.0, 0)];
+  id move = [CCMoveBy actionWithDuration:0.3 position:CGPointMake(250, 0.0)];
+  id moveBack = [move reverse];
   [mole runAction:[CCSequence actions:
                    [CCEaseIn actionWithAction:move rate:1.0],
+                   [CCCallFunc actionWithTarget:self selector:@selector(playIntroduction)],
+                   [CCDelayTime actionWithDuration:3],
                    [CCEaseIn actionWithAction:moveBack rate:1.0],
                    removeMySprite,
                    [CCCallFunc actionWithTarget:ui selector:@selector(introductionComplete)],
                    nil]];
+}
+
+-(void) playIntroduction
+{
+  [[SimpleAudioEngine sharedEngine] playEffect:@"lost-stuff.mp3"];
 }
 
 -(void) update:(ccTime)delta
