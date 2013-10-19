@@ -28,8 +28,9 @@ OCDSpec2Context(LessonUserInterfaceSpec){
       [mockPlayCue stopMocking];
     });
     
-    It(@"tells the lesson to start on start", ^{
-      [(NSObject<Lesson>*)[lesson expect] start];
+    It(@"tells the view to show the introduction on start", ^{
+      [(NSObject<Lesson> *)[lesson stub] start];
+      [[gameView expect] showIntroduction];
       
       [ui startLesson];
       

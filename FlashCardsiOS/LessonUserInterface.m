@@ -29,6 +29,7 @@
 -(void) startLesson
 {
   [self.lesson start];
+  [self.view showIntroduction];
 }
 
 -(void) playIntroduction
