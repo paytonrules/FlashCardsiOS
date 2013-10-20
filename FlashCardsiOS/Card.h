@@ -9,7 +9,7 @@
 
 -(id) initWithName:(NSString *) name;
 -(id) initWithName:(NSString *) name lesson:(NSObject<Lesson> *) lesson;
--(void) tap;
+-(BOOL) tap;
 -(void) makeCurrent;
 -(void) makeUnCurrent;
 

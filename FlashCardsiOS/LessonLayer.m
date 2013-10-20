@@ -17,13 +17,11 @@
 
 +(CCScene *) scene
 {
-	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
 	LessonLayer *layer = [LessonLayer node];
 
-  // Move this out
+
+  // Plist file
   CardLookupTable *lookupTable = [CardLookupTable new];
   [lookupTable add:@{@"sprite" : @"Enemy Bug.png",
                      @"reading" : @"bug.mp3",
@@ -39,7 +37,6 @@
                      @"reading" : @"tree.mp3",
                      @"location-x" : @450,
                      @"location-y" : @600} named: @"tree"];
-  
   NSObject<Lesson> *lesson = [FirstLesson lessonWithCardLookup:lookupTable];
   
   LessonUserInterface *cont = [LessonUserInterface flashCardsControllerWith:lesson view:layer];
@@ -48,12 +45,11 @@
   layer.lesson = lesson;
   layer.lookup = lookupTable;
   layer.cont = cont;
-  [layer.cont startLesson];
-
-  [layer scheduleUpdate];
   
 	// add layer as a child to scene
 	[scene addChild: layer];
+  [layer.cont startLesson];
+  [layer scheduleUpdate];
 	
 	// return the scene
 	return scene;

@@ -8,6 +8,7 @@
 -(void) incorrectGuess;
 -(void) update;
 -(void) start;
+@property(readonly) BOOL started;
 @property(readonly) NSMutableArray *cards;
 @property(readonly) Card *currentCard;
 

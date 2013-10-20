@@ -33,9 +33,15 @@
   return self;
 }
 
--(void) tap
+-(BOOL) tap
 {
-  self.current ? [self.lesson correctGuess] : [self.lesson incorrectGuess];
+  if (self.current)
+  {
+    [self.lesson correctGuess];
+  } else {
+    [self.lesson incorrectGuess];
+  }
+  return self.current;
 }
 
 -(void) makeUnCurrent

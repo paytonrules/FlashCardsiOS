@@ -17,7 +17,7 @@ OCDSpec2Context(LessonUserInterfaceSpec){
     __block id                    mockPlayCue;
     
     BeforeEach(^{
-      gameView = [OCMockObject mockForProtocol:@protocol(GameView)];
+      gameView = [OCMockObject niceMockForProtocol:@protocol(GameView)];
       lesson = [OCMockObject mockForProtocol:@protocol(Lesson)];
       card = [Card new];
       ui = [LessonUserInterface flashCardsControllerWith:lesson view:gameView];
@@ -29,7 +29,6 @@ OCDSpec2Context(LessonUserInterfaceSpec){
     });
     
     It(@"tells the view to show the introduction on start - passing itself as the delegate", ^{
-      [(NSObject<Lesson> *)[lesson stub] start];
       [[gameView expect] showIntroduction:ui];
       
       [ui startLesson];
@@ -38,7 +37,7 @@ OCDSpec2Context(LessonUserInterfaceSpec){
     });
     
     It(@"starts the lesson when the introduction is complete", ^{
-      [[lesson expect] startWithView:gameView];
+      [(NSObject<Lesson> *)[lesson expect] start];
       
       [ui introductionComplete];
       
@@ -46,6 +45,7 @@ OCDSpec2Context(LessonUserInterfaceSpec){
     });
     
     It(@"schedules a playClue when a new card becomes current", ^{
+      [[lesson stub] started];
       [[lesson stub] update];
       [[[lesson stub] andReturn:@[]] cards];
       [[[lesson stub] andReturn:card] currentCard];
@@ -60,6 +60,7 @@ OCDSpec2Context(LessonUserInterfaceSpec){
     });
 
     It(@"only does it once for the given card", ^{
+      [[lesson stub] started];
       [[lesson stub] update];
       [[[lesson stub] andReturn:@[card]] cards];
       [[[lesson stub] andReturn:card] currentCard];
@@ -76,6 +77,7 @@ OCDSpec2Context(LessonUserInterfaceSpec){
 
     It(@"creates a schedule wrapper with its scheduler", ^{
       [[lesson stub] update];
+      [[lesson stub] started];
       [[[lesson stub] andReturn:@[card]] cards];
       [[[lesson stub] andReturn:card] currentCard];
       
@@ -94,7 +96,57 @@ OCDSpec2Context(LessonUserInterfaceSpec){
       [mockPlayCue verify];
     });
     
-    It(@"updates the lesson controller each update", ^{
+    It(@"creates views for each card on the first update", ^{
+      Card *cardOne = [Card new];
+      Card *cardTwo = [Card new];
+      [lesson setExpectationOrderMatters:YES];
+      [[[lesson stub] andReturnValue:OCMOCK_VALUE((BOOL) {YES})] started];
+      [[[lesson expect] andReturn:@[cardOne, cardTwo]] cards];
+      [[lesson stub] currentCard];
+      [[lesson stub] update];
+      
+      [[gameView expect] addCard:cardOne];
+      [[gameView expect] addCard:cardTwo];
+      
+      [ui update:0];
+      
+      [lesson verify];
+      [gameView verify];
+    });
+    
+    It(@"only creates the views once", ^{
+      Card *cardOne = [Card new];
+      Card *cardTwo = [Card new];
+
+      [lesson setExpectationOrderMatters:YES];
+      [[[lesson stub] andReturnValue:OCMOCK_VALUE((BOOL) {YES})] started];
+      [[[lesson stub] andReturn:@[cardOne, cardTwo]] cards];
+      [[lesson stub] currentCard];
+      [[lesson stub] update];
+      
+      [[gameView expect] addCard:cardOne];
+      [[gameView expect] addCard:cardTwo];
+      
+      [ui update:0];
+      [ui update:0];
+      
+      [lesson verify];
+      [gameView verify];
+    });
+
+    It(@"doesn't update if lesson isn't started", ^{
+      [[lesson stub] update];
+      [[lesson stub] currentCard];
+      [[[lesson stub] andReturnValue:OCMOCK_VALUE((BOOL) {NO})] started];
+
+      [ui update:0];
+      
+      [lesson verify];
+      [gameView verify];
+    });
+    
+    It(@"updates the lesson each update", ^{
+      [[lesson stub] started];
       [[[lesson stub] andReturn:nil] currentCard];
       [[lesson expect] update];
       

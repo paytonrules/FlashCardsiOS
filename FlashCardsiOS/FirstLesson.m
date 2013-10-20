@@ -46,7 +46,15 @@
   return self;
 }
 
--(void) start {
+-(void) start
+{  
+  for (NSString *cardName in [self.cardLookup allCards])
+  {
+    Card *card = [Card cardWithName: cardName lesson:self];
+    
+    [self.cards addObject:card];
+  }
+  self.started = YES;
 }
 
 -(void) startWithView:(NSObject<GameView> *)view
@@ -58,9 +66,7 @@
     Card *card = [Card cardWithName: cardName lesson:self];
 
     [self.cards addObject:card];
-    [self.view addCard:card];
   }
-// [self.view showIntroduction];
   self.started = YES;
 }
 

@@ -30,7 +30,7 @@ OCDSpec2Context(CardSpec) {
     __block Card *card;
     
     BeforeEach(^{
-      lesson = [OCMockObject mockForProtocol:@protocol(Lesson)];
+      lesson = [OCMockObject niceMockForProtocol:@protocol(Lesson)];
       card = [Card cardWithName: @"" lesson:lesson];
     });
     
@@ -49,6 +49,14 @@ OCDSpec2Context(CardSpec) {
       [card tap];
       
       [lesson verify];
+    });
+    
+    It(@"returns a boolean if it is successful or unsuccessful", ^{
+      [ExpectBool([card tap]) toBeFalse];
+      
+      [card makeCurrent];
+      
+      [ExpectBool([card tap]) toBeTrue];
     });
   });
   

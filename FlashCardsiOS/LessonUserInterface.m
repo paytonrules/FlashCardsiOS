@@ -7,6 +7,7 @@
 @property(strong) NSObject<Lesson> *lesson;
 @property(strong) NSObject<GameView> *view;
 @property(strong) Card* currentCard;
+@property(assign) BOOL loadedCards;
 @end
 
 @implementation LessonUserInterface
@@ -22,6 +23,7 @@
   if (self) {
     self.lesson = lesson;
     self.view = view;
+    self.loadedCards = NO;
   }
   return self;
 }
@@ -33,11 +35,19 @@
 
 -(void) introductionComplete
 {
-  [self.lesson startWithView:self.view];
+  [self.lesson start];
 }
 
 -(void) update:(ccTime)delta
 {
+  if (self.lesson.started && !self.loadedCards) {
+    for (Card *card in [self.lesson cards])
+    {
+      [self.view addCard:card];
+    }
+    self.loadedCards = YES;
+  }
+  
   if (self.currentCard != self.lesson.currentCard) {
     self.currentCard = self.lesson.currentCard;
     [PlayClueCommand commandWithCard:self.lesson.currentCard
